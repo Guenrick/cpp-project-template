@@ -1,22 +1,21 @@
-CC = g++
-CFLAGS = -Iinclude -Wall
-SRC_DIR = src
-BIN_DIR = bin
-TEST_DIR = test
+CXX = g++
+# O -I avisa o compilador para buscar os cabecalhos dentro dessas pastas
+CXXFLAGS = -Wall -Wextra -std=c++11 -I src -I test/funcional
 
-# Garante que a pasta bin existe antes de compilar
-$(shell mkdir -p $(BIN_DIR))
+# Fontes e testes
+SRC = src/system.cpp src/flow.cpp src/model.cpp
+TEST_FUNC = test/funcional/main.cpp test/funcional/funcional_tests.cpp
 
-all: $(BIN_DIR)/main.exe
+# Destino do executavel
+EXEC = bin/funcional_tests
 
-# Compilação do programa principal (main + biblioteca)
-$(BIN_DIR)/main.exe: $(SRC_DIR)/main.cpp $(SRC_DIR)/bib.cpp
-	$(CC) $(CFLAGS) $(SRC_DIR)/main.cpp $(SRC_DIR)/bib.cpp -o $(BIN_DIR)/main.exe
+all: clean funcional run
 
-# Regra para o teste de regressão (Item 9)
-test: $(SRC_DIR)/bib.cpp $(TEST_DIR)/main.cpp
-	$(CC) $(CFLAGS) $(SRC_DIR)/bib.cpp $(TEST_DIR)/main.cpp -o $(BIN_DIR)/testeRegressivo.exe
-	./$(BIN_DIR)/testeRegressivo.exe
+funcional:
+	$(CXX) $(CXXFLAGS) $(SRC) $(TEST_FUNC) -o $(EXEC)
+
+run:
+	./$(EXEC)
 
 clean:
-	rm -f $(BIN_DIR)/*
+	rm -f bin/*
