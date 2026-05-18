@@ -13,7 +13,6 @@ Flow& Flow::operator=(const Flow& obj) {
     return *this;
 }
 
-// --- Metodos da UML ---
 void Flow::setSource(System* s) { source = s; }
 
 void Flow::setTarget(System* s) { target = s; }
