@@ -5,7 +5,6 @@ Model::Model() : time(0.0) {}
 Model::Model(const Model& obj) : time(obj.time), systems(obj.systems), flows(obj.flows) {}
 
 Model::~Model() {
-    // Como eh Agregacao (losango branco), o Model apenas limpa as listas, sem dar 'delete' nos ponteiros.
     systems.clear();
     flows.clear();
 }
@@ -16,6 +15,22 @@ Model& Model::operator=(const Model& obj) {
     systems = obj.systems;
     flows = obj.flows;
     return *this;
+}
+
+Model::systemIterator Model::beginSystems() {
+    return systems.begin();
+}
+
+Model::systemIterator Model::endSystems() {
+    return systems.end();
+}
+
+Model::flowIterator Model::beginFlows() {
+    return flows.begin();
+}
+
+Model::flowIterator Model::endFlows() {
+    return flows.end();
 }
 
 void Model::add(System* s) { systems.push_back(s); }
@@ -48,21 +63,18 @@ void Model::execute(double start, double final_time, double inc) {
             results.push_back(f->execute());
         }
         
-        // Atualiza os sistemas com os resultados calculados
         for (std::size_t i = 0; i < flows.size(); ++i) {
             System* origem = flows[i]->getSource();
             System* destino = flows[i]->getTarget();
             
-            // Subtrai da origem (se ela existir)
             if (origem != nullptr) {
                 origem->setValue(origem->getValue() - results[i]);
             }
-            // Soma no destino (se ele existir)
             if (destino != nullptr) {
                 destino->setValue(destino->getValue() + results[i]);
             }
         }
         
-        time += inc; // Avanca o relogio
+        time += inc; 
     }
 }
