@@ -91,3 +91,5 @@ public:
      */
     virtual double execute() = 0;
 };
+
+#endif //FLOW_HPP
