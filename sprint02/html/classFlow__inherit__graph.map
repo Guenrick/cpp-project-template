@@ -1,0 +1,9 @@
+<map id="Flow" name="Flow">
+<area shape="rect" id="Node000001" title="Classe abstrata que representa um fluxo de simulação. A classe Flow é responsável por conectar dois s..." alt="" coords="173,5,288,291"/>
+<area shape="rect" id="Node000002" href="$classComplexFlow.html" title="Classe que implementa um fluxo Complexo para os testes de rede. Possui o mesmo comportamento matemáti..." alt="" coords="5,339,133,424"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,244,101,340,96,337,163,241"/>
+<area shape="rect" id="Node000003" href="$classExponentialFlow.html" title="Classe que implementa um fluxo Exponencial para os testes. Calcula a transferência de massa com base ..." alt="" coords="157,339,304,424"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="233,304,233,338,228,338,228,304"/>
+<area shape="rect" id="Node000004" href="$classLogisticFlow.html" title="Classe que implementa um fluxo Logístico para os testes. Calcula a transferência com base em uma equa..." alt="" coords="328,339,448,424"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="298,244,362,337,357,340,294,247"/>
+</map>

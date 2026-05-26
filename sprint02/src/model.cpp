@@ -62,7 +62,7 @@ void Model::execute(double start, double final_time, double inc) {
         for (Flow* f : flows) {
             results.push_back(f->execute());
         }
-        
+        // for(systemIterator it; it != endSystems(); it++){}
         for (std::size_t i = 0; i < flows.size(); ++i) {
             System* origem = flows[i]->getSource();
             System* destino = flows[i]->getTarget();
