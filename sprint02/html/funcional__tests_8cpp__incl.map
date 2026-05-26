@@ -1,0 +1,21 @@
+<map id="test/funcional/funcional_tests.cpp" name="test/funcional/funcional_tests.cpp">
+<area shape="rect" id="Node000001" title="Implementação dos testes funcionais e das classes de fluxo específicas. Este arquivo contém as implem..." alt="" coords="265,5,439,45"/>
+<area shape="rect" id="Node000002" href="$funcional__tests_8hpp.html" title="Declaração das funções de testes funcionais do simulador." alt="" coords="5,93,155,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="288,48,134,92,132,87,286,43"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="83,167,146,192"/>
+<area shape="poly" id="edge11_Node000001_Node000003" title=" " alt="" coords="309,48,264,69,219,96,175,128,138,159,135,155,172,124,216,91,262,65,306,43"/>
+<area shape="rect" id="Node000004" href="$model_8hpp.html" title="Declaração da classe Model. Este arquivo contém a interface da classe Model, responsável por gerencia..." alt="" coords="229,93,368,119"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="341,47,317,83,312,80,337,44"/>
+<area shape="rect" id="Node000006" href="$system_8hpp.html" title=" " alt="" coords="331,240,429,265"/>
+<area shape="poly" id="edge8_Node000001_Node000006" title=" " alt="" coords="370,44,405,96,422,130,433,166,436,180,433,193,421,214,406,232,402,229,417,211,428,191,430,180,428,167,417,132,401,99,366,47"/>
+<area shape="rect" id="Node000007" href="$flow_8hpp.html" title="Declaração da classe Flow. Este arquivo contém a interface da classe abstrata Flow,..." alt="" coords="342,167,418,192"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="365,45,383,93,386,124,385,153,380,153,381,124,377,94,360,47"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="493,93,563,119"/>
+<area shape="poly" id="edge10_Node000001_Node000008" title=" " alt="" coords="395,43,491,85,488,90,393,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="88,118,105,153,101,155,83,120"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="203,167,266,192"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="290,121,256,158,252,155,286,117"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="304,118,315,152,333,191,361,228,357,232,328,193,310,154,299,120"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="313,117,358,156,355,160,310,121"/>
+<area shape="poly" id="edge7_Node000007_Node000006" title=" " alt="" coords="383,192,383,226,377,226,377,192"/>
+</map>

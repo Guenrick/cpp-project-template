@@ -1,0 +1,5 @@
+<map id="Flow" name="Flow">
+<area shape="rect" id="Node000001" title="Classe abstrata que representa um fluxo de simulação. A classe Flow é responsável por conectar dois s..." alt="" coords="5,248,120,513"/>
+<area shape="rect" id="Node000002" href="$classSystem.html" title="Classe que representa um Sistema no simulador." alt="" coords="10,5,115,171"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="65,171,65,232,60,232,60,171"/>
+</map>

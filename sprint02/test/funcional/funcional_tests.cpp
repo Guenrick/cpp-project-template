@@ -1,3 +1,11 @@
+/**
+ * @file funcional_tests.cpp
+ * @brief Implementação dos testes funcionais e das classes de fluxo específicas.
+ * Este arquivo contém as implementações das classes filhas de Flow (Exponencial, 
+ * Logístico e Complexo) utilizadas exclusivamente para validar a arquitetura do simulador,
+ * bem como o código de execução de cada cenário de teste.
+ */
+
 #include "funcional_tests.hpp"
 #include "../../src/model.hpp"
 #include "../../src/system.hpp"
@@ -5,11 +13,24 @@
 #include <cassert>
 #include <cmath> 
 
-
+/**
+ * @brief Classe que implementa um fluxo Exponencial para os testes.
+ * Calcula a transferência de massa com base em uma taxa fixa (0.01) multiplicada
+ * pelo valor atual do sistema de origem.
+ */
 class ExponentialFlow : public Flow {
 public:
+    /**
+     * @brief Construtor da classe ExponentialFlow.
+     * @param source Ponteiro para o sistema de origem.
+     * @param target Ponteiro para o sistema de destino.
+     */
     ExponentialFlow(System* source = nullptr, System* target = nullptr) : Flow(source, target) {}
     
+    /**
+     * @brief Executa a equação do fluxo exponencial.
+     * @return double O valor correspondente a 1% da massa do sistema de origem.
+     */
     double execute() override {
         if (getSource() != nullptr) {
             return 0.01 * getSource()->getValue();
@@ -18,10 +39,24 @@ public:
     }
 };
 
+/**
+ * @brief Classe que implementa um fluxo Logístico para os testes.
+ * Calcula a transferência com base em uma equação de crescimento logístico 
+ * dependente do valor do sistema de destino e de uma capacidade máxima (70.0).
+ */
 class LogisticFlow : public Flow {
 public:
+    /**
+     * @brief Construtor da classe LogisticFlow.
+     * @param source Ponteiro para o sistema de origem.
+     * @param target Ponteiro para o sistema de destino.
+     */
     LogisticFlow(System* source = nullptr, System* target = nullptr) : Flow(source, target) {}
     
+    /**
+     * @brief Executa a equação do fluxo logístico.
+     * @return double O valor calculado pela equação diferencial logística.
+     */
     double execute() override {
         if (getTarget() != nullptr) {
             double p2 = getTarget()->getValue();
@@ -31,10 +66,24 @@ public:
     }
 };
 
+/**
+ * @brief Classe que implementa um fluxo Complexo para os testes de rede.
+ * Possui o mesmo comportamento matemático do fluxo exponencial, servindo
+ * especificamente para interligar múltiplos sistemas no teste complexo de grafos.
+ */
 class ComplexFlow : public Flow {
 public:
+    /**
+     * @brief Construtor da classe ComplexFlow.
+     * @param source Ponteiro para o sistema de origem.
+     * @param target Ponteiro para o sistema de destino.
+     */
     ComplexFlow(System* source = nullptr, System* target = nullptr) : Flow(source, target) {}
     
+    /**
+     * @brief Executa a equação do fluxo complexo.
+     * @return double O valor correspondente a 1% da massa do sistema de origem.
+     */
     double execute() override {
         if (getSource() != nullptr) {
             return 0.01 * getSource()->getValue();
@@ -42,6 +91,7 @@ public:
         return 0.0;
     }
 };
+
 
 void exponentialFuncionalTest() {
     System pop1(100.0);
@@ -55,8 +105,8 @@ void exponentialFuncionalTest() {
     
     sim.execute(0, 100, 1);
     
-    assert(std::trunc(pop1.getValue() * 10000 + 0.5) == 366032);
-    assert(std::trunc(pop2.getValue() * 10000 + 0.5) == 633968);
+    assert(std::round(pop1.getValue() * 10000) == 366032);
+    assert(std::round(pop2.getValue() * 10000) == 633968);
 }
 
 void logisticalFuncionalTest() {
@@ -71,8 +121,8 @@ void logisticalFuncionalTest() {
     
     sim.execute(0, 100, 1);
     
-    assert(std::trunc(p1.getValue() * 10000 + 0.5) == 882167);
-    assert(std::trunc(p2.getValue() * 10000 + 0.5) == 217833);
+    assert(std::round(p1.getValue() * 10000) == 882167);
+    assert(std::round(p2.getValue() * 10000) == 217833);
 }
 
 void complexFuncionalTest() {
@@ -90,9 +140,9 @@ void complexFuncionalTest() {
     
     sim.execute(0, 100, 1);
     
-    assert(std::trunc(q1.getValue() * 10000 + 0.5) == 318513);
-    assert(std::trunc(q2.getValue() * 10000 + 0.5) == 184003);
-    assert(std::trunc(q3.getValue() * 10000 + 0.5) == 771143);
-    assert(std::trunc(q4.getValue() * 10000 + 0.5) == 561728);
-    assert(std::trunc(q5.getValue() * 10000 + 0.5) == 164612);
+    assert(std::round(q1.getValue() * 10000) == 318513);
+    assert(std::round(q2.getValue() * 10000) == 184002);
+    assert(std::round(q3.getValue() * 10000) == 771143);
+    assert(std::round(q4.getValue() * 10000) == 561728);
+    assert(std::round(q5.getValue() * 10000) == 164612);
 }
