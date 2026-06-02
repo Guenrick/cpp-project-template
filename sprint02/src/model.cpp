@@ -5,37 +5,26 @@ Model::Model() : time(0.0) {}
 Model::Model(const Model& obj) : time(obj.time), systems(obj.systems), flows(obj.flows) {}
 
 Model::~Model() {
+    // Agregação: apenas limpa as listas, sem destruir os objetos apontados
     systems.clear();
     flows.clear();
 }
 
 Model& Model::operator=(const Model& obj) {
     if (this == &obj) return *this;
-    time = obj.time;
+    time    = obj.time;
     systems = obj.systems;
-    flows = obj.flows;
+    flows   = obj.flows;
     return *this;
 }
 
-Model::systemIterator Model::beginSystems() {
-    return systems.begin();
-}
-
-Model::systemIterator Model::endSystems() {
-    return systems.end();
-}
-
-Model::flowIterator Model::beginFlows() {
-    return flows.begin();
-}
-
-Model::flowIterator Model::endFlows() {
-    return flows.end();
-}
+Model::systemIterator Model::beginSystems() { return systems.begin(); }
+Model::systemIterator Model::endSystems()   { return systems.end();   }
+Model::flowIterator   Model::beginFlows()   { return flows.begin();   }
+Model::flowIterator   Model::endFlows()     { return flows.end();     }
 
 void Model::add(System* s) { systems.push_back(s); }
-
-void Model::add(Flow* f) { flows.push_back(f); }
+void Model::add(Flow* f)   { flows.push_back(f);   }
 
 void Model::remove(System* s) {
     for (auto it = systems.begin(); it != systems.end(); ) {
@@ -53,28 +42,19 @@ void Model::remove(Flow* f) {
 
 void Model::execute(double start, double final_time, double inc) {
     time = start;
-    
-    // Loop principal
     while (time < final_time) {
+        // Passo 1: calcula todas as taxas antes de atualizar qualquer sistema
         std::vector<double> results;
-        
-        // Calcula a taxa de todos os fluxos e armazena temporariamente
-        for (Flow* f : flows) {
+        for (Flow* f : flows)
             results.push_back(f->execute());
-        }
-        // for(systemIterator it; it != endSystems(); it++){}
+
+        // Passo 2: aplica os resultados simultaneamente
         for (std::size_t i = 0; i < flows.size(); ++i) {
-            System* origem = flows[i]->getSource();
+            System* origem  = flows[i]->getSource();
             System* destino = flows[i]->getTarget();
-            
-            if (origem != nullptr) {
-                origem->setValue(origem->getValue() - results[i]);
-            }
-            if (destino != nullptr) {
-                destino->setValue(destino->getValue() + results[i]);
-            }
+            if (origem  != nullptr) origem->setValue(origem->getValue()   - results[i]);
+            if (destino != nullptr) destino->setValue(destino->getValue() + results[i]);
         }
-        
-        time += inc; 
+        time += inc;
     }
 }

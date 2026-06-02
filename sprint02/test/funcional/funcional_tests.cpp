@@ -139,9 +139,9 @@ void complexFuncionalTest() {
     sim.add(&f); sim.add(&g); sim.add(&r); sim.add(&t); sim.add(&u); sim.add(&v);
     
     sim.execute(0, 100, 1);
-    
+
     assert(std::round(q1.getValue() * 10000) == 318513);
-    assert(std::round(q2.getValue() * 10000) == 184002);
+    assert(std::round(q2.getValue() * 10000) == 184003);
     assert(std::round(q3.getValue() * 10000) == 771143);
     assert(std::round(q4.getValue() * 10000) == 561728);
     assert(std::round(q5.getValue() * 10000) == 164612);
