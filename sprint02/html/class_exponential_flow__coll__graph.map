@@ -1,0 +1,7 @@
+<map id="ExponentialFlow" name="ExponentialFlow">
+<area shape="rect" id="Node000001" title="Classe que implementa um fluxo Exponencial para os testes. Calcula a transferência de massa com base ..." alt="" coords="5,593,133,727"/>
+<area shape="rect" id="Node000002" href="$class_flow.html" title="Classe abstrata que representa um fluxo de simulação. A classe Flow é responsável por conectar dois s..." alt="" coords="19,261,120,544"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="70,557,72,594,67,593,69,562"/>
+<area shape="rect" id="Node000003" href="$class_system.html" title="Classe que representa um Sistema no simulador." alt="" coords="26,5,113,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="70,179,72,244,67,244,69,184"/>
+</map>

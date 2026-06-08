@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['logisticflow_0',['LogisticFlow',['../classLogisticFlow.html',1,'']]]
+  ['logisticflow_0',['LogisticFlow',['../class_logistic_flow.html',1,'']]]
 ];

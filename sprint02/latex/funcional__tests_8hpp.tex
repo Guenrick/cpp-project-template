@@ -1,0 +1,74 @@
+\doxysection{test/funcional/funcional\+\_\+tests.hpp File Reference}
+\hypertarget{funcional__tests_8hpp}{}\label{funcional__tests_8hpp}\index{test/funcional/funcional\_tests.hpp@{test/funcional/funcional\_tests.hpp}}
+
+
+Declaração das funções de testes funcionais do simulador.  
+
+
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{funcional__tests_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{funcional__tests_8hpp_a2c448ffaffdff4b03c825a01dffa6f27}{exponential\+Funcional\+Test}} ()
+\begin{DoxyCompactList}\small\item\em Executa o teste funcional para o modelo exponencial. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{funcional__tests_8hpp_a60914db64bde71b56d69320797266c29}{logistical\+Funcional\+Test}} ()
+\begin{DoxyCompactList}\small\item\em Executa o teste funcional para o modelo logístico. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{funcional__tests_8hpp_a943dfe0c597a01c9760c140715fed527}{complex\+Funcional\+Test}} ()
+\begin{DoxyCompactList}\small\item\em Executa o teste funcional complexo (cenário de rede). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declaração das funções de testes funcionais do simulador. 
+
+
+\begin{DoxyItemize}
+\item Este arquivo contém os protótipos dos testes funcionais que validam o comportamento das simulações de fluxo Exponencial, Logístico e de Redes Complexas. 
+\end{DoxyItemize}
+
+\doxysubsection{Function Documentation}
+\Hypertarget{funcional__tests_8hpp_a943dfe0c597a01c9760c140715fed527}\label{funcional__tests_8hpp_a943dfe0c597a01c9760c140715fed527} 
+\index{funcional\_tests.hpp@{funcional\_tests.hpp}!complexFuncionalTest@{complexFuncionalTest}}
+\index{complexFuncionalTest@{complexFuncionalTest}!funcional\_tests.hpp@{funcional\_tests.hpp}}
+\doxysubsubsection{\texorpdfstring{complexFuncionalTest()}{complexFuncionalTest()}}
+{\footnotesize\ttfamily void complex\+Funcional\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Executa o teste funcional complexo (cenário de rede). 
+
+
+\begin{DoxyItemize}
+\item Monta uma rede interconectada de múltiplos sistemas (s1, s2, s3, s4, s5) e fluxos (u, v, g, r, t) para simular um ecossistema completo. Valida a robustez do laço de execução do modelo principal sob condições de concorrência e dependência de dados. 
+\end{DoxyItemize}\Hypertarget{funcional__tests_8hpp_a2c448ffaffdff4b03c825a01dffa6f27}\label{funcional__tests_8hpp_a2c448ffaffdff4b03c825a01dffa6f27} 
+\index{funcional\_tests.hpp@{funcional\_tests.hpp}!exponentialFuncionalTest@{exponentialFuncionalTest}}
+\index{exponentialFuncionalTest@{exponentialFuncionalTest}!funcional\_tests.hpp@{funcional\_tests.hpp}}
+\doxysubsubsection{\texorpdfstring{exponentialFuncionalTest()}{exponentialFuncionalTest()}}
+{\footnotesize\ttfamily void exponential\+Funcional\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Executa o teste funcional para o modelo exponencial. 
+
+
+\begin{DoxyItemize}
+\item Cria um cenário com dois sistemas e um fluxo exponencial para validar a transferência de massa ao longo de um determinado período de tempo, comparando o resultado final com a precisão matemática esperada. 
+\end{DoxyItemize}\Hypertarget{funcional__tests_8hpp_a60914db64bde71b56d69320797266c29}\label{funcional__tests_8hpp_a60914db64bde71b56d69320797266c29} 
+\index{funcional\_tests.hpp@{funcional\_tests.hpp}!logisticalFuncionalTest@{logisticalFuncionalTest}}
+\index{logisticalFuncionalTest@{logisticalFuncionalTest}!funcional\_tests.hpp@{funcional\_tests.hpp}}
+\doxysubsubsection{\texorpdfstring{logisticalFuncionalTest()}{logisticalFuncionalTest()}}
+{\footnotesize\ttfamily void logistical\+Funcional\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Executa o teste funcional para o modelo logístico. 
+
+
+\begin{DoxyItemize}
+\item Configura uma simulação utilizando a equação de crescimento logístico entre dois sistemas, avaliando se os limites de capacidade e taxas de variação estão sendo respeitados conforme os requisitos do modelo. 
+\end{DoxyItemize}

@@ -8,7 +8,6 @@
 #ifndef FUNCIONAL_TESTS_HPP
 #define FUNCIONAL_TESTS_HPP
 
-#include <cmath>
 
 /**
  * @brief Executa o teste funcional para o modelo exponencial.

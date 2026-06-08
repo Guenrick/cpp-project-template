@@ -1,0 +1,5 @@
+<map id="ConcreteFlow" name="ConcreteFlow">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,357,118,448"/>
+<area shape="rect" id="Node000002" href="$class_flow.html" title="Classe abstrata que representa um fluxo de simulação. A classe Flow é responsável por conectar dois s..." alt="" coords="11,5,112,309"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="63,322,64,358,59,357,61,327"/>
+</map>

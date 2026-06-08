@@ -1,0 +1,113 @@
+\doxysection{Complex\+Flow Class Reference}
+\hypertarget{class_complex_flow}{}\label{class_complex_flow}\index{ComplexFlow@{ComplexFlow}}
+
+
+Classe que implementa um fluxo Complexo para os testes de rede. Possui o mesmo comportamento matemático do fluxo exponencial, servindo especificamente para interligar múltiplos sistemas no teste complexo de grafos.  
+
+
+
+
+Inheritance diagram for Complex\+Flow\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{class_complex_flow__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Complex\+Flow\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_complex_flow__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_complex_flow_a2a85c166feac6de8841466f16267e317}{Complex\+Flow}} (\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_flow_a963ca162995d112f0f30322e2bb9de63}{source}}=nullptr, \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_flow_a87be88d9bae4e927b29205faabeaf387}{target}}=nullptr)
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxylink{class_complex_flow}{Complex\+Flow}. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_complex_flow_a744cb3029e9335038f3f8c1da6daea4d}{execute}} () override
+\begin{DoxyCompactList}\small\item\em Executa a equação do fluxo complexo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_flow}{Flow}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_flow_ae1f699fde45c0a39cb5628d9f217cbb8}{Flow}} (\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_flow_a963ca162995d112f0f30322e2bb9de63}{source}}=nullptr, \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_flow_a87be88d9bae4e927b29205faabeaf387}{target}}=nullptr)
+\begin{DoxyCompactList}\small\item\em Construtor padrão e parametrizado do \doxylink{class_flow}{Flow}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_flow_aa9a50d7ede896bf6a0740a6d1330ae21}{Flow}} (const \mbox{\hyperlink{class_flow}{Flow}} \&obj)
+\begin{DoxyCompactList}\small\item\em Construtor de cópia do \doxylink{class_flow}{Flow}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_flow_a5991efa6e8cf88c4ef2125cc727db333}{\texorpdfstring{$\sim$}{\string~}\+Flow}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor virtual do \doxylink{class_flow}{Flow}. Garante a destruição correta de objetos em classes derivadas (herança). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_flow}{Flow}} \& \mbox{\hyperlink{class_flow_a21f26edbbb55b1c8312d0836153c08a9}{operator=}} (const \mbox{\hyperlink{class_flow}{Flow}} \&obj)
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador de atribuição (=). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_flow_a4da8089ed4e652c414180252d22c8516}{set\+Source}} (\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}s)
+\begin{DoxyCompactList}\small\item\em Define ou altera o sistema de origem do fluxo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_flow_a9efed9cf09dd73afc0fe6c1bdc3662a8}{set\+Target}} (\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}s)
+\begin{DoxyCompactList}\small\item\em Define ou altera o sistema de destino do fluxo. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_flow_a1f3858f90d141807377c2640fb5dd0fc}{get\+Source}} () const
+\begin{DoxyCompactList}\small\item\em Obtém o sistema de origem atual do fluxo. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_flow_aff8a0f8ca8dc50d37c92ab7556e172b5}{get\+Target}} () const
+\begin{DoxyCompactList}\small\item\em Obtém o sistema de destino atual do fluxo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_flow_af262728866a280fef6b60e26257a6d6f}{clear\+Source}} ()
+\begin{DoxyCompactList}\small\item\em Limpa a referência ao sistema de origem. Remove a conexão com a origem, definindo o ponteiro como nullptr. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_flow_a2d1ef837436f4982de52096c2b802e4e}{clear\+Target}} ()
+\begin{DoxyCompactList}\small\item\em Limpa a referência ao sistema de destino. Remove a conexão com o destino, definindo o ponteiro como nullptr. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_flow_a619be0b590c78202127bc6ac7fb04029}{execute}} ()=0
+\begin{DoxyCompactList}\small\item\em Executa a equação matemática do fluxo. Método puramente virtual que deve ser implementado pelas classes derivadas para calcular a quantidade exata de massa a ser transferida a cada iteração. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_flow}{Flow}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_flow_a963ca162995d112f0f30322e2bb9de63}{source}}
+\item 
+\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_flow_a87be88d9bae4e927b29205faabeaf387}{target}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe que implementa um fluxo Complexo para os testes de rede. Possui o mesmo comportamento matemático do fluxo exponencial, servindo especificamente para interligar múltiplos sistemas no teste complexo de grafos. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_complex_flow_a2a85c166feac6de8841466f16267e317}\label{class_complex_flow_a2a85c166feac6de8841466f16267e317} 
+\index{ComplexFlow@{ComplexFlow}!ComplexFlow@{ComplexFlow}}
+\index{ComplexFlow@{ComplexFlow}!ComplexFlow@{ComplexFlow}}
+\doxysubsubsection{\texorpdfstring{ComplexFlow()}{ComplexFlow()}}
+{\footnotesize\ttfamily Complex\+Flow\+::\+Complex\+Flow (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}}]{source = {\ttfamily nullptr},  }\item[{\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}}]{target = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor da classe \doxylink{class_complex_flow}{Complex\+Flow}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & Ponteiro para o sistema de origem. \\
+\hline
+{\em target} & Ponteiro para o sistema de destino. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_complex_flow_a744cb3029e9335038f3f8c1da6daea4d}\label{class_complex_flow_a744cb3029e9335038f3f8c1da6daea4d} 
+\index{ComplexFlow@{ComplexFlow}!execute@{execute}}
+\index{execute@{execute}!ComplexFlow@{ComplexFlow}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily double Complex\+Flow\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Executa a equação do fluxo complexo. 
+
+\begin{DoxyReturn}{Returns}
+double O valor correspondente a 1\% da massa do sistema de origem. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_flow_a619be0b590c78202127bc6ac7fb04029}{Flow}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+test/funcional/\mbox{\hyperlink{funcional__tests_8cpp}{funcional\+\_\+tests.\+cpp}}\end{DoxyCompactItemize}

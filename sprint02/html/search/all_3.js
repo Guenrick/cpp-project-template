@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['clearsource_0',['clearSource',['../classFlow.html#af262728866a280fef6b60e26257a6d6f',1,'Flow']]],
-  ['cleartarget_1',['clearTarget',['../classFlow.html#a2d1ef837436f4982de52096c2b802e4e',1,'Flow']]],
-  ['complexflow_2',['complexflow',['../classComplexFlow.html',1,'ComplexFlow'],['../classComplexFlow.html#a2a85c166feac6de8841466f16267e317',1,'ComplexFlow::ComplexFlow()']]],
-  ['complexfuncionaltest_3',['complexfuncionaltest',['../funcional__tests_8cpp.html#a943dfe0c597a01c9760c140715fed527',1,'complexFuncionalTest():&#160;funcional_tests.cpp'],['../funcional__tests_8hpp.html#a943dfe0c597a01c9760c140715fed527',1,'complexFuncionalTest():&#160;funcional_tests.cpp']]]
+  ['endflows_0',['endFlows',['../class_model.html#abfae233cbcbc3b9875ee87698f1e140c',1,'Model']]],
+  ['endsystems_1',['endSystems',['../class_model.html#a815cd0c70ae9cb2344cc7256e2dda35f',1,'Model']]],
+  ['execute_2',['execute',['../class_flow.html#a619be0b590c78202127bc6ac7fb04029',1,'Flow::execute()'],['../class_model.html#a379d0fb5e45cb059cce00e22cd101bc8',1,'Model::execute()'],['../class_exponential_flow.html#aafb074830c5c18138913cb10da3b8782',1,'ExponentialFlow::execute()'],['../class_logistic_flow.html#ae0d2de87d6dbb8cfc2af6db5cd22e884',1,'LogisticFlow::execute()'],['../class_complex_flow.html#a744cb3029e9335038f3f8c1da6daea4d',1,'ComplexFlow::execute()'],['../class_concrete_flow.html#ac2f043ade900c63a033542657799cddc',1,'ConcreteFlow::execute()'],['../class_exponential_flow.html#aafb074830c5c18138913cb10da3b8782',1,'ExponentialFlow::execute()']]],
+  ['exponentialflow_3',['ExponentialFlow',['../class_exponential_flow.html',1,'ExponentialFlow'],['../class_exponential_flow.html#ad298be6a81718d8a27ac45c42ca28eea',1,'ExponentialFlow::ExponentialFlow(System *source=nullptr, System *target=nullptr)'],['../class_exponential_flow.html#a97b2083af546bc73576efe6025d4603d',1,'ExponentialFlow::ExponentialFlow(System *s=nullptr, System *t=nullptr)']]],
+  ['exponentialfuncionaltest_4',['exponentialFuncionalTest',['../funcional__tests_8cpp.html#a2c448ffaffdff4b03c825a01dffa6f27',1,'exponentialFuncionalTest():&#160;funcional_tests.cpp'],['../funcional__tests_8hpp.html#a2c448ffaffdff4b03c825a01dffa6f27',1,'exponentialFuncionalTest():&#160;funcional_tests.cpp']]]
 ];

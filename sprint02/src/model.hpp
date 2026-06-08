@@ -1,113 +1,31 @@
-/**
- * @file model.hpp
- * @brief Declaração da classe Model.
- */
-
 #ifndef MODEL_HPP
 #define MODEL_HPP
 
-#include <vector>
 #include "system.hpp"
 #include "flow.hpp"
+#include <vector>
 
 /**
- * @brief Contêiner e motor principal da simulação.
- *
- * Model gerencia coleções de Systems e Flows e executa o laço de simulação,
- * aplicando o princípio da atualização simultânea: calcula todos os fluxos
- * antes de atualizar qualquer sistema.
+ * @brief Interface da classe Model.
+ * Define o contrato do motor de simulacao: adicionar/remover Systems e Flows,
+ * expor iteradores para percorrer as colecoes e executar o laco de simulacao.
  */
 class Model {
-protected:
-    double time;                   /*!< Relógio interno da simulação. */
-    std::vector<System*> systems;  /*!< Lista de ponteiros para os sistemas. */
-    std::vector<Flow*>   flows;    /*!< Lista de ponteiros para os fluxos. */
-
 public:
-    /** @brief Atalho para o iterador do vetor de sistemas. */
     typedef std::vector<System*>::iterator systemIterator;
+    typedef std::vector<Flow*>::iterator   flowIterator;
 
-    /** @brief Atalho para o iterador do vetor de fluxos. */
-    typedef std::vector<Flow*>::iterator flowIterator;
+    virtual ~Model() {}
 
-    /**
-     * @brief Construtor padrão.
-     */
-    Model();
-
-    /**
-     * @brief Construtor de cópia (Forma Canônica).
-     * @param obj Objeto Model a ser copiado.
-     */
-    Model(const Model& obj);
-
-    /**
-     * @brief Destrutor virtual (Forma Canônica).
-     */
-    virtual ~Model();
-
-    /**
-     * @brief Operador de atribuição (Forma Canônica).
-     * @param obj Objeto Model a ser atribuído.
-     * @return Referência para o próprio objeto.
-     */
-    Model& operator=(const Model& obj);
-
-    /**
-     * @brief Iterador para o início da lista de sistemas.
-     * @return systemIterator apontando para o primeiro System.
-     */
-    systemIterator beginSystems();
-
-    /**
-     * @brief Iterador para o fim da lista de sistemas.
-     * @return systemIterator apontando após o último System.
-     */
-    systemIterator endSystems();
-
-    /**
-     * @brief Iterador para o início da lista de fluxos.
-     * @return flowIterator apontando para o primeiro Flow.
-     */
-    flowIterator beginFlows();
-
-    /**
-     * @brief Iterador para o fim da lista de fluxos.
-     * @return flowIterator apontando após o último Flow.
-     */
-    flowIterator endFlows();
-
-    /**
-     * @brief Executa o laço principal da simulação.
-     * @param start      Tempo inicial.
-     * @param final_time Tempo final.
-     * @param inc        Incremento por iteração.
-     */
-    void execute(double start, double final_time, double inc);
-
-    /**
-     * @brief Adiciona um sistema ao modelo.
-     * @param s Ponteiro para o System a ser adicionado.
-     */
-    void add(System* s);
-
-    /**
-     * @brief Adiciona um fluxo ao modelo.
-     * @param f Ponteiro para o Flow a ser adicionado.
-     */
-    void add(Flow* f);
-
-    /**
-     * @brief Remove um sistema do modelo.
-     * @param s Ponteiro para o System a ser removido.
-     */
-    void remove(System* s);
-
-    /**
-     * @brief Remove um fluxo do modelo.
-     * @param f Ponteiro para o Flow a ser removido.
-     */
-    void remove(Flow* f);
+    virtual void execute(double start, double final_time, double inc) = 0;
+    virtual void add(System* s) = 0;
+    virtual void add(Flow* f) = 0;
+    virtual void remove(System* s) = 0;
+    virtual void remove(Flow* f) = 0;
+    virtual systemIterator beginSystems() = 0;
+    virtual systemIterator endSystems() = 0;
+    virtual flowIterator   beginFlows() = 0;
+    virtual flowIterator   endFlows() = 0;
 };
 
 #endif // MODEL_HPP

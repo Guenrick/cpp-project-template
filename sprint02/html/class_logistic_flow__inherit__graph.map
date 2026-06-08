@@ -1,0 +1,5 @@
+<map id="LogisticFlow" name="LogisticFlow">
+<area shape="rect" id="Node000001" title="Classe que implementa um fluxo Logístico para os testes. Calcula a transferência com base em uma equa..." alt="" coords="5,357,110,448"/>
+<area shape="rect" id="Node000002" href="$class_flow.html" title="Classe abstrata que representa um fluxo de simulação. A classe Flow é responsável por conectar dois s..." alt="" coords="7,5,108,309"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="59,322,60,358,55,357,57,327"/>
+</map>

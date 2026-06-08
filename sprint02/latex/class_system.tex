@@ -1,0 +1,141 @@
+\doxysection{System Class Reference}
+\hypertarget{class_system}{}\label{class_system}\index{System@{System}}
+
+
+Classe que representa um Sistema no simulador.  
+
+
+
+
+{\ttfamily \#include $<$system.\+hpp$>$}
+
+
+
+Collaboration diagram for System\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{class_system__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_system_af80bdd142bb0b158eda8ae4dbff09872}{System}} (double v=0.\+0)
+\begin{DoxyCompactList}\small\item\em Construtor padrão e parametrizado do \doxylink{class_system}{System}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_system_ae85f88a65a564ff9b3308b05d8fd1fa2}{System}} (const \mbox{\hyperlink{class_system}{System}} \&obj)
+\begin{DoxyCompactList}\small\item\em Construtor de cópia do \doxylink{class_system}{System}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_system_a3be70bb338e3f062f821173fd15680d0}{\texorpdfstring{$\sim$}{\string~}\+System}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor virtual do \doxylink{class_system}{System}. Garante a destruição correta de objetos em heranças, caso necessário no futuro. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_system}{System}} \& \mbox{\hyperlink{class_system_a93f350faa6efd0b1eca2bfc2c73c8cd6}{operator=}} (const \mbox{\hyperlink{class_system}{System}} \&obj)
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador de atribuição (=). \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_system_aa7d17369d1034e7d8643a63f69d1901d}{get\+Value}} () const
+\begin{DoxyCompactList}\small\item\em Obtém o valor atual do sistema. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_system_a1882ddf97ae81fc751283365d9d89ade}{set\+Value}} (double v)
+\begin{DoxyCompactList}\small\item\em Define ou atualiza o valor do sistema. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe que representa um Sistema no simulador. 
+
+
+\begin{DoxyItemize}
+\item A classe \doxylink{class_system}{System} é responsável por armazenar uma quantidade de \"{}massa\"{} ou \"{}energia\"{} que pode ser consumida ou incrementada pelos fluxos (\doxylink{class_flow}{Flow}) durante a execução do modelo. 
+\end{DoxyItemize}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_system_af80bdd142bb0b158eda8ae4dbff09872}\label{class_system_af80bdd142bb0b158eda8ae4dbff09872} 
+\index{System@{System}!System@{System}}
+\index{System@{System}!System@{System}}
+\doxysubsubsection{\texorpdfstring{System()}{System()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily System\+::\+System (\begin{DoxyParamCaption}\item[{double}]{v = {\ttfamily 0.0} }\end{DoxyParamCaption})}
+
+
+
+Construtor padrão e parametrizado do \doxylink{class_system}{System}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Valor inicial a ser armazenado no sistema. O padrão é 0.\+0. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_system_ae85f88a65a564ff9b3308b05d8fd1fa2}\label{class_system_ae85f88a65a564ff9b3308b05d8fd1fa2} 
+\index{System@{System}!System@{System}}
+\index{System@{System}!System@{System}}
+\doxysubsubsection{\texorpdfstring{System()}{System()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily System\+::\+System (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_system}{System}} \&}]{obj }\end{DoxyParamCaption})}
+
+
+
+Construtor de cópia do \doxylink{class_system}{System}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Referência constante para o objeto \doxylink{class_system}{System} que será copiado. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_system_a3be70bb338e3f062f821173fd15680d0}\label{class_system_a3be70bb338e3f062f821173fd15680d0} 
+\index{System@{System}!````~System@{\texorpdfstring{$\sim$}{\string~}System}}
+\index{````~System@{\texorpdfstring{$\sim$}{\string~}System}!System@{System}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}System()}{\string~System()}}
+{\footnotesize\ttfamily System\+::\texorpdfstring{$\sim$}{\string~}\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destrutor virtual do \doxylink{class_system}{System}. Garante a destruição correta de objetos em heranças, caso necessário no futuro. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_system_aa7d17369d1034e7d8643a63f69d1901d}\label{class_system_aa7d17369d1034e7d8643a63f69d1901d} 
+\index{System@{System}!getValue@{getValue}}
+\index{getValue@{getValue}!System@{System}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily double System\+::get\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtém o valor atual do sistema. 
+
+\begin{DoxyReturn}{Returns}
+double Retorna o valor (massa/energia) armazenado. 
+\end{DoxyReturn}
+\Hypertarget{class_system_a93f350faa6efd0b1eca2bfc2c73c8cd6}\label{class_system_a93f350faa6efd0b1eca2bfc2c73c8cd6} 
+\index{System@{System}!operator=@{operator=}}
+\index{operator=@{operator=}!System@{System}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_system}{System}} \& System\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_system}{System}} \&}]{obj }\end{DoxyParamCaption})}
+
+
+
+Sobrecarga do operador de atribuição (=). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Referência constante para o objeto \doxylink{class_system}{System} que será atribuído. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Referência para o próprio objeto recém-\/atualizado. 
+\end{DoxyReturn}
+\Hypertarget{class_system_a1882ddf97ae81fc751283365d9d89ade}\label{class_system_a1882ddf97ae81fc751283365d9d89ade} 
+\index{System@{System}!setValue@{setValue}}
+\index{setValue@{setValue}!System@{System}}
+\doxysubsubsection{\texorpdfstring{setValue()}{setValue()}}
+{\footnotesize\ttfamily void System\+::set\+Value (\begin{DoxyParamCaption}\item[{double}]{v }\end{DoxyParamCaption})}
+
+
+
+Define ou atualiza o valor do sistema. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Novo valor (double) que substituirá o valor atual do sistema. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{system_8hpp}{system.\+hpp}}\item 
+src/\mbox{\hyperlink{system_8cpp}{system.\+cpp}}\end{DoxyCompactItemize}

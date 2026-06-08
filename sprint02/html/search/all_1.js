@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['add_0',['add',['../classModel.html#a054350312f72e04ef46fe5b14f987735',1,'Model::add(System *s)'],['../classModel.html#a237ff1636694a6e26ff280c8d122540e',1,'Model::add(Flow *f)']]]
+  ['beginflows_0',['beginFlows',['../class_model.html#a2c1ca83c40f2dea05e01275651a476b1',1,'Model']]],
+  ['beginsystems_1',['beginSystems',['../class_model.html#a79fe15fb9d2fbd880eaaf38b0f03e17e',1,'Model']]]
 ];

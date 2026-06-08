@@ -1,31 +1,28 @@
 #include "unit_System.h"
-#include "../../src/system.hpp"
+#include "../../src/systemImpl.hpp"
 #include <assert.h>
 
 void unit_System_constructor(void) {
-    System s1;
+    SystemImpl s1;
     assert(s1.getValue() == 0.0);
 
-    System s2(10.0);
+    SystemImpl s2(10.0);
     assert(s2.getValue() == 10.0);
 
-    System s3(-5.5);
+    SystemImpl s3(-5.5);
     assert(s3.getValue() == -5.5);
-
-    System s4(0.0);
-    assert(s4.getValue() == 0.0);
 }
 
 void unit_System_destructor(void) {
     {
-        System s(42.0);
+        SystemImpl s(42.0);
         assert(s.getValue() == 42.0);
     }
 }
 
 void unit_System_copyConstructor(void) {
-    System original(99.0);
-    System copia(original);
+    SystemImpl original(99.0);
+    SystemImpl copia(original);
 
     assert(copia.getValue() == 99.0);
 
@@ -35,8 +32,8 @@ void unit_System_copyConstructor(void) {
 }
 
 void unit_System_assignmentOperator(void) {
-    System s1(50.0);
-    System s2(0.0);
+    SystemImpl s1(50.0);
+    SystemImpl s2(0.0);
 
     s2 = s1;
     assert(s2.getValue() == 50.0);
@@ -44,23 +41,23 @@ void unit_System_assignmentOperator(void) {
     s2.setValue(200.0);
     assert(s1.getValue() == 50.0);
 
-    s1 = s1; // auto-atribuição
+    s1 = s1;
     assert(s1.getValue() == 50.0);
 }
 
 void unit_System_getValue(void) {
-    System s(10.0);
+    SystemImpl s(10.0);
     assert(s.getValue() == 10.0);
 
-    System s2(0.0);
+    SystemImpl s2(0.0);
     assert(s2.getValue() == 0.0);
 
-    System s3(-100.0);
+    SystemImpl s3(-100.0);
     assert(s3.getValue() == -100.0);
 }
 
 void unit_System_setValue(void) {
-    System s;
+    SystemImpl s;
 
     s.setValue(100.0);
     assert(s.getValue() == 100.0);
