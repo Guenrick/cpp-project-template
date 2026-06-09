@@ -80,24 +80,34 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="unit___flow_8h_source.html">unit_Flow.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="flow_8hpp_source.html">../../src/flow.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="system_8hpp_source.html">../../src/system.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="flow_impl_8hpp_source.html">../../src/flowImpl.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="factory_8hpp_source.html">../../src/factory.hpp</a>&quot;</code><br />
 <code>#include &lt;assert.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for unit_Flow.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="unit___flow_8cpp__incl.png" border="0" usemap="#atest_2unit_2unit___flow_8cpp" alt=""/></div>
 <map name="atest_2unit_2unit___flow_8cpp" id="atest_2unit_2unit___flow_8cpp">
-<area shape="rect" title=" " alt="" coords="145,5,297,32"/>
+<area shape="rect" title=" " alt="" coords="105,5,257,32"/>
 <area shape="rect" href="unit___flow_8h.html" title="Declaração dos testes unitários da classe Flow." alt="" coords="5,80,93,107"/>
-<area shape="poly" title=" " alt="" coords="190,35,94,76,92,71,192,30"/>
-<area shape="rect" href="flow_8hpp.html" title="Declaração da classe Flow. Este arquivo contém a interface da classe abstrata Flow,..." alt="" coords="117,80,232,107"/>
-<area shape="poly" title=" " alt="" coords="215,31,192,69,189,65,211,34"/>
-<area shape="rect" href="system_8hpp.html" title=" " alt="" coords="176,155,266,181"/>
-<area shape="poly" title=" " alt="" coords="229,30,246,80,245,112,236,142,232,139,240,111,241,80,226,35"/>
-<area shape="rect" title=" " alt="" coords="307,80,375,107"/>
-<area shape="poly" title=" " alt="" coords="242,30,310,71,304,72,241,35"/>
-<area shape="poly" title=" " alt="" coords="184,105,207,142,202,141,181,110"/>
+<area shape="poly" title=" " alt="" coords="157,35,87,74,83,70,159,30"/>
+<area shape="rect" href="flow_impl_8hpp.html" title=" " alt="" coords="26,155,168,181"/>
+<area shape="poly" title=" " alt="" coords="173,35,114,143,109,140,175,30"/>
+<area shape="rect" href="factory_8hpp.html" title="Funcoes de fabrica para criacao de objetos do MyVENSIM." alt="" coords="167,80,299,107"/>
+<area shape="poly" title=" " alt="" coords="190,30,218,67,213,68,190,35"/>
+<area shape="rect" title=" " alt="" coords="323,80,391,107"/>
+<area shape="poly" title=" " alt="" coords="212,30,314,72,310,75,212,35"/>
+<area shape="rect" href="flow_8hpp.html" title=" " alt="" coords="72,229,141,256"/>
+<area shape="poly" title=" " alt="" coords="100,179,105,215,100,214,98,184"/>
+<area shape="rect" href="system_8hpp.html" title=" " alt="" coords="216,304,306,331"/>
+<area shape="poly" title=" " alt="" coords="134,254,223,296,218,298,133,259"/>
+<area shape="poly" title=" " alt="" coords="249,104,272,126,289,154,296,190,294,227,286,262,275,291,271,288,281,260,289,226,291,190,284,156,268,129,249,110"/>
+<area shape="rect" href="model_8hpp.html" title=" " alt="" coords="192,155,274,181"/>
+<area shape="poly" title=" " alt="" coords="234,105,235,140,231,138,232,110"/>
+<area shape="poly" title=" " alt="" coords="209,184,143,224,140,219,213,180"/>
+<area shape="poly" title=" " alt="" coords="237,180,258,289,253,288,233,184"/>
+<area shape="rect" title=" " alt="" coords="166,229,223,256"/>
+<area shape="poly" title=" " alt="" coords="228,180,210,217,206,214,224,184"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -109,16 +119,16 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a4b6e7371ad9b3059a32e0b1600e653a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit___flow_8cpp.html#a4b6e7371ad9b3059a32e0b1600e653a3">unit_Flow_constructor</a> (void)</td></tr>
-<tr class="memdesc:a4b6e7371ad9b3059a32e0b1600e653a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testa os construtores da classe <a class="el" href="class_flow.html" title="Classe abstrata que representa um fluxo de simulação. A classe Flow é responsável por conectar dois s...">Flow</a>. Verifica o construtor padrão (ponteiros nullptr) e o parametrizado.  <br /></td></tr>
+<tr class="memdesc:a4b6e7371ad9b3059a32e0b1600e653a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testa os construtores da classe <a class="el" href="class_flow.html" title="Interface da classe Flow. Define o contrato de um fluxo: conectar dois Systems e calcular a taxa de t...">Flow</a>. Verifica o construtor padrão (ponteiros nullptr) e o parametrizado.  <br /></td></tr>
 <tr class="separator:a4b6e7371ad9b3059a32e0b1600e653a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae158212a296c723df96316c44c67a045"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit___flow_8cpp.html#ae158212a296c723df96316c44c67a045">unit_Flow_destructor</a> (void)</td></tr>
-<tr class="memdesc:ae158212a296c723df96316c44c67a045"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testa o destrutor da classe <a class="el" href="class_flow.html" title="Classe abstrata que representa um fluxo de simulação. A classe Flow é responsável por conectar dois s...">Flow</a>. <a class="el" href="class_flow.html" title="Classe abstrata que representa um fluxo de simulação. A classe Flow é responsável por conectar dois s...">Flow</a> não é dona dos Systems — eles devem continuar intactos após o destrutor.  <br /></td></tr>
+<tr class="memdesc:ae158212a296c723df96316c44c67a045"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testa o destrutor da classe <a class="el" href="class_flow.html" title="Interface da classe Flow. Define o contrato de um fluxo: conectar dois Systems e calcular a taxa de t...">Flow</a>. <a class="el" href="class_flow.html" title="Interface da classe Flow. Define o contrato de um fluxo: conectar dois Systems e calcular a taxa de t...">Flow</a> não é dona dos Systems — eles devem continuar intactos após o destrutor.  <br /></td></tr>
 <tr class="separator:ae158212a296c723df96316c44c67a045"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bea4a60d8ace6f9cd01beca3d6e0901"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit___flow_8cpp.html#a6bea4a60d8ace6f9cd01beca3d6e0901">unit_Flow_copyConstructor</a> (void)</td></tr>
-<tr class="memdesc:a6bea4a60d8ace6f9cd01beca3d6e0901"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testa o construtor de cópia da classe <a class="el" href="class_flow.html" title="Classe abstrata que representa um fluxo de simulação. A classe Flow é responsável por conectar dois s...">Flow</a>. A cópia deve apontar para os mesmos sistemas que o original.  <br /></td></tr>
+<tr class="memdesc:a6bea4a60d8ace6f9cd01beca3d6e0901"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testa o construtor de cópia da classe <a class="el" href="class_flow.html" title="Interface da classe Flow. Define o contrato de um fluxo: conectar dois Systems e calcular a taxa de t...">Flow</a>. A cópia deve apontar para os mesmos sistemas que o original.  <br /></td></tr>
 <tr class="separator:a6bea4a60d8ace6f9cd01beca3d6e0901"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8d6df01fb780f4003b93fc0ae7fe9b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit___flow_8cpp.html#ac8d6df01fb780f4003b93fc0ae7fe9b9">unit_Flow_assignmentOperator</a> (void)</td></tr>
-<tr class="memdesc:ac8d6df01fb780f4003b93fc0ae7fe9b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testa o operador de atribuição da classe <a class="el" href="class_flow.html" title="Classe abstrata que representa um fluxo de simulação. A classe Flow é responsável por conectar dois s...">Flow</a>. Verifica atribuição normal e auto-atribuição.  <br /></td></tr>
+<tr class="memdesc:ac8d6df01fb780f4003b93fc0ae7fe9b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testa o operador de atribuição da classe <a class="el" href="class_flow.html" title="Interface da classe Flow. Define o contrato de um fluxo: conectar dois Systems e calcular a taxa de t...">Flow</a>. Verifica atribuição normal e auto-atribuição.  <br /></td></tr>
 <tr class="separator:ac8d6df01fb780f4003b93fc0ae7fe9b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2442717bcd816291df7364fea7a84683"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit___flow_8cpp.html#a2442717bcd816291df7364fea7a84683">unit_Flow_setSource</a> (void)</td></tr>
 <tr class="memdesc:a2442717bcd816291df7364fea7a84683"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testa o método setSource(). Após a chamada, getSource() deve retornar o novo ponteiro.  <br /></td></tr>
@@ -142,7 +152,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:afde1feedc7a89ff8baf0a88d1afc35f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testa o método execute() da subclasse <a class="el" href="class_concrete_flow.html">ConcreteFlow</a>. Verifica o cálculo com origem válida e com origem nula.  <br /></td></tr>
 <tr class="separator:afde1feedc7a89ff8baf0a88d1afc35f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad22590f3fd206c1de5ae1a673917de8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit___flow_8cpp.html#ad22590f3fd206c1de5ae1a673917de8c">run_unit_tests_Flow</a> (void)</td></tr>
-<tr class="memdesc:ad22590f3fd206c1de5ae1a673917de8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executa todos os testes unitários da classe <a class="el" href="class_flow.html" title="Classe abstrata que representa um fluxo de simulação. A classe Flow é responsável por conectar dois s...">Flow</a>.  <br /></td></tr>
+<tr class="memdesc:ad22590f3fd206c1de5ae1a673917de8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executa todos os testes unitários da classe <a class="el" href="class_flow.html" title="Interface da classe Flow. Define o contrato de um fluxo: conectar dois Systems e calcular a taxa de t...">Flow</a>.  <br /></td></tr>
 <tr class="separator:ad22590f3fd206c1de5ae1a673917de8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -162,7 +172,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Executa todos os testes unitários da classe <a class="el" href="class_flow.html" title="Classe abstrata que representa um fluxo de simulação. A classe Flow é responsável por conectar dois s...">Flow</a>. </p>
+<p>Executa todos os testes unitários da classe <a class="el" href="class_flow.html" title="Interface da classe Flow. Define o contrato de um fluxo: conectar dois Systems e calcular a taxa de t...">Flow</a>. </p>
 
 </div>
 </div>
@@ -182,7 +192,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Testa o operador de atribuição da classe <a class="el" href="class_flow.html" title="Classe abstrata que representa um fluxo de simulação. A classe Flow é responsável por conectar dois s...">Flow</a>. Verifica atribuição normal e auto-atribuição. </p>
+<p>Testa o operador de atribuição da classe <a class="el" href="class_flow.html" title="Interface da classe Flow. Define o contrato de um fluxo: conectar dois Systems e calcular a taxa de t...">Flow</a>. Verifica atribuição normal e auto-atribuição. </p>
 
 </div>
 </div>
@@ -242,7 +252,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Testa os construtores da classe <a class="el" href="class_flow.html" title="Classe abstrata que representa um fluxo de simulação. A classe Flow é responsável por conectar dois s...">Flow</a>. Verifica o construtor padrão (ponteiros nullptr) e o parametrizado. </p>
+<p>Testa os construtores da classe <a class="el" href="class_flow.html" title="Interface da classe Flow. Define o contrato de um fluxo: conectar dois Systems e calcular a taxa de t...">Flow</a>. Verifica o construtor padrão (ponteiros nullptr) e o parametrizado. </p>
 
 </div>
 </div>
@@ -262,7 +272,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Testa o construtor de cópia da classe <a class="el" href="class_flow.html" title="Classe abstrata que representa um fluxo de simulação. A classe Flow é responsável por conectar dois s...">Flow</a>. A cópia deve apontar para os mesmos sistemas que o original. </p>
+<p>Testa o construtor de cópia da classe <a class="el" href="class_flow.html" title="Interface da classe Flow. Define o contrato de um fluxo: conectar dois Systems e calcular a taxa de t...">Flow</a>. A cópia deve apontar para os mesmos sistemas que o original. </p>
 
 </div>
 </div>
@@ -282,7 +292,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Testa o destrutor da classe <a class="el" href="class_flow.html" title="Classe abstrata que representa um fluxo de simulação. A classe Flow é responsável por conectar dois s...">Flow</a>. <a class="el" href="class_flow.html" title="Classe abstrata que representa um fluxo de simulação. A classe Flow é responsável por conectar dois s...">Flow</a> não é dona dos Systems — eles devem continuar intactos após o destrutor. </p>
+<p>Testa o destrutor da classe <a class="el" href="class_flow.html" title="Interface da classe Flow. Define o contrato de um fluxo: conectar dois Systems e calcular a taxa de t...">Flow</a>. <a class="el" href="class_flow.html" title="Interface da classe Flow. Define o contrato de um fluxo: conectar dois Systems e calcular a taxa de t...">Flow</a> não é dona dos Systems — eles devem continuar intactos após o destrutor. </p>
 
 </div>
 </div>

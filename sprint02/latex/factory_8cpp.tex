@@ -1,0 +1,54 @@
+\doxysection{src/factory.cpp File Reference}
+\hypertarget{factory_8cpp}{}\label{factory_8cpp}\index{src/factory.cpp@{src/factory.cpp}}
+
+
+Implementacao das funcoes de fabrica.  
+
+
+{\ttfamily \#include \"{}factory.\+hpp\"{}}\newline
+{\ttfamily \#include \"{}system\+Impl.\+hpp\"{}}\newline
+{\ttfamily \#include \"{}model\+Impl.\+hpp\"{}}\newline
+Include dependency graph for factory.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{factory_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{factory_8cpp_add37a387de08deb7594b5bcad1d1c479}{create\+System}} (double value)
+\begin{DoxyCompactList}\small\item\em Cria um \doxylink{class_system_impl}{System\+Impl} e retorna como ponteiro para \doxylink{class_system}{System}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_model}{Model}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{factory_8cpp_ab6eb2892b3ab436a84a64e974780c361}{create\+Model}} ()
+\begin{DoxyCompactList}\small\item\em Cria um \doxylink{class_model_impl}{Model\+Impl} e retorna como ponteiro para \doxylink{class_model}{Model}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementacao das funcoes de fabrica. 
+
+Este arquivo e o unico ponto do projeto que conhece \doxylink{class_system_impl}{System\+Impl} e \doxylink{class_model_impl}{Model\+Impl}. Fica compilado dentro da biblioteca compartilhada (libmyvensim.\+so), permanecendo invisivel para os clientes da biblioteca. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{factory_8cpp_ab6eb2892b3ab436a84a64e974780c361}\label{factory_8cpp_ab6eb2892b3ab436a84a64e974780c361} 
+\index{factory.cpp@{factory.cpp}!createModel@{createModel}}
+\index{createModel@{createModel}!factory.cpp@{factory.cpp}}
+\doxysubsubsection{\texorpdfstring{createModel()}{createModel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_model}{Model}} \texorpdfstring{$\ast$}{*} create\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Cria um \doxylink{class_model_impl}{Model\+Impl} e retorna como ponteiro para \doxylink{class_model}{Model}. 
+
+Cria um novo objeto \doxylink{class_model}{Model}. \Hypertarget{factory_8cpp_add37a387de08deb7594b5bcad1d1c479}\label{factory_8cpp_add37a387de08deb7594b5bcad1d1c479} 
+\index{factory.cpp@{factory.cpp}!createSystem@{createSystem}}
+\index{createSystem@{createSystem}!factory.cpp@{factory.cpp}}
+\doxysubsubsection{\texorpdfstring{createSystem()}{createSystem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} create\+System (\begin{DoxyParamCaption}\item[{double}]{value }\end{DoxyParamCaption})}
+
+
+
+Cria um \doxylink{class_system_impl}{System\+Impl} e retorna como ponteiro para \doxylink{class_system}{System}. 
+
+Cria um novo objeto \doxylink{class_system}{System}. 

@@ -1,0 +1,72 @@
+\doxysection{src/factory.hpp File Reference}
+\hypertarget{factory_8hpp}{}\label{factory_8hpp}\index{src/factory.hpp@{src/factory.hpp}}
+
+
+Funcoes de fabrica para criacao de objetos do My\+VENSIM.  
+
+
+{\ttfamily \#include \"{}system.\+hpp\"{}}\newline
+{\ttfamily \#include \"{}model.\+hpp\"{}}\newline
+Include dependency graph for factory.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=271pt]{factory_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{factory_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{factory_8hpp_afed88e5f8551d949a8ab4a70cbd0eee8}{create\+System}} (double value=0.\+0)
+\begin{DoxyCompactList}\small\item\em Cria um novo objeto \doxylink{class_system}{System}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_model}{Model}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{factory_8hpp_ab6eb2892b3ab436a84a64e974780c361}{create\+Model}} ()
+\begin{DoxyCompactList}\small\item\em Cria um novo objeto \doxylink{class_model}{Model}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Funcoes de fabrica para criacao de objetos do My\+VENSIM. 
+
+Expoe apenas as interfaces publicas (\doxylink{class_system}{System} e \doxylink{class_model}{Model}), ocultando completamente as implementacoes concretas (\doxylink{class_system_impl}{System\+Impl}, \doxylink{class_model_impl}{Model\+Impl}). 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{factory_8hpp_ab6eb2892b3ab436a84a64e974780c361}\label{factory_8hpp_ab6eb2892b3ab436a84a64e974780c361} 
+\index{factory.hpp@{factory.hpp}!createModel@{createModel}}
+\index{createModel@{createModel}!factory.hpp@{factory.hpp}}
+\doxysubsubsection{\texorpdfstring{createModel()}{createModel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_model}{Model}} \texorpdfstring{$\ast$}{*} create\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Cria um novo objeto \doxylink{class_model}{Model}. 
+
+\begin{DoxyReturn}{Returns}
+Ponteiro para a interface \doxylink{class_model}{Model}. O chamador e responsavel por deletar o objeto.
+\end{DoxyReturn}
+Cria um novo objeto \doxylink{class_model}{Model}. \Hypertarget{factory_8hpp_afed88e5f8551d949a8ab4a70cbd0eee8}\label{factory_8hpp_afed88e5f8551d949a8ab4a70cbd0eee8} 
+\index{factory.hpp@{factory.hpp}!createSystem@{createSystem}}
+\index{createSystem@{createSystem}!factory.hpp@{factory.hpp}}
+\doxysubsubsection{\texorpdfstring{createSystem()}{createSystem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} create\+System (\begin{DoxyParamCaption}\item[{double}]{value }\end{DoxyParamCaption})}
+
+
+
+Cria um novo objeto \doxylink{class_system}{System}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Valor inicial do sistema (padrao\+: 0.\+0). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ponteiro para a interface \doxylink{class_system}{System}. O chamador e responsavel por deletar o objeto.
+\end{DoxyReturn}
+Cria um novo objeto \doxylink{class_system}{System}. 

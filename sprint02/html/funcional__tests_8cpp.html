@@ -79,13 +79,9 @@ $(function() {
   <div class="headertitle"><div class="title">funcional_tests.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p>Implementação dos testes funcionais e das classes de fluxo específicas. Este arquivo contém as implementações das classes filhas de <a class="el" href="class_flow.html" title="Classe abstrata que representa um fluxo de simulação. A classe Flow é responsável por conectar dois s...">Flow</a> (Exponencial, Logístico e Complexo) utilizadas exclusivamente para validar a arquitetura do simulador, bem como o código de execução de cada cenário de teste.  
-<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="funcional__tests_8hpp_source.html">funcional_tests.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="model_8hpp_source.html">../../src/model.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="system_8hpp_source.html">../../src/system.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="flow_8hpp_source.html">../../src/flow.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="flow_impl_8hpp_source.html">../../src/flowImpl.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="factory_8hpp_source.html">../../src/factory.hpp</a>&quot;</code><br />
 <code>#include &lt;cassert&gt;</code><br />
 <code>#include &lt;cmath&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -93,56 +89,55 @@ Include dependency graph for funcional_tests.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="funcional__tests_8cpp__incl.png" border="0" usemap="#atest_2funcional_2funcional__tests_8cpp" alt=""/></div>
 <map name="atest_2funcional_2funcional__tests_8cpp" id="atest_2funcional_2funcional__tests_8cpp">
-<area shape="rect" title="Implementação dos testes funcionais e das classes de fluxo específicas. Este arquivo contém as implem..." alt="" coords="276,5,432,48"/>
+<area shape="rect" title=" " alt="" coords="202,5,357,48"/>
 <area shape="rect" href="funcional__tests_8hpp.html" title="Declaração das funções de testes funcionais do simulador." alt="" coords="5,96,140,123"/>
-<area shape="poly" title=" " alt="" coords="280,51,133,94,131,89,283,46"/>
-<area shape="rect" href="model_8hpp.html" title="Declaração da classe Model." alt="" coords="164,96,291,123"/>
-<area shape="poly" title=" " alt="" coords="319,50,261,90,258,85,323,47"/>
-<area shape="rect" href="system_8hpp.html" title=" " alt="" coords="262,245,352,272"/>
-<area shape="poly" title=" " alt="" coords="360,46,367,116,365,157,356,198,346,218,333,236,330,232,342,215,351,196,360,157,362,116,356,51"/>
-<area shape="rect" href="flow_8hpp.html" title="Declaração da classe Flow. Este arquivo contém a interface da classe abstrata Flow,..." alt="" coords="272,171,342,197"/>
-<area shape="poly" title=" " alt="" coords="350,47,318,157,313,154,346,50"/>
-<area shape="rect" title=" " alt="" coords="416,96,481,123"/>
-<area shape="poly" title=" " alt="" coords="379,46,425,86,419,86,378,51"/>
-<area shape="rect" title=" " alt="" coords="505,96,562,123"/>
-<area shape="poly" title=" " alt="" coords="400,46,494,89,489,90,400,51"/>
-<area shape="rect" title=" " alt="" coords="140,171,197,197"/>
-<area shape="poly" title=" " alt="" coords="219,122,190,160,186,157,215,125"/>
-<area shape="poly" title=" " alt="" coords="232,121,245,156,263,196,288,234,283,233,258,199,240,158,229,125"/>
-<area shape="poly" title=" " alt="" coords="242,121,285,160,280,160,240,126"/>
-<area shape="poly" title=" " alt="" coords="309,196,309,231,305,228,305,200"/>
+<area shape="poly" title=" " alt="" coords="224,51,121,92,118,88,227,46"/>
+<area shape="rect" href="flow_impl_8hpp.html" title=" " alt="" coords="72,171,214,197"/>
+<area shape="poly" title=" " alt="" coords="251,51,204,98,160,159,156,156,200,94,254,47"/>
+<area shape="rect" href="factory_8hpp.html" title="Funcoes de fabrica para criacao de objetos do MyVENSIM." alt="" coords="214,96,345,123"/>
+<area shape="poly" title=" " alt="" coords="280,46,282,81,277,79,278,51"/>
+<area shape="rect" title=" " alt="" coords="368,96,433,123"/>
+<area shape="poly" title=" " alt="" coords="311,46,371,87,366,88,310,51"/>
+<area shape="rect" title=" " alt="" coords="457,96,514,123"/>
+<area shape="poly" title=" " alt="" coords="332,46,445,90,440,92,332,51"/>
+<area shape="rect" href="flow_8hpp.html" title=" " alt="" coords="118,245,187,272"/>
+<area shape="poly" title=" " alt="" coords="146,195,152,231,146,229,144,200"/>
+<area shape="rect" href="system_8hpp.html" title=" " alt="" coords="262,320,352,347"/>
+<area shape="poly" title=" " alt="" coords="180,270,269,312,264,314,179,275"/>
+<area shape="poly" title=" " alt="" coords="296,120,318,142,335,170,342,206,340,243,332,278,321,307,318,304,327,276,335,242,337,206,330,172,314,145,295,126"/>
+<area shape="rect" href="model_8hpp.html" title=" " alt="" coords="238,171,320,197"/>
+<area shape="poly" title=" " alt="" coords="280,121,282,156,277,154,278,126"/>
+<area shape="poly" title=" " alt="" coords="255,199,189,240,186,235,259,197"/>
+<area shape="poly" title=" " alt="" coords="283,196,304,305,299,304,280,200"/>
+<area shape="rect" title=" " alt="" coords="212,245,269,272"/>
+<area shape="poly" title=" " alt="" coords="274,196,256,233,252,230,270,200"/>
 </map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exponential_flow.html">ExponentialFlow</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Classe que implementa um fluxo Exponencial para os testes. Calcula a transferência de massa com base em uma taxa fixa (0.01) multiplicada pelo valor atual do sistema de origem.  <a href="class_exponential_flow.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_logistic_flow.html">LogisticFlow</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Classe que implementa um fluxo Logístico para os testes. Calcula a transferência com base em uma equação de crescimento logístico dependente do valor do sistema de destino e de uma capacidade máxima (70.0).  <a href="class_logistic_flow.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_complex_flow.html">ComplexFlow</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Classe que implementa um fluxo Complexo para os testes de rede. Possui o mesmo comportamento matemático do fluxo exponencial, servindo especificamente para interligar múltiplos sistemas no teste complexo de grafos.  <a href="class_complex_flow.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a2c448ffaffdff4b03c825a01dffa6f27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funcional__tests_8cpp.html#a2c448ffaffdff4b03c825a01dffa6f27">exponentialFuncionalTest</a> ()</td></tr>
-<tr class="memdesc:a2c448ffaffdff4b03c825a01dffa6f27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executa o teste funcional para o modelo exponencial.  <br /></td></tr>
-<tr class="separator:a2c448ffaffdff4b03c825a01dffa6f27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60914db64bde71b56d69320797266c29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funcional__tests_8cpp.html#a60914db64bde71b56d69320797266c29">logisticalFuncionalTest</a> ()</td></tr>
-<tr class="memdesc:a60914db64bde71b56d69320797266c29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executa o teste funcional para o modelo logístico.  <br /></td></tr>
-<tr class="separator:a60914db64bde71b56d69320797266c29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a943dfe0c597a01c9760c140715fed527"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funcional__tests_8cpp.html#a943dfe0c597a01c9760c140715fed527">complexFuncionalTest</a> ()</td></tr>
-<tr class="memdesc:a943dfe0c597a01c9760c140715fed527"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executa o teste funcional complexo (cenário de rede).  <br /></td></tr>
-<tr class="separator:a943dfe0c597a01c9760c140715fed527"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dc4a254782f6fee3a88faa5b9b9498e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funcional__tests_8cpp.html#a4dc4a254782f6fee3a88faa5b9b9498e">exponentialFuncionalTest</a> (void)</td></tr>
+<tr class="memdesc:a4dc4a254782f6fee3a88faa5b9b9498e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executa o teste funcional para o modelo exponencial.  <br /></td></tr>
+<tr class="separator:a4dc4a254782f6fee3a88faa5b9b9498e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1437d4d7164d5fda6c5caccea352eea8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funcional__tests_8cpp.html#a1437d4d7164d5fda6c5caccea352eea8">logisticalFuncionalTest</a> (void)</td></tr>
+<tr class="memdesc:a1437d4d7164d5fda6c5caccea352eea8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executa o teste funcional para o modelo logístico.  <br /></td></tr>
+<tr class="separator:a1437d4d7164d5fda6c5caccea352eea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e9f63b18e0833b74fd2513d758ee4da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funcional__tests_8cpp.html#a4e9f63b18e0833b74fd2513d758ee4da">complexFuncionalTest</a> (void)</td></tr>
+<tr class="memdesc:a4e9f63b18e0833b74fd2513d758ee4da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executa o teste funcional complexo (cenário de rede).  <br /></td></tr>
+<tr class="separator:a4e9f63b18e0833b74fd2513d758ee4da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Implementação dos testes funcionais e das classes de fluxo específicas. Este arquivo contém as implementações das classes filhas de <a class="el" href="class_flow.html" title="Classe abstrata que representa um fluxo de simulação. A classe Flow é responsável por conectar dois s...">Flow</a> (Exponencial, Logístico e Complexo) utilizadas exclusivamente para validar a arquitetura do simulador, bem como o código de execução de cada cenário de teste. </p>
-</div><h2 class="groupheader">Function Documentation</h2>
-<a id="a943dfe0c597a01c9760c140715fed527" name="a943dfe0c597a01c9760c140715fed527"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a943dfe0c597a01c9760c140715fed527">&#9670;&#160;</a></span>complexFuncionalTest()</h2>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a4e9f63b18e0833b74fd2513d758ee4da" name="a4e9f63b18e0833b74fd2513d758ee4da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e9f63b18e0833b74fd2513d758ee4da">&#9670;&#160;</a></span>complexFuncionalTest()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -163,8 +158,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a2c448ffaffdff4b03c825a01dffa6f27" name="a2c448ffaffdff4b03c825a01dffa6f27"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c448ffaffdff4b03c825a01dffa6f27">&#9670;&#160;</a></span>exponentialFuncionalTest()</h2>
+<a id="a4dc4a254782f6fee3a88faa5b9b9498e" name="a4dc4a254782f6fee3a88faa5b9b9498e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dc4a254782f6fee3a88faa5b9b9498e">&#9670;&#160;</a></span>exponentialFuncionalTest()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -185,8 +180,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a60914db64bde71b56d69320797266c29" name="a60914db64bde71b56d69320797266c29"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a60914db64bde71b56d69320797266c29">&#9670;&#160;</a></span>logisticalFuncionalTest()</h2>
+<a id="a1437d4d7164d5fda6c5caccea352eea8" name="a1437d4d7164d5fda6c5caccea352eea8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1437d4d7164d5fda6c5caccea352eea8">&#9670;&#160;</a></span>logisticalFuncionalTest()</h2>
 
 <div class="memitem">
 <div class="memproto">

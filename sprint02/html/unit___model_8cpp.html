@@ -80,9 +80,8 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="unit___model_8h_source.html">unit_Model.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="model_8hpp_source.html">../../src/model.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="system_8hpp_source.html">../../src/system.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="flow_8hpp_source.html">../../src/flow.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="flow_impl_8hpp_source.html">../../src/flowImpl.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="factory_8hpp_source.html">../../src/factory.hpp</a>&quot;</code><br />
 <code>#include &lt;assert.h&gt;</code><br />
 <code>#include &lt;cmath&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -90,46 +89,49 @@ Include dependency graph for unit_Model.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="unit___model_8cpp__incl.png" border="0" usemap="#atest_2unit_2unit___model_8cpp" alt=""/></div>
 <map name="atest_2unit_2unit___model_8cpp" id="atest_2unit_2unit___model_8cpp">
-<area shape="rect" title=" " alt="" coords="236,5,396,32"/>
+<area shape="rect" title=" " alt="" coords="161,5,321,32"/>
 <area shape="rect" href="unit___model_8h.html" title="Declaração dos testes unitários da classe Model." alt="" coords="5,80,101,107"/>
-<area shape="poly" title=" " alt="" coords="269,35,115,78,113,73,271,30"/>
-<area shape="rect" href="model_8hpp.html" title="Declaração da classe Model." alt="" coords="125,80,253,107"/>
-<area shape="poly" title=" " alt="" coords="291,34,226,74,223,70,296,31"/>
-<area shape="rect" href="system_8hpp.html" title=" " alt="" coords="224,229,314,256"/>
-<area shape="poly" title=" " alt="" coords="320,30,328,97,327,140,318,182,308,202,295,220,292,216,304,199,313,180,322,139,323,98,317,35"/>
-<area shape="rect" href="flow_8hpp.html" title="Declaração da classe Flow. Este arquivo contém a interface da classe abstrata Flow,..." alt="" coords="234,155,304,181"/>
-<area shape="poly" title=" " alt="" coords="314,31,280,141,275,138,310,34"/>
-<area shape="rect" title=" " alt="" coords="379,80,447,107"/>
-<area shape="poly" title=" " alt="" coords="333,30,387,71,382,71,332,35"/>
-<area shape="rect" title=" " alt="" coords="471,80,528,107"/>
-<area shape="poly" title=" " alt="" coords="348,30,459,74,454,76,348,35"/>
-<area shape="rect" title=" " alt="" coords="102,155,159,181"/>
-<area shape="poly" title=" " alt="" coords="181,105,152,144,148,141,177,109"/>
-<area shape="poly" title=" " alt="" coords="194,105,207,140,225,180,250,218,245,217,220,183,202,142,191,109"/>
-<area shape="poly" title=" " alt="" coords="204,105,247,144,242,145,202,110"/>
-<area shape="poly" title=" " alt="" coords="271,180,271,215,267,212,267,184"/>
+<area shape="poly" title=" " alt="" coords="207,35,102,76,99,72,210,30"/>
+<area shape="rect" href="flow_impl_8hpp.html" title=" " alt="" coords="34,155,176,181"/>
+<area shape="poly" title=" " alt="" coords="220,34,195,55,166,82,141,112,122,142,117,140,137,109,162,78,191,51,224,30"/>
+<area shape="rect" href="factory_8hpp.html" title="Funcoes de fabrica para criacao de objetos do MyVENSIM." alt="" coords="175,80,307,107"/>
+<area shape="poly" title=" " alt="" coords="242,30,244,65,238,64,240,35"/>
+<area shape="rect" title=" " alt="" coords="331,80,399,107"/>
+<area shape="poly" title=" " alt="" coords="263,30,333,71,328,73,263,35"/>
+<area shape="rect" title=" " alt="" coords="423,80,480,107"/>
+<area shape="poly" title=" " alt="" coords="278,30,411,76,406,78,278,35"/>
+<area shape="rect" href="flow_8hpp.html" title=" " alt="" coords="80,229,149,256"/>
+<area shape="poly" title=" " alt="" coords="108,179,113,215,108,214,106,184"/>
+<area shape="rect" href="system_8hpp.html" title=" " alt="" coords="224,304,314,331"/>
+<area shape="poly" title=" " alt="" coords="142,254,231,296,226,298,141,259"/>
+<area shape="poly" title=" " alt="" coords="257,104,280,126,297,154,304,190,302,227,294,262,283,291,279,288,289,260,297,226,299,190,292,156,276,129,257,110"/>
+<area shape="rect" href="model_8hpp.html" title=" " alt="" coords="200,155,282,181"/>
+<area shape="poly" title=" " alt="" coords="242,105,243,140,239,138,240,110"/>
+<area shape="poly" title=" " alt="" coords="217,183,151,224,148,219,221,180"/>
+<area shape="poly" title=" " alt="" coords="245,180,266,289,261,288,241,184"/>
+<area shape="rect" title=" " alt="" coords="174,229,231,256"/>
+<area shape="poly" title=" " alt="" coords="236,180,218,217,214,214,232,184"/>
 </map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exponential_flow.html">ExponentialFlow</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Classe que implementa um fluxo Exponencial para os testes. Calcula a transferência de massa com base em uma taxa fixa (0.01) multiplicada pelo valor atual do sistema de origem.  <a href="class_exponential_flow.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:af0c874c71422ff355ec8579c9a859738"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit___model_8cpp.html#af0c874c71422ff355ec8579c9a859738">unit_Model_constructor</a> (void)</td></tr>
-<tr class="memdesc:af0c874c71422ff355ec8579c9a859738"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testa o construtor padrão de <a class="el" href="class_model.html" title="Contêiner e motor principal da simulação.">Model</a>. Um <a class="el" href="class_model.html" title="Contêiner e motor principal da simulação.">Model</a> recém-criado deve ter listas de sistemas e fluxos vazias.  <br /></td></tr>
+<tr class="memdesc:af0c874c71422ff355ec8579c9a859738"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testa o construtor padrão de <a class="el" href="class_model.html" title="Interface da classe Model. Define o contrato do motor de simulacao: adicionar/remover Systems e Flows...">Model</a>. Um <a class="el" href="class_model.html" title="Interface da classe Model. Define o contrato do motor de simulacao: adicionar/remover Systems e Flows...">Model</a> recém-criado deve ter listas de sistemas e fluxos vazias.  <br /></td></tr>
 <tr class="separator:af0c874c71422ff355ec8579c9a859738"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab348ace4d56947bf92a931650a17b240"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit___model_8cpp.html#ab348ace4d56947bf92a931650a17b240">unit_Model_destructor</a> (void)</td></tr>
-<tr class="memdesc:ab348ace4d56947bf92a931650a17b240"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testa o destrutor de <a class="el" href="class_model.html" title="Contêiner e motor principal da simulação.">Model</a>. <a class="el" href="class_model.html" title="Contêiner e motor principal da simulação.">Model</a> não é dono dos objetos — sistemas devem continuar intactos após o destrutor.  <br /></td></tr>
+<tr class="memdesc:ab348ace4d56947bf92a931650a17b240"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testa o destrutor de <a class="el" href="class_model.html" title="Interface da classe Model. Define o contrato do motor de simulacao: adicionar/remover Systems e Flows...">Model</a>. <a class="el" href="class_model.html" title="Interface da classe Model. Define o contrato do motor de simulacao: adicionar/remover Systems e Flows...">Model</a> não é dono dos objetos — sistemas devem continuar intactos após o destrutor.  <br /></td></tr>
 <tr class="separator:ab348ace4d56947bf92a931650a17b240"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5504169b35177d0717c8074ef376d19a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit___model_8cpp.html#a5504169b35177d0717c8074ef376d19a">unit_Model_copyConstructor</a> (void)</td></tr>
-<tr class="memdesc:a5504169b35177d0717c8074ef376d19a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testa o construtor de cópia de <a class="el" href="class_model.html" title="Contêiner e motor principal da simulação.">Model</a>. A cópia deve conter os mesmos ponteiros que o original.  <br /></td></tr>
+<tr class="memdesc:a5504169b35177d0717c8074ef376d19a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testa o construtor de cópia de <a class="el" href="class_model.html" title="Interface da classe Model. Define o contrato do motor de simulacao: adicionar/remover Systems e Flows...">Model</a>. A cópia deve conter os mesmos ponteiros que o original.  <br /></td></tr>
 <tr class="separator:a5504169b35177d0717c8074ef376d19a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28d45d33aaf478ce3a0eef7c230df523"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit___model_8cpp.html#a28d45d33aaf478ce3a0eef7c230df523">unit_Model_assignmentOperator</a> (void)</td></tr>
-<tr class="memdesc:a28d45d33aaf478ce3a0eef7c230df523"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testa o operador de atribuição de <a class="el" href="class_model.html" title="Contêiner e motor principal da simulação.">Model</a>. Verifica atribuição normal e auto-atribuição.  <br /></td></tr>
+<tr class="memdesc:a28d45d33aaf478ce3a0eef7c230df523"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testa o operador de atribuição de <a class="el" href="class_model.html" title="Interface da classe Model. Define o contrato do motor de simulacao: adicionar/remover Systems e Flows...">Model</a>. Verifica atribuição normal e auto-atribuição.  <br /></td></tr>
 <tr class="separator:a28d45d33aaf478ce3a0eef7c230df523"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3057ba58ead378390c26338bf4b8b081"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit___model_8cpp.html#a3057ba58ead378390c26338bf4b8b081">unit_Model_add_System</a> (void)</td></tr>
 <tr class="memdesc:a3057ba58ead378390c26338bf4b8b081"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testa add(System*). Após adicionar, o iterador deve encontrar o sistema na lista.  <br /></td></tr>
@@ -156,10 +158,10 @@ Functions</h2></td></tr>
 <tr class="memdesc:ad6a97adba7764c4eb5a04c9c39dd0aca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testa endFlows(). A iteração completa deve percorrer exatamente todos os fluxos adicionados.  <br /></td></tr>
 <tr class="separator:ad6a97adba7764c4eb5a04c9c39dd0aca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac3d89a223697eccea16a00a2ac266f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit___model_8cpp.html#aac3d89a223697eccea16a00a2ac266f0">unit_Model_execute</a> (void)</td></tr>
-<tr class="memdesc:aac3d89a223697eccea16a00a2ac266f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testa execute() com o modelo exponencial clássico. Configuração: pop1=100, pop2=0, <a class="el" href="class_exponential_flow.html" title="Classe que implementa um fluxo Exponencial para os testes. Calcula a transferência de massa com base ...">ExponentialFlow</a>, 100 iterações. Resultado esperado: pop1 ≈ 36.6032, pop2 ≈ 63.3968.  <br /></td></tr>
+<tr class="memdesc:aac3d89a223697eccea16a00a2ac266f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testa execute() com o modelo exponencial clássico. Configuração: pop1=100, pop2=0, <a class="el" href="class_exponential_flow.html">ExponentialFlow</a>, 100 iterações. Resultado esperado: pop1 ≈ 36.6032, pop2 ≈ 63.3968.  <br /></td></tr>
 <tr class="separator:aac3d89a223697eccea16a00a2ac266f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9809e814596bf9bf3c37918190a866c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit___model_8cpp.html#ac9809e814596bf9bf3c37918190a866c">run_unit_tests_Model</a> (void)</td></tr>
-<tr class="memdesc:ac9809e814596bf9bf3c37918190a866c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executa todos os testes unitários da classe <a class="el" href="class_model.html" title="Contêiner e motor principal da simulação.">Model</a>.  <br /></td></tr>
+<tr class="memdesc:ac9809e814596bf9bf3c37918190a866c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executa todos os testes unitários da classe <a class="el" href="class_model.html" title="Interface da classe Model. Define o contrato do motor de simulacao: adicionar/remover Systems e Flows...">Model</a>.  <br /></td></tr>
 <tr class="separator:ac9809e814596bf9bf3c37918190a866c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -179,7 +181,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Executa todos os testes unitários da classe <a class="el" href="class_model.html" title="Contêiner e motor principal da simulação.">Model</a>. </p>
+<p>Executa todos os testes unitários da classe <a class="el" href="class_model.html" title="Interface da classe Model. Define o contrato do motor de simulacao: adicionar/remover Systems e Flows...">Model</a>. </p>
 
 </div>
 </div>
@@ -239,7 +241,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Testa o operador de atribuição de <a class="el" href="class_model.html" title="Contêiner e motor principal da simulação.">Model</a>. Verifica atribuição normal e auto-atribuição. </p>
+<p>Testa o operador de atribuição de <a class="el" href="class_model.html" title="Interface da classe Model. Define o contrato do motor de simulacao: adicionar/remover Systems e Flows...">Model</a>. Verifica atribuição normal e auto-atribuição. </p>
 
 </div>
 </div>
@@ -299,7 +301,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Testa o construtor padrão de <a class="el" href="class_model.html" title="Contêiner e motor principal da simulação.">Model</a>. Um <a class="el" href="class_model.html" title="Contêiner e motor principal da simulação.">Model</a> recém-criado deve ter listas de sistemas e fluxos vazias. </p>
+<p>Testa o construtor padrão de <a class="el" href="class_model.html" title="Interface da classe Model. Define o contrato do motor de simulacao: adicionar/remover Systems e Flows...">Model</a>. Um <a class="el" href="class_model.html" title="Interface da classe Model. Define o contrato do motor de simulacao: adicionar/remover Systems e Flows...">Model</a> recém-criado deve ter listas de sistemas e fluxos vazias. </p>
 
 </div>
 </div>
@@ -319,7 +321,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Testa o construtor de cópia de <a class="el" href="class_model.html" title="Contêiner e motor principal da simulação.">Model</a>. A cópia deve conter os mesmos ponteiros que o original. </p>
+<p>Testa o construtor de cópia de <a class="el" href="class_model.html" title="Interface da classe Model. Define o contrato do motor de simulacao: adicionar/remover Systems e Flows...">Model</a>. A cópia deve conter os mesmos ponteiros que o original. </p>
 
 </div>
 </div>
@@ -339,7 +341,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Testa o destrutor de <a class="el" href="class_model.html" title="Contêiner e motor principal da simulação.">Model</a>. <a class="el" href="class_model.html" title="Contêiner e motor principal da simulação.">Model</a> não é dono dos objetos — sistemas devem continuar intactos após o destrutor. </p>
+<p>Testa o destrutor de <a class="el" href="class_model.html" title="Interface da classe Model. Define o contrato do motor de simulacao: adicionar/remover Systems e Flows...">Model</a>. <a class="el" href="class_model.html" title="Interface da classe Model. Define o contrato do motor de simulacao: adicionar/remover Systems e Flows...">Model</a> não é dono dos objetos — sistemas devem continuar intactos após o destrutor. </p>
 
 </div>
 </div>
@@ -399,7 +401,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Testa execute() com o modelo exponencial clássico. Configuração: pop1=100, pop2=0, <a class="el" href="class_exponential_flow.html" title="Classe que implementa um fluxo Exponencial para os testes. Calcula a transferência de massa com base ...">ExponentialFlow</a>, 100 iterações. Resultado esperado: pop1 ≈ 36.6032, pop2 ≈ 63.3968. </p>
+<p>Testa execute() com o modelo exponencial clássico. Configuração: pop1=100, pop2=0, <a class="el" href="class_exponential_flow.html">ExponentialFlow</a>, 100 iterações. Resultado esperado: pop1 ≈ 36.6032, pop2 ≈ 63.3968. </p>
 
 </div>
 </div>

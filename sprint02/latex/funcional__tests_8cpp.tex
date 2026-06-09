@@ -1,14 +1,8 @@
 \doxysection{test/funcional/funcional\+\_\+tests.cpp File Reference}
 \hypertarget{funcional__tests_8cpp}{}\label{funcional__tests_8cpp}\index{test/funcional/funcional\_tests.cpp@{test/funcional/funcional\_tests.cpp}}
-
-
-Implementação dos testes funcionais e das classes de fluxo específicas. Este arquivo contém as implementações das classes filhas de \doxylink{class_flow}{Flow} (Exponencial, Logístico e Complexo) utilizadas exclusivamente para validar a arquitetura do simulador, bem como o código de execução de cada cenário de teste.  
-
-
 {\ttfamily \#include \"{}funcional\+\_\+tests.\+hpp\"{}}\newline
-{\ttfamily \#include \"{}../../src/model.\+hpp\"{}}\newline
-{\ttfamily \#include \"{}../../src/system.\+hpp\"{}}\newline
-{\ttfamily \#include \"{}../../src/flow.\+hpp\"{}}\newline
+{\ttfamily \#include \"{}../../src/flow\+Impl.\+hpp\"{}}\newline
+{\ttfamily \#include \"{}../../src/factory.\+hpp\"{}}\newline
 {\ttfamily \#include $<$cassert$>$}\newline
 {\ttfamily \#include $<$cmath$>$}\newline
 Include dependency graph for funcional\+\_\+tests.\+cpp\+:
@@ -23,29 +17,24 @@ Include dependency graph for funcional\+\_\+tests.\+cpp\+:
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{class_exponential_flow}{Exponential\+Flow}}
-\begin{DoxyCompactList}\small\item\em Classe que implementa um fluxo Exponencial para os testes. Calcula a transferência de massa com base em uma taxa fixa (0.\+01) multiplicada pelo valor atual do sistema de origem. \end{DoxyCompactList}\item 
+\item 
 class \mbox{\hyperlink{class_logistic_flow}{Logistic\+Flow}}
-\begin{DoxyCompactList}\small\item\em Classe que implementa um fluxo Logístico para os testes. Calcula a transferência com base em uma equação de crescimento logístico dependente do valor do sistema de destino e de uma capacidade máxima (70.\+0). \end{DoxyCompactList}\item 
+\item 
 class \mbox{\hyperlink{class_complex_flow}{Complex\+Flow}}
-\begin{DoxyCompactList}\small\item\em Classe que implementa um fluxo Complexo para os testes de rede. Possui o mesmo comportamento matemático do fluxo exponencial, servindo especificamente para interligar múltiplos sistemas no teste complexo de grafos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{funcional__tests_8cpp_a2c448ffaffdff4b03c825a01dffa6f27}{exponential\+Funcional\+Test}} ()
+void \mbox{\hyperlink{funcional__tests_8cpp_a4dc4a254782f6fee3a88faa5b9b9498e}{exponential\+Funcional\+Test}} (void)
 \begin{DoxyCompactList}\small\item\em Executa o teste funcional para o modelo exponencial. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{funcional__tests_8cpp_a60914db64bde71b56d69320797266c29}{logistical\+Funcional\+Test}} ()
+void \mbox{\hyperlink{funcional__tests_8cpp_a1437d4d7164d5fda6c5caccea352eea8}{logistical\+Funcional\+Test}} (void)
 \begin{DoxyCompactList}\small\item\em Executa o teste funcional para o modelo logístico. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{funcional__tests_8cpp_a943dfe0c597a01c9760c140715fed527}{complex\+Funcional\+Test}} ()
+void \mbox{\hyperlink{funcional__tests_8cpp_a4e9f63b18e0833b74fd2513d758ee4da}{complex\+Funcional\+Test}} (void)
 \begin{DoxyCompactList}\small\item\em Executa o teste funcional complexo (cenário de rede). \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
-Implementação dos testes funcionais e das classes de fluxo específicas. Este arquivo contém as implementações das classes filhas de \doxylink{class_flow}{Flow} (Exponencial, Logístico e Complexo) utilizadas exclusivamente para validar a arquitetura do simulador, bem como o código de execução de cada cenário de teste. 
-
-
-
 \doxysubsection{Function Documentation}
-\Hypertarget{funcional__tests_8cpp_a943dfe0c597a01c9760c140715fed527}\label{funcional__tests_8cpp_a943dfe0c597a01c9760c140715fed527} 
+\Hypertarget{funcional__tests_8cpp_a4e9f63b18e0833b74fd2513d758ee4da}\label{funcional__tests_8cpp_a4e9f63b18e0833b74fd2513d758ee4da} 
 \index{funcional\_tests.cpp@{funcional\_tests.cpp}!complexFuncionalTest@{complexFuncionalTest}}
 \index{complexFuncionalTest@{complexFuncionalTest}!funcional\_tests.cpp@{funcional\_tests.cpp}}
 \doxysubsubsection{\texorpdfstring{complexFuncionalTest()}{complexFuncionalTest()}}
@@ -58,7 +47,7 @@ Executa o teste funcional complexo (cenário de rede).
 
 \begin{DoxyItemize}
 \item Monta uma rede interconectada de múltiplos sistemas (s1, s2, s3, s4, s5) e fluxos (u, v, g, r, t) para simular um ecossistema completo. Valida a robustez do laço de execução do modelo principal sob condições de concorrência e dependência de dados. 
-\end{DoxyItemize}\Hypertarget{funcional__tests_8cpp_a2c448ffaffdff4b03c825a01dffa6f27}\label{funcional__tests_8cpp_a2c448ffaffdff4b03c825a01dffa6f27} 
+\end{DoxyItemize}\Hypertarget{funcional__tests_8cpp_a4dc4a254782f6fee3a88faa5b9b9498e}\label{funcional__tests_8cpp_a4dc4a254782f6fee3a88faa5b9b9498e} 
 \index{funcional\_tests.cpp@{funcional\_tests.cpp}!exponentialFuncionalTest@{exponentialFuncionalTest}}
 \index{exponentialFuncionalTest@{exponentialFuncionalTest}!funcional\_tests.cpp@{funcional\_tests.cpp}}
 \doxysubsubsection{\texorpdfstring{exponentialFuncionalTest()}{exponentialFuncionalTest()}}
@@ -71,7 +60,7 @@ Executa o teste funcional para o modelo exponencial.
 
 \begin{DoxyItemize}
 \item Cria um cenário com dois sistemas e um fluxo exponencial para validar a transferência de massa ao longo de um determinado período de tempo, comparando o resultado final com a precisão matemática esperada. 
-\end{DoxyItemize}\Hypertarget{funcional__tests_8cpp_a60914db64bde71b56d69320797266c29}\label{funcional__tests_8cpp_a60914db64bde71b56d69320797266c29} 
+\end{DoxyItemize}\Hypertarget{funcional__tests_8cpp_a1437d4d7164d5fda6c5caccea352eea8}\label{funcional__tests_8cpp_a1437d4d7164d5fda6c5caccea352eea8} 
 \index{funcional\_tests.cpp@{funcional\_tests.cpp}!logisticalFuncionalTest@{logisticalFuncionalTest}}
 \index{logisticalFuncionalTest@{logisticalFuncionalTest}!funcional\_tests.cpp@{funcional\_tests.cpp}}
 \doxysubsubsection{\texorpdfstring{logisticalFuncionalTest()}{logisticalFuncionalTest()}}

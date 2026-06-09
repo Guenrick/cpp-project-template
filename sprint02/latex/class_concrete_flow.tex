@@ -2,16 +2,18 @@
 \hypertarget{class_concrete_flow}{}\label{class_concrete_flow}\index{ConcreteFlow@{ConcreteFlow}}
 
 
-Inheritance diagram for Concrete\+Flow\+:\nopagebreak
+Inheritance diagram for Concrete\+Flow\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=165pt]{class_concrete_flow__inherit__graph}
+\includegraphics[height=550pt]{class_concrete_flow__inherit__graph}
 \end{center}
 \end{figure}
 
 
-Collaboration diagram for Concrete\+Flow\+:\nopagebreak
+Collaboration diagram for Concrete\+Flow\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -24,39 +26,58 @@ Collaboration diagram for Concrete\+Flow\+:\nopagebreak
 \mbox{\hyperlink{class_concrete_flow_a69bca899b9ad11c3194e2d666b77f934}{Concrete\+Flow}} (\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}s=nullptr, \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}t=nullptr)
 \item 
 double \mbox{\hyperlink{class_concrete_flow_ac2f043ade900c63a033542657799cddc}{execute}} () override
-\begin{DoxyCompactList}\small\item\em Executa a equação matemática do fluxo. Método puramente virtual que deve ser implementado pelas classes derivadas para calcular a quantidade exata de massa a ser transferida a cada iteração. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_flow_impl}{Flow\+Impl}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_flow_impl_a4a88f4376cdaf1c0e62a900f507d4295}{Flow\+Impl}} (\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_flow_impl_a950987351656a518a1057b64c5f85af8}{source}}=nullptr, \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_flow_impl_af97039b649da65573e5582edbeb287b5}{target}}=nullptr)
+\item 
+\mbox{\hyperlink{class_flow_impl_a2981b1758ffef2310105758b4f473c27}{Flow\+Impl}} (const \mbox{\hyperlink{class_flow_impl}{Flow\+Impl}} \&obj)
+\item 
+virtual \mbox{\hyperlink{class_flow_impl_a2d91539593b336aee4a19048f8a82e8c}{\texorpdfstring{$\sim$}{\string~}\+Flow\+Impl}} ()
+\item 
+\mbox{\hyperlink{class_flow_impl}{Flow\+Impl}} \& \mbox{\hyperlink{class_flow_impl_ad923ca284a121114852d8f2948190e37}{operator=}} (const \mbox{\hyperlink{class_flow_impl}{Flow\+Impl}} \&obj)
+\item 
+void \mbox{\hyperlink{class_flow_impl_a47bbb64941fde986da1198b4af443c16}{set\+Source}} (\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}s) override
+\item 
+void \mbox{\hyperlink{class_flow_impl_abb1e0677c5e0d0a94b931ab57187bdcb}{set\+Target}} (\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}s) override
+\item 
+\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_flow_impl_a06c8ffdcfd36b04ddad091d2c043f5d0}{get\+Source}} () const override
+\item 
+\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_flow_impl_adb35e3574470e91207c631fda3cdc9bd}{get\+Target}} () const override
+\item 
+void \mbox{\hyperlink{class_flow_impl_acf4fc570ead9b0421638d428f44305c1}{clear\+Source}} () override
+\item 
+void \mbox{\hyperlink{class_flow_impl_acf255f5bb33cdc0a09f486f2bab20d99}{clear\+Target}} () override
+\item 
+virtual double \mbox{\hyperlink{class_flow_impl_a88d14f759988f1dcf393b83a93aea1f1}{execute}} ()=0
+\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_flow}{Flow}}}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_flow_ae1f699fde45c0a39cb5628d9f217cbb8}{Flow}} (\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_flow_a963ca162995d112f0f30322e2bb9de63}{source}}=nullptr, \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_flow_a87be88d9bae4e927b29205faabeaf387}{target}}=nullptr)
-\begin{DoxyCompactList}\small\item\em Construtor padrão e parametrizado do \doxylink{class_flow}{Flow}. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_flow_aa9a50d7ede896bf6a0740a6d1330ae21}{Flow}} (const \mbox{\hyperlink{class_flow}{Flow}} \&obj)
-\begin{DoxyCompactList}\small\item\em Construtor de cópia do \doxylink{class_flow}{Flow}. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{class_flow_a5991efa6e8cf88c4ef2125cc727db333}{\texorpdfstring{$\sim$}{\string~}\+Flow}} ()
-\begin{DoxyCompactList}\small\item\em Destrutor virtual do \doxylink{class_flow}{Flow}. Garante a destruição correta de objetos em classes derivadas (herança). \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_flow}{Flow}} \& \mbox{\hyperlink{class_flow_a21f26edbbb55b1c8312d0836153c08a9}{operator=}} (const \mbox{\hyperlink{class_flow}{Flow}} \&obj)
-\begin{DoxyCompactList}\small\item\em Sobrecarga do operador de atribuição (=). \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_flow_a4da8089ed4e652c414180252d22c8516}{set\+Source}} (\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}s)
-\begin{DoxyCompactList}\small\item\em Define ou altera o sistema de origem do fluxo. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_flow_a9efed9cf09dd73afc0fe6c1bdc3662a8}{set\+Target}} (\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}s)
-\begin{DoxyCompactList}\small\item\em Define ou altera o sistema de destino do fluxo. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_flow_a1f3858f90d141807377c2640fb5dd0fc}{get\+Source}} () const
-\begin{DoxyCompactList}\small\item\em Obtém o sistema de origem atual do fluxo. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_flow_aff8a0f8ca8dc50d37c92ab7556e172b5}{get\+Target}} () const
-\begin{DoxyCompactList}\small\item\em Obtém o sistema de destino atual do fluxo. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_flow_af262728866a280fef6b60e26257a6d6f}{clear\+Source}} ()
-\begin{DoxyCompactList}\small\item\em Limpa a referência ao sistema de origem. Remove a conexão com a origem, definindo o ponteiro como nullptr. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_flow_a2d1ef837436f4982de52096c2b802e4e}{clear\+Target}} ()
-\begin{DoxyCompactList}\small\item\em Limpa a referência ao sistema de destino. Remove a conexão com o destino, definindo o ponteiro como nullptr. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_flow_a325d284a50ca3274b126b21f5c39b9af}{\texorpdfstring{$\sim$}{\string~}\+Flow}} ()
+\item 
+virtual void \mbox{\hyperlink{class_flow_a4d756236982858350e7bf80a465926a7}{set\+Source}} (\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}s)=0
+\item 
+virtual void \mbox{\hyperlink{class_flow_ab1361d85c69c6c897d0409c8b8ae72fe}{set\+Target}} (\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}s)=0
+\item 
+virtual \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_flow_abf0f3dbb285fe82e5ba6449de06b97c8}{get\+Source}} () const =0
+\item 
+virtual \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_flow_afb9b8d93ea0fc81868b8e02dd382a787}{get\+Target}} () const =0
+\item 
+virtual void \mbox{\hyperlink{class_flow_a98e7aafb65699a9645a22f215b49c8b0}{clear\+Source}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_flow_a52f8ab7ff430f5d2e87aa0fdb12ad64b}{clear\+Target}} ()=0
+\item 
 virtual double \mbox{\hyperlink{class_flow_a619be0b590c78202127bc6ac7fb04029}{execute}} ()=0
-\begin{DoxyCompactList}\small\item\em Executa a equação matemática do fluxo. Método puramente virtual que deve ser implementado pelas classes derivadas para calcular a quantidade exata de massa a ser transferida a cada iteração. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
-\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_flow}{Flow}}}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_flow_impl}{Flow\+Impl}}}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_flow_a963ca162995d112f0f30322e2bb9de63}{source}}
+\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_flow_impl_a950987351656a518a1057b64c5f85af8}{source}}
 \item 
-\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_flow_a87be88d9bae4e927b29205faabeaf387}{target}}
+\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_flow_impl_af97039b649da65573e5582edbeb287b5}{target}}
 \end{DoxyCompactItemize}
 
 
@@ -78,14 +99,7 @@ virtual double \mbox{\hyperlink{class_flow_a619be0b590c78202127bc6ac7fb04029}{ex
 
 
 
-Executa a equação matemática do fluxo. Método puramente virtual que deve ser implementado pelas classes derivadas para calcular a quantidade exata de massa a ser transferida a cada iteração. 
-
-\begin{DoxyReturn}{Returns}
-double O valor calculado que será transferido. 
-\end{DoxyReturn}
-
-
-Implements \mbox{\hyperlink{class_flow_a619be0b590c78202127bc6ac7fb04029}{Flow}}.
+Implements \mbox{\hyperlink{class_flow_impl_a88d14f759988f1dcf393b83a93aea1f1}{Flow\+Impl}}.
 
 
 

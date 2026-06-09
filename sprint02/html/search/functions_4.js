@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['flow_0',['Flow',['../class_flow.html#ae1f699fde45c0a39cb5628d9f217cbb8',1,'Flow::Flow(System *source=nullptr, System *target=nullptr)'],['../class_flow.html#aa9a50d7ede896bf6a0740a6d1330ae21',1,'Flow::Flow(const Flow &amp;obj)']]]
+  ['flowimpl_0',['FlowImpl',['../class_flow_impl.html#a4a88f4376cdaf1c0e62a900f507d4295',1,'FlowImpl::FlowImpl(System *source=nullptr, System *target=nullptr)'],['../class_flow_impl.html#a2981b1758ffef2310105758b4f473c27',1,'FlowImpl::FlowImpl(const FlowImpl &amp;obj)']]]
 ];

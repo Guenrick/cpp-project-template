@@ -79,36 +79,46 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="unit___system_8h_source.html">unit_System.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="system_8hpp_source.html">../../src/system.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="factory_8hpp_source.html">../../src/factory.hpp</a>&quot;</code><br />
 <code>#include &lt;assert.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for unit_System.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="unit___system_8cpp__incl.png" border="0" usemap="#atest_2unit_2unit___system_8cpp" alt=""/></div>
 <map name="atest_2unit_2unit___system_8cpp" id="atest_2unit_2unit___system_8cpp">
-<area shape="rect" title=" " alt="" coords="117,5,287,32"/>
+<area shape="rect" title=" " alt="" coords="116,5,286,32"/>
 <area shape="rect" href="unit___system_8h.html" title="Declaração dos testes unitários da classe System." alt="" coords="5,80,111,107"/>
-<area shape="poly" title=" " alt="" coords="180,33,98,75,96,70,174,33"/>
-<area shape="rect" href="system_8hpp.html" title=" " alt="" coords="134,80,270,107"/>
-<area shape="poly" title=" " alt="" coords="204,31,204,66,200,63,200,34"/>
-<area shape="rect" title=" " alt="" coords="293,80,362,107"/>
-<area shape="poly" title=" " alt="" coords="225,30,295,72,290,72,223,35"/>
+<area shape="poly" title=" " alt="" coords="174,35,98,75,95,70,177,30"/>
+<area shape="rect" href="factory_8hpp.html" title="Funcoes de fabrica para criacao de objetos do MyVENSIM." alt="" coords="135,80,266,107"/>
+<area shape="poly" title=" " alt="" coords="202,30,203,65,198,64,200,35"/>
+<area shape="rect" title=" " alt="" coords="290,80,359,107"/>
+<area shape="poly" title=" " alt="" coords="222,30,293,71,288,73,222,35"/>
+<area shape="rect" href="system_8hpp.html" title=" " alt="" coords="156,304,245,331"/>
+<area shape="poly" title=" " alt="" coords="201,105,199,155,202,289,196,288,194,155,198,109"/>
+<area shape="rect" href="model_8hpp.html" title=" " alt="" coords="209,155,291,181"/>
+<area shape="poly" title=" " alt="" coords="210,105,236,142,230,142,209,110"/>
+<area shape="poly" title=" " alt="" coords="247,180,229,230,210,291,206,287,223,228,243,183"/>
+<area shape="rect" href="flow_8hpp.html" title=" " alt="" coords="238,229,307,256"/>
+<area shape="poly" title=" " alt="" coords="255,180,267,215,262,214,253,184"/>
+<area shape="rect" title=" " alt="" coords="332,229,389,256"/>
+<area shape="poly" title=" " alt="" coords="270,179,331,220,326,221,269,184"/>
+<area shape="poly" title=" " alt="" coords="263,256,225,295,222,291,258,258"/>
 </map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a46e097a8a45f48d72634c5dff1f7ca5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit___system_8cpp.html#a46e097a8a45f48d72634c5dff1f7ca5f">unit_System_constructor</a> (void)</td></tr>
-<tr class="memdesc:a46e097a8a45f48d72634c5dff1f7ca5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testa os construtores da classe <a class="el" href="class_system.html" title="Classe que representa um Sistema no simulador.">System</a>. Verifica o construtor padrão (valor 0.0) e o parametrizado com valores positivos, negativos e zero.  <br /></td></tr>
+<tr class="memdesc:a46e097a8a45f48d72634c5dff1f7ca5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testa os construtores da classe <a class="el" href="class_system.html" title="Interface da classe System. Define o contrato que toda implementacao de System deve cumprir....">System</a>. Verifica o construtor padrão (valor 0.0) e o parametrizado com valores positivos, negativos e zero.  <br /></td></tr>
 <tr class="separator:a46e097a8a45f48d72634c5dff1f7ca5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6102352f9630ddcf12eb94bc4b558bc1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit___system_8cpp.html#a6102352f9630ddcf12eb94bc4b558bc1">unit_System_destructor</a> (void)</td></tr>
-<tr class="memdesc:a6102352f9630ddcf12eb94bc4b558bc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testa o destrutor da classe <a class="el" href="class_system.html" title="Classe que representa um Sistema no simulador.">System</a>. Um objeto criado em escopo local deve ser destruído sem erros ao sair do escopo.  <br /></td></tr>
+<tr class="memdesc:a6102352f9630ddcf12eb94bc4b558bc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testa o destrutor da classe <a class="el" href="class_system.html" title="Interface da classe System. Define o contrato que toda implementacao de System deve cumprir....">System</a>. Um objeto criado em escopo local deve ser destruído sem erros ao sair do escopo.  <br /></td></tr>
 <tr class="separator:a6102352f9630ddcf12eb94bc4b558bc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b504bd5c78b1a1cae785948cf0e58a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit___system_8cpp.html#a4b504bd5c78b1a1cae785948cf0e58a3">unit_System_copyConstructor</a> (void)</td></tr>
-<tr class="memdesc:a4b504bd5c78b1a1cae785948cf0e58a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testa o construtor de cópia da classe <a class="el" href="class_system.html" title="Classe que representa um Sistema no simulador.">System</a>. A cópia deve ter o mesmo valor que o original, e modificá-la não deve afetar o original.  <br /></td></tr>
+<tr class="memdesc:a4b504bd5c78b1a1cae785948cf0e58a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testa o construtor de cópia da classe <a class="el" href="class_system.html" title="Interface da classe System. Define o contrato que toda implementacao de System deve cumprir....">System</a>. A cópia deve ter o mesmo valor que o original, e modificá-la não deve afetar o original.  <br /></td></tr>
 <tr class="separator:a4b504bd5c78b1a1cae785948cf0e58a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1b2276713abfafdd55b3a70f2380c78"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit___system_8cpp.html#ae1b2276713abfafdd55b3a70f2380c78">unit_System_assignmentOperator</a> (void)</td></tr>
-<tr class="memdesc:ae1b2276713abfafdd55b3a70f2380c78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testa o operador de atribuição da classe <a class="el" href="class_system.html" title="Classe que representa um Sistema no simulador.">System</a>. Verifica atribuição normal, independência entre objetos e auto-atribuição.  <br /></td></tr>
+<tr class="memdesc:ae1b2276713abfafdd55b3a70f2380c78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testa o operador de atribuição da classe <a class="el" href="class_system.html" title="Interface da classe System. Define o contrato que toda implementacao de System deve cumprir....">System</a>. Verifica atribuição normal, independência entre objetos e auto-atribuição.  <br /></td></tr>
 <tr class="separator:ae1b2276713abfafdd55b3a70f2380c78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adeeb73fcb3ab0a36610f3740f85b6eae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit___system_8cpp.html#adeeb73fcb3ab0a36610f3740f85b6eae">unit_System_getValue</a> (void)</td></tr>
 <tr class="memdesc:adeeb73fcb3ab0a36610f3740f85b6eae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testa o método getValue(). Deve retornar exatamente o valor armazenado no sistema.  <br /></td></tr>
@@ -117,7 +127,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:a0e0a4c0513e1dbf6487920465ce62b22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testa o método setValue(). Após a chamada, getValue() deve retornar o novo valor imediatamente.  <br /></td></tr>
 <tr class="separator:a0e0a4c0513e1dbf6487920465ce62b22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3d9f7c3d450ff30ca9cf6b51666f701"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit___system_8cpp.html#ab3d9f7c3d450ff30ca9cf6b51666f701">run_unit_tests_System</a> (void)</td></tr>
-<tr class="memdesc:ab3d9f7c3d450ff30ca9cf6b51666f701"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executa todos os testes unitários da classe <a class="el" href="class_system.html" title="Classe que representa um Sistema no simulador.">System</a>.  <br /></td></tr>
+<tr class="memdesc:ab3d9f7c3d450ff30ca9cf6b51666f701"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executa todos os testes unitários da classe <a class="el" href="class_system.html" title="Interface da classe System. Define o contrato que toda implementacao de System deve cumprir....">System</a>.  <br /></td></tr>
 <tr class="separator:ab3d9f7c3d450ff30ca9cf6b51666f701"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -137,7 +147,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Executa todos os testes unitários da classe <a class="el" href="class_system.html" title="Classe que representa um Sistema no simulador.">System</a>. </p>
+<p>Executa todos os testes unitários da classe <a class="el" href="class_system.html" title="Interface da classe System. Define o contrato que toda implementacao de System deve cumprir....">System</a>. </p>
 
 </div>
 </div>
@@ -157,7 +167,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Testa o operador de atribuição da classe <a class="el" href="class_system.html" title="Classe que representa um Sistema no simulador.">System</a>. Verifica atribuição normal, independência entre objetos e auto-atribuição. </p>
+<p>Testa o operador de atribuição da classe <a class="el" href="class_system.html" title="Interface da classe System. Define o contrato que toda implementacao de System deve cumprir....">System</a>. Verifica atribuição normal, independência entre objetos e auto-atribuição. </p>
 
 </div>
 </div>
@@ -177,7 +187,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Testa os construtores da classe <a class="el" href="class_system.html" title="Classe que representa um Sistema no simulador.">System</a>. Verifica o construtor padrão (valor 0.0) e o parametrizado com valores positivos, negativos e zero. </p>
+<p>Testa os construtores da classe <a class="el" href="class_system.html" title="Interface da classe System. Define o contrato que toda implementacao de System deve cumprir....">System</a>. Verifica o construtor padrão (valor 0.0) e o parametrizado com valores positivos, negativos e zero. </p>
 
 </div>
 </div>
@@ -197,7 +207,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Testa o construtor de cópia da classe <a class="el" href="class_system.html" title="Classe que representa um Sistema no simulador.">System</a>. A cópia deve ter o mesmo valor que o original, e modificá-la não deve afetar o original. </p>
+<p>Testa o construtor de cópia da classe <a class="el" href="class_system.html" title="Interface da classe System. Define o contrato que toda implementacao de System deve cumprir....">System</a>. A cópia deve ter o mesmo valor que o original, e modificá-la não deve afetar o original. </p>
 
 </div>
 </div>
@@ -217,7 +227,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Testa o destrutor da classe <a class="el" href="class_system.html" title="Classe que representa um Sistema no simulador.">System</a>. Um objeto criado em escopo local deve ser destruído sem erros ao sair do escopo. </p>
+<p>Testa o destrutor da classe <a class="el" href="class_system.html" title="Interface da classe System. Define o contrato que toda implementacao de System deve cumprir....">System</a>. Um objeto criado em escopo local deve ser destruído sem erros ao sair do escopo. </p>
 
 </div>
 </div>

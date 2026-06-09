@@ -1,12 +1,8 @@
 \doxysection{src/flow.hpp File Reference}
 \hypertarget{flow_8hpp}{}\label{flow_8hpp}\index{src/flow.hpp@{src/flow.hpp}}
-
-
-Declaração da classe \doxylink{class_flow}{Flow}. Este arquivo contém a interface da classe abstrata \doxylink{class_flow}{Flow}, que define a base para as interações de transferência de dados entre instâncias de \doxylink{class_system}{System}.  
-
-
 {\ttfamily \#include \"{}system.\+hpp\"{}}\newline
-Include dependency graph for flow.\+hpp\+:\nopagebreak
+Include dependency graph for flow.\+hpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -25,9 +21,4 @@ This graph shows which files directly or indirectly include this file\+:
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{class_flow}{Flow}}
-\begin{DoxyCompactList}\small\item\em Classe abstrata que representa um fluxo de simulação. A classe \doxylink{class_flow}{Flow} é responsável por conectar dois sistemas (origem e destino) e ditar a regra matemática de transferência de massa/energia entre eles. \end{DoxyCompactList}\end{DoxyCompactItemize}
-
-
-\doxysubsection{Detailed Description}
-Declaração da classe \doxylink{class_flow}{Flow}. Este arquivo contém a interface da classe abstrata \doxylink{class_flow}{Flow}, que define a base para as interações de transferência de dados entre instâncias de \doxylink{class_system}{System}. 
-
+\begin{DoxyCompactList}\small\item\em Interface da classe \doxylink{class_flow}{Flow}. Define o contrato de um fluxo\+: conectar dois Systems e calcular a taxa de transferencia. Todos os metodos sao virtuais puros. \end{DoxyCompactList}\end{DoxyCompactItemize}

@@ -1,5 +1,7 @@
 <map id="ConcreteFlow" name="ConcreteFlow">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,357,118,448"/>
-<area shape="rect" id="Node000002" href="$class_flow.html" title="Classe abstrata que representa um fluxo de simulação. A classe Flow é responsável por conectar dois s..." alt="" coords="11,5,112,309"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="63,322,64,358,59,357,61,327"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,624,118,715"/>
+<area shape="rect" id="Node000002" href="$class_flow_impl.html" title="Implementacao concreta base da interface Flow. Gerencia os ponteiros source e target e implementa tod..." alt="" coords="11,272,112,576"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="63,589,64,624,59,624,61,594"/>
+<area shape="rect" id="Node000003" href="$class_flow.html" title="Interface da classe Flow. Define o contrato de um fluxo: conectar dois Systems e calcular a taxa de t..." alt="" coords="11,5,112,224"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="62,236,64,272,59,272,62,242"/>
 </map>
