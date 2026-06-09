@@ -12,21 +12,38 @@ UNIT_SRC = test/unit/main.cpp \
 FUNC_SRC = test/funcional/main.cpp \
            test/funcional/funcional_tests.cpp
 
-all: clean unit funcional run_unit run_funcional
+LIB = bin/libmyvensim.so
 
-unit:
+#alvo: dependencias
+#	comandos
+# -shared vai gerar uma biblioteca compartilhada .so ao invés de um executável, e -fPIC é necessário para criar código independente de posição, que é necessário para bibliotecas compartilhadas.	
+lib: 
 	mkdir -p bin
-	$(CXX) $(CXXFLAGS) $(SRC) $(UNIT_SRC) -o bin/unit_tests
+	$(CXX) $(CXXFLAGS) -shared -fPIC $(SRC) src/factory.cpp -o $(LIB)
+	@echo "Library compiled successfully."
 
-funcional:
+all: clean lib unit funcional run_unit run_funcional
+	@echo "All targets built and tests executed successfully."
+
+#unit:lib garante que a .so é compilada antes dos testes
+unit: lib #dependencia
+	mkdir -p bin 
+	$(CXX) $(CXXFLAGS) $(UNIT_SRC) -L bin -lmyvensim -Wl,-rpath,'$$ORIGIN' -o bin/unit_tests
+	@echo "Unit tests compiled successfully."
+
+funcional: lib
 	mkdir -p bin
-	$(CXX) $(CXXFLAGS) $(SRC) $(FUNC_SRC) -o bin/funcional_tests
+	$(CXX) $(CXXFLAGS) $(FUNC_SRC) -L bin -lmyvensim -Wl,-rpath,'$$ORIGIN' -o bin/funcional_tests
+	@echo "Functional tests compiled successfully."
 
 run_unit:
 	./bin/unit_tests
+	@echo "Unit tests executed successfully."
 
 run_funcional:
 	./bin/funcional_tests
+	@echo "Functional tests executed successfully."
 
 clean:
 	rm -f bin/*
+	@echo "Cleaned up bin directory."
