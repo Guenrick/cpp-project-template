@@ -1,9 +1,9 @@
 <map id="ExponentialFlow" name="ExponentialFlow">
-<area shape="rect" id="Node000001" title=" " alt="" coords="50,636,178,769"/>
-<area shape="rect" id="Node000002" href="$class_flow_impl.html" title="Implementacao concreta base da interface Flow. Gerencia os ponteiros source e target e implementa tod..." alt="" coords="64,304,165,587"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,600,117,637,112,636,113,604"/>
-<area shape="rect" id="Node000003" href="$class_flow.html" title="Interface da classe Flow. Define o contrato de um fluxo: conectar dois Systems e calcular a taxa de t..." alt="" coords="5,5,106,224"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="78,236,92,304,87,305,78,241"/>
-<area shape="rect" id="Node000004" href="$class_system.html" title="Interface da classe System. Define o contrato que toda implementacao de System deve cumprir...." alt="" coords="131,59,216,171"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="164,168,145,288,140,287,163,173"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="43,529,171,663"/>
+<area shape="rect" id="Node000002" href="$class_flow_impl.html" title="Implementacao concreta base da interface Flow." alt="" coords="56,240,157,480"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,492,109,530,104,529,106,497"/>
+<area shape="rect" id="Node000003" href="$class_flow.html" title="Interface da classe Flow. Define o contrato minimo de um fluxo: ler suas conexoes (origem e destino) ..." alt="" coords="5,16,96,149"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="67,161,85,240,80,240,67,167"/>
+<area shape="rect" id="Node000004" href="$class_system.html" title="Interface da classe System. Define o contrato que toda implementacao de System deve cumprir...." alt="" coords="120,5,205,160"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="148,157,137,224,132,223,147,162"/>
 </map>

@@ -1,13 +1,13 @@
 <map id="Flow" name="Flow">
-<area shape="rect" id="Node000001" title="Interface da classe Flow. Define o contrato de um fluxo: conectar dois Systems e calcular a taxa de t..." alt="" coords="219,5,320,224"/>
-<area shape="rect" id="Node000002" href="$class_flow_impl.html" title="Implementacao concreta base da interface Flow. Gerencia os ponteiros source e target e implementa tod..." alt="" coords="219,272,320,576"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="270,236,272,273,267,272,269,242"/>
-<area shape="rect" id="Node000003" href="$class_complex_flow.html" title=" " alt="" coords="5,645,117,736"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="212,502,98,647,94,644,208,499"/>
-<area shape="rect" id="Node000004" href="$class_concrete_flow.html" title=" " alt="" coords="141,645,254,736"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="226,589,212,647,207,644,222,593"/>
-<area shape="rect" id="Node000005" href="$class_exponential_flow.html" title=" " alt="" coords="277,624,405,757"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="316,588,326,625,321,623,313,593"/>
-<area shape="rect" id="Node000006" href="$class_logistic_flow.html" title=" " alt="" coords="429,645,534,736"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="330,497,449,645,443,646,328,502"/>
+<area shape="rect" id="Node000001" title="Interface da classe Flow. Define o contrato minimo de um fluxo: ler suas conexoes (origem e destino) ..." alt="" coords="224,5,315,139"/>
+<area shape="rect" id="Node000002" href="$class_flow_impl.html" title="Implementacao concreta base da interface Flow." alt="" coords="219,187,320,469"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="270,151,272,187,267,186,269,156"/>
+<area shape="rect" id="Node000003" href="$class_complex_flow.html" title=" " alt="" coords="5,539,117,629"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="212,404,99,541,95,537,207,401"/>
+<area shape="rect" id="Node000004" href="$class_concrete_flow.html" title=" " alt="" coords="141,539,254,629"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="227,481,212,540,207,538,224,485"/>
+<area shape="rect" id="Node000005" href="$class_exponential_flow.html" title=" " alt="" coords="277,517,405,651"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="314,481,325,519,320,517,312,486"/>
+<area shape="rect" id="Node000006" href="$class_logistic_flow.html" title=" " alt="" coords="429,539,534,629"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="330,399,447,539,442,539,328,403"/>
 </map>

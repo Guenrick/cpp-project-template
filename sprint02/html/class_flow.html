@@ -76,7 +76,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Interface da classe <a class="el" href="class_flow.html" title="Interface da classe Flow. Define o contrato de um fluxo: conectar dois Systems e calcular a taxa de t...">Flow</a>. Define o contrato de um fluxo: conectar dois Systems e calcular a taxa de transferencia. Todos os metodos sao virtuais puros.  
+<p>Interface da classe <a class="el" href="class_flow.html" title="Interface da classe Flow. Define o contrato minimo de um fluxo: ler suas conexoes (origem e destino) ...">Flow</a>. Define o contrato minimo de um fluxo: ler suas conexoes (origem e destino) e calcular a taxa de transferencia. Todos os metodos sao virtuais puros.  
  <a href="class_flow.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="flow_8hpp_source.html">flow.hpp</a>&gt;</code></p>
@@ -85,17 +85,17 @@ Inheritance diagram for Flow:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_flow__inherit__graph.png" border="0" usemap="#a_flow_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_flow_inherit__map" id="a_flow_inherit__map">
-<area shape="rect" title="Interface da classe Flow. Define o contrato de um fluxo: conectar dois Systems e calcular a taxa de t..." alt="" coords="219,5,320,224"/>
-<area shape="rect" href="class_flow_impl.html" title="Implementacao concreta base da interface Flow. Gerencia os ponteiros source e target e implementa tod..." alt="" coords="219,272,320,576"/>
-<area shape="poly" title=" " alt="" coords="270,236,272,273,267,272,269,242"/>
-<area shape="rect" href="class_complex_flow.html" title=" " alt="" coords="5,645,117,736"/>
-<area shape="poly" title=" " alt="" coords="212,502,98,647,94,644,208,499"/>
-<area shape="rect" href="class_concrete_flow.html" title=" " alt="" coords="141,645,254,736"/>
-<area shape="poly" title=" " alt="" coords="226,589,212,647,207,644,222,593"/>
-<area shape="rect" href="class_exponential_flow.html" title=" " alt="" coords="277,624,405,757"/>
-<area shape="poly" title=" " alt="" coords="316,588,326,625,321,623,313,593"/>
-<area shape="rect" href="class_logistic_flow.html" title=" " alt="" coords="429,645,534,736"/>
-<area shape="poly" title=" " alt="" coords="330,497,449,645,443,646,328,502"/>
+<area shape="rect" title="Interface da classe Flow. Define o contrato minimo de um fluxo: ler suas conexoes (origem e destino) ..." alt="" coords="224,5,315,139"/>
+<area shape="rect" href="class_flow_impl.html" title="Implementacao concreta base da interface Flow." alt="" coords="219,187,320,469"/>
+<area shape="poly" title=" " alt="" coords="270,151,272,187,267,186,269,156"/>
+<area shape="rect" href="class_complex_flow.html" title=" " alt="" coords="5,539,117,629"/>
+<area shape="poly" title=" " alt="" coords="212,404,99,541,95,537,207,401"/>
+<area shape="rect" href="class_concrete_flow.html" title=" " alt="" coords="141,539,254,629"/>
+<area shape="poly" title=" " alt="" coords="227,481,212,540,207,538,224,485"/>
+<area shape="rect" href="class_exponential_flow.html" title=" " alt="" coords="277,517,405,651"/>
+<area shape="poly" title=" " alt="" coords="314,481,325,519,320,517,312,486"/>
+<area shape="rect" href="class_logistic_flow.html" title=" " alt="" coords="429,539,534,629"/>
+<area shape="poly" title=" " alt="" coords="330,399,447,539,442,539,328,403"/>
 </map>
 </div>
 <div class="dynheader">
@@ -103,7 +103,7 @@ Collaboration diagram for Flow:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_flow__coll__graph.png" border="0" usemap="#a_flow_coll__map" alt="Collaboration graph"/></div>
 <map name="a_flow_coll__map" id="a_flow_coll__map">
-<area shape="rect" title="Interface da classe Flow. Define o contrato de um fluxo: conectar dois Systems e calcular a taxa de t..." alt="" coords="5,5,106,224"/>
+<area shape="rect" title="Interface da classe Flow. Define o contrato minimo de um fluxo: ler suas conexoes (origem e destino) ..." alt="" coords="5,5,96,139"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -111,23 +111,19 @@ Collaboration diagram for Flow:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a325d284a50ca3274b126b21f5c39b9af"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flow.html#a325d284a50ca3274b126b21f5c39b9af">~Flow</a> ()</td></tr>
 <tr class="separator:a325d284a50ca3274b126b21f5c39b9af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d756236982858350e7bf80a465926a7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flow.html#a4d756236982858350e7bf80a465926a7">setSource</a> (<a class="el" href="class_system.html">System</a> *s)=0</td></tr>
-<tr class="separator:a4d756236982858350e7bf80a465926a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1361d85c69c6c897d0409c8b8ae72fe"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flow.html#ab1361d85c69c6c897d0409c8b8ae72fe">setTarget</a> (<a class="el" href="class_system.html">System</a> *s)=0</td></tr>
-<tr class="separator:ab1361d85c69c6c897d0409c8b8ae72fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf0f3dbb285fe82e5ba6449de06b97c8"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_system.html">System</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flow.html#abf0f3dbb285fe82e5ba6449de06b97c8">getSource</a> () const =0</td></tr>
+<tr class="memdesc:abf0f3dbb285fe82e5ba6449de06b97c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o <a class="el" href="class_system.html" title="Interface da classe System. Define o contrato que toda implementacao de System deve cumprir....">System</a> de origem deste <a class="el" href="class_flow.html" title="Interface da classe Flow. Define o contrato minimo de um fluxo: ler suas conexoes (origem e destino) ...">Flow</a> (ou nullptr se nao houver).  <br /></td></tr>
 <tr class="separator:abf0f3dbb285fe82e5ba6449de06b97c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb9b8d93ea0fc81868b8e02dd382a787"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_system.html">System</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flow.html#afb9b8d93ea0fc81868b8e02dd382a787">getTarget</a> () const =0</td></tr>
+<tr class="memdesc:afb9b8d93ea0fc81868b8e02dd382a787"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o <a class="el" href="class_system.html" title="Interface da classe System. Define o contrato que toda implementacao de System deve cumprir....">System</a> de destino deste <a class="el" href="class_flow.html" title="Interface da classe Flow. Define o contrato minimo de um fluxo: ler suas conexoes (origem e destino) ...">Flow</a> (ou nullptr se nao houver).  <br /></td></tr>
 <tr class="separator:afb9b8d93ea0fc81868b8e02dd382a787"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98e7aafb65699a9645a22f215b49c8b0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flow.html#a98e7aafb65699a9645a22f215b49c8b0">clearSource</a> ()=0</td></tr>
-<tr class="separator:a98e7aafb65699a9645a22f215b49c8b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52f8ab7ff430f5d2e87aa0fdb12ad64b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flow.html#a52f8ab7ff430f5d2e87aa0fdb12ad64b">clearTarget</a> ()=0</td></tr>
-<tr class="separator:a52f8ab7ff430f5d2e87aa0fdb12ad64b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a619be0b590c78202127bc6ac7fb04029"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flow.html#a619be0b590c78202127bc6ac7fb04029">execute</a> ()=0</td></tr>
+<tr class="memdesc:a619be0b590c78202127bc6ac7fb04029"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula a quantidade transferida de origem para destino neste passo.  <br /></td></tr>
 <tr class="separator:a619be0b590c78202127bc6ac7fb04029"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Interface da classe <a class="el" href="class_flow.html" title="Interface da classe Flow. Define o contrato de um fluxo: conectar dois Systems e calcular a taxa de t...">Flow</a>. Define o contrato de um fluxo: conectar dois Systems e calcular a taxa de transferencia. Todos os metodos sao virtuais puros. </p>
+<div class="textblock"><p>Interface da classe <a class="el" href="class_flow.html" title="Interface da classe Flow. Define o contrato minimo de um fluxo: ler suas conexoes (origem e destino) ...">Flow</a>. Define o contrato minimo de um fluxo: ler suas conexoes (origem e destino) e calcular a taxa de transferencia. Todos os metodos sao virtuais puros. </p>
+<p>As operacoes de conexao (setSource/setTarget/clearSource/clearTarget) nao fazem parte desta interface — elas sao responsabilidade do <a class="el" href="class_model.html" title="Interface da classe Model.">Model</a>, que e quem gerencia o ciclo de vida e as ligacoes entre Systems e Flows. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a325d284a50ca3274b126b21f5c39b9af" name="a325d284a50ca3274b126b21f5c39b9af"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a325d284a50ca3274b126b21f5c39b9af">&#9670;&#160;</a></span>~Flow()</h2>
@@ -155,60 +151,6 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a98e7aafb65699a9645a22f215b49c8b0" name="a98e7aafb65699a9645a22f215b49c8b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a98e7aafb65699a9645a22f215b49c8b0">&#9670;&#160;</a></span>clearSource()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void Flow::clearSource </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implemented in <a class="el" href="class_flow_impl.html#acf4fc570ead9b0421638d428f44305c1">FlowImpl</a>.</p>
-
-</div>
-</div>
-<a id="a52f8ab7ff430f5d2e87aa0fdb12ad64b" name="a52f8ab7ff430f5d2e87aa0fdb12ad64b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52f8ab7ff430f5d2e87aa0fdb12ad64b">&#9670;&#160;</a></span>clearTarget()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void Flow::clearTarget </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implemented in <a class="el" href="class_flow_impl.html#acf255f5bb33cdc0a09f486f2bab20d99">FlowImpl</a>.</p>
-
-</div>
-</div>
 <a id="a619be0b590c78202127bc6ac7fb04029" name="a619be0b590c78202127bc6ac7fb04029"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a619be0b590c78202127bc6ac7fb04029">&#9670;&#160;</a></span>execute()</h2>
 
@@ -231,6 +173,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Calcula a quantidade transferida de origem para destino neste passo. </p>
 
 <p>Implemented in <a class="el" href="class_exponential_flow.html#aafb074830c5c18138913cb10da3b8782">ExponentialFlow</a>, <a class="el" href="class_logistic_flow.html#ae0d2de87d6dbb8cfc2af6db5cd22e884">LogisticFlow</a>, <a class="el" href="class_complex_flow.html#a744cb3029e9335038f3f8c1da6daea4d">ComplexFlow</a>, <a class="el" href="class_concrete_flow.html#ac2f043ade900c63a033542657799cddc">ConcreteFlow</a>, <a class="el" href="class_exponential_flow.html#aafb074830c5c18138913cb10da3b8782">ExponentialFlow</a>, and <a class="el" href="class_flow_impl.html#a88d14f759988f1dcf393b83a93aea1f1">FlowImpl</a>.</p>
 
@@ -259,6 +203,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Retorna o <a class="el" href="class_system.html" title="Interface da classe System. Define o contrato que toda implementacao de System deve cumprir....">System</a> de origem deste <a class="el" href="class_flow.html" title="Interface da classe Flow. Define o contrato minimo de um fluxo: ler suas conexoes (origem e destino) ...">Flow</a> (ou nullptr se nao houver). </p>
+
 <p>Implemented in <a class="el" href="class_flow_impl.html#a06c8ffdcfd36b04ddad091d2c043f5d0">FlowImpl</a>.</p>
 
 </div>
@@ -286,63 +232,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Retorna o <a class="el" href="class_system.html" title="Interface da classe System. Define o contrato que toda implementacao de System deve cumprir....">System</a> de destino deste <a class="el" href="class_flow.html" title="Interface da classe Flow. Define o contrato minimo de um fluxo: ler suas conexoes (origem e destino) ...">Flow</a> (ou nullptr se nao houver). </p>
+
 <p>Implemented in <a class="el" href="class_flow_impl.html#adb35e3574470e91207c631fda3cdc9bd">FlowImpl</a>.</p>
-
-</div>
-</div>
-<a id="a4d756236982858350e7bf80a465926a7" name="a4d756236982858350e7bf80a465926a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4d756236982858350e7bf80a465926a7">&#9670;&#160;</a></span>setSource()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void Flow::setSource </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_system.html">System</a> *&#160;</td>
-          <td class="paramname"><em>s</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implemented in <a class="el" href="class_flow_impl.html#a47bbb64941fde986da1198b4af443c16">FlowImpl</a>.</p>
-
-</div>
-</div>
-<a id="ab1361d85c69c6c897d0409c8b8ae72fe" name="ab1361d85c69c6c897d0409c8b8ae72fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1361d85c69c6c897d0409c8b8ae72fe">&#9670;&#160;</a></span>setTarget()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void Flow::setTarget </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_system.html">System</a> *&#160;</td>
-          <td class="paramname"><em>s</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implemented in <a class="el" href="class_flow_impl.html#abb1e0677c5e0d0a94b931ab57187bdcb">FlowImpl</a>.</p>
 
 </div>
 </div>

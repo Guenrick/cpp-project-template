@@ -2,7 +2,7 @@
 \hypertarget{class_flow}{}\label{class_flow}\index{Flow@{Flow}}
 
 
-Interface da classe \doxylink{class_flow}{Flow}. Define o contrato de um fluxo\+: conectar dois Systems e calcular a taxa de transferencia. Todos os metodos sao virtuais puros.  
+Interface da classe \doxylink{class_flow}{Flow}. Define o contrato minimo de um fluxo\+: ler suas conexoes (origem e destino) e calcular a taxa de transferencia. Todos os metodos sao virtuais puros.  
 
 
 
@@ -26,7 +26,7 @@ Collaboration diagram for Flow\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=156pt]{class_flow__coll__graph}
+\includegraphics[width=148pt]{class_flow__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Member Functions}
@@ -34,24 +34,18 @@ Collaboration diagram for Flow\+:
 \item 
 virtual \mbox{\hyperlink{class_flow_a325d284a50ca3274b126b21f5c39b9af}{\texorpdfstring{$\sim$}{\string~}\+Flow}} ()
 \item 
-virtual void \mbox{\hyperlink{class_flow_a4d756236982858350e7bf80a465926a7}{set\+Source}} (\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}s)=0
-\item 
-virtual void \mbox{\hyperlink{class_flow_ab1361d85c69c6c897d0409c8b8ae72fe}{set\+Target}} (\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}s)=0
-\item 
 virtual \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_flow_abf0f3dbb285fe82e5ba6449de06b97c8}{get\+Source}} () const =0
-\item 
+\begin{DoxyCompactList}\small\item\em Retorna o \doxylink{class_system}{System} de origem deste \doxylink{class_flow}{Flow} (ou nullptr se nao houver). \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_flow_afb9b8d93ea0fc81868b8e02dd382a787}{get\+Target}} () const =0
-\item 
-virtual void \mbox{\hyperlink{class_flow_a98e7aafb65699a9645a22f215b49c8b0}{clear\+Source}} ()=0
-\item 
-virtual void \mbox{\hyperlink{class_flow_a52f8ab7ff430f5d2e87aa0fdb12ad64b}{clear\+Target}} ()=0
-\item 
+\begin{DoxyCompactList}\small\item\em Retorna o \doxylink{class_system}{System} de destino deste \doxylink{class_flow}{Flow} (ou nullptr se nao houver). \end{DoxyCompactList}\item 
 virtual double \mbox{\hyperlink{class_flow_a619be0b590c78202127bc6ac7fb04029}{execute}} ()=0
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Calcula a quantidade transferida de origem para destino neste passo. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Interface da classe \doxylink{class_flow}{Flow}. Define o contrato de um fluxo\+: conectar dois Systems e calcular a taxa de transferencia. Todos os metodos sao virtuais puros. 
+Interface da classe \doxylink{class_flow}{Flow}. Define o contrato minimo de um fluxo\+: ler suas conexoes (origem e destino) e calcular a taxa de transferencia. Todos os metodos sao virtuais puros. 
+
+As operacoes de conexao (set\+Source/set\+Target/clear\+Source/clear\+Target) nao fazem parte desta interface — elas sao responsabilidade do \doxylink{class_model}{Model}, que e quem gerencia o ciclo de vida e as ligacoes entre Systems e Flows. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{class_flow_a325d284a50ca3274b126b21f5c39b9af}\label{class_flow_a325d284a50ca3274b126b21f5c39b9af} 
@@ -63,31 +57,15 @@ Interface da classe \doxylink{class_flow}{Flow}. Define o contrato de um fluxo\+
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{class_flow_a98e7aafb65699a9645a22f215b49c8b0}\label{class_flow_a98e7aafb65699a9645a22f215b49c8b0} 
-\index{Flow@{Flow}!clearSource@{clearSource}}
-\index{clearSource@{clearSource}!Flow@{Flow}}
-\doxysubsubsection{\texorpdfstring{clearSource()}{clearSource()}}
-{\footnotesize\ttfamily virtual void Flow\+::clear\+Source (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
-
-
-
-Implemented in \mbox{\hyperlink{class_flow_impl_acf4fc570ead9b0421638d428f44305c1}{Flow\+Impl}}.
-
-\Hypertarget{class_flow_a52f8ab7ff430f5d2e87aa0fdb12ad64b}\label{class_flow_a52f8ab7ff430f5d2e87aa0fdb12ad64b} 
-\index{Flow@{Flow}!clearTarget@{clearTarget}}
-\index{clearTarget@{clearTarget}!Flow@{Flow}}
-\doxysubsubsection{\texorpdfstring{clearTarget()}{clearTarget()}}
-{\footnotesize\ttfamily virtual void Flow\+::clear\+Target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
-
-
-
-Implemented in \mbox{\hyperlink{class_flow_impl_acf255f5bb33cdc0a09f486f2bab20d99}{Flow\+Impl}}.
-
 \Hypertarget{class_flow_a619be0b590c78202127bc6ac7fb04029}\label{class_flow_a619be0b590c78202127bc6ac7fb04029} 
 \index{Flow@{Flow}!execute@{execute}}
 \index{execute@{execute}!Flow@{Flow}}
 \doxysubsubsection{\texorpdfstring{execute()}{execute()}}
 {\footnotesize\ttfamily virtual double Flow\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Calcula a quantidade transferida de origem para destino neste passo. 
 
 
 
@@ -101,6 +79,10 @@ Implemented in \mbox{\hyperlink{class_exponential_flow_aafb074830c5c18138913cb10
 
 
 
+Retorna o \doxylink{class_system}{System} de origem deste \doxylink{class_flow}{Flow} (ou nullptr se nao houver). 
+
+
+
 Implemented in \mbox{\hyperlink{class_flow_impl_a06c8ffdcfd36b04ddad091d2c043f5d0}{Flow\+Impl}}.
 
 \Hypertarget{class_flow_afb9b8d93ea0fc81868b8e02dd382a787}\label{class_flow_afb9b8d93ea0fc81868b8e02dd382a787} 
@@ -111,27 +93,11 @@ Implemented in \mbox{\hyperlink{class_flow_impl_a06c8ffdcfd36b04ddad091d2c043f5d
 
 
 
+Retorna o \doxylink{class_system}{System} de destino deste \doxylink{class_flow}{Flow} (ou nullptr se nao houver). 
+
+
+
 Implemented in \mbox{\hyperlink{class_flow_impl_adb35e3574470e91207c631fda3cdc9bd}{Flow\+Impl}}.
-
-\Hypertarget{class_flow_a4d756236982858350e7bf80a465926a7}\label{class_flow_a4d756236982858350e7bf80a465926a7} 
-\index{Flow@{Flow}!setSource@{setSource}}
-\index{setSource@{setSource}!Flow@{Flow}}
-\doxysubsubsection{\texorpdfstring{setSource()}{setSource()}}
-{\footnotesize\ttfamily virtual void Flow\+::set\+Source (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
-
-
-
-Implemented in \mbox{\hyperlink{class_flow_impl_a47bbb64941fde986da1198b4af443c16}{Flow\+Impl}}.
-
-\Hypertarget{class_flow_ab1361d85c69c6c897d0409c8b8ae72fe}\label{class_flow_ab1361d85c69c6c897d0409c8b8ae72fe} 
-\index{Flow@{Flow}!setTarget@{setTarget}}
-\index{setTarget@{setTarget}!Flow@{Flow}}
-\doxysubsubsection{\texorpdfstring{setTarget()}{setTarget()}}
-{\footnotesize\ttfamily virtual void Flow\+::set\+Target (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
-
-
-
-Implemented in \mbox{\hyperlink{class_flow_impl_abb1e0677c5e0d0a94b931ab57187bdcb}{Flow\+Impl}}.
 
 
 

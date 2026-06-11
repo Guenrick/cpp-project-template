@@ -79,16 +79,20 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="flow_8hpp_source.html">flow.hpp</a>&quot;</code><br />
+<code>#include &lt;string&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for flowImpl.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="flow_impl_8hpp__incl.png" border="0" usemap="#asrc_2flow_impl_8hpp" alt=""/></div>
 <map name="asrc_2flow_impl_8hpp" id="asrc_2flow_impl_8hpp">
-<area shape="rect" title=" " alt="" coords="5,5,123,32"/>
-<area shape="rect" href="flow_8hpp.html" title=" " alt="" coords="29,80,99,107"/>
-<area shape="poly" title=" " alt="" coords="65,30,67,65,61,64,63,35"/>
-<area shape="rect" href="system_8hpp.html" title=" " alt="" coords="19,155,109,181"/>
-<area shape="poly" title=" " alt="" coords="66,105,67,140,61,138,62,109"/>
+<area shape="rect" title=" " alt="" coords="33,5,150,32"/>
+<area shape="rect" href="flow_8hpp.html" title=" " alt="" coords="21,80,90,107"/>
+<area shape="poly" title=" " alt="" coords="84,35,71,67,66,65,86,30"/>
+<area shape="rect" title=" " alt="" coords="65,229,118,256"/>
+<area shape="poly" title=" " alt="" coords="95,30,109,96,112,139,110,182,102,216,98,213,105,181,107,139,103,97,94,35"/>
+<area shape="rect" href="system_8hpp.html" title=" " alt="" coords="5,155,95,181"/>
+<area shape="poly" title=" " alt="" coords="55,105,55,139,49,139,54,110"/>
+<area shape="poly" title=" " alt="" coords="58,180,79,216,74,216,56,184"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -96,15 +100,29 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="flow_impl_8hpp__dep__incl.png" border="0" usemap="#asrc_2flow_impl_8hppdep" alt=""/></div>
 <map name="asrc_2flow_impl_8hppdep" id="asrc_2flow_impl_8hppdep">
-<area shape="rect" title=" " alt="" coords="253,5,371,32"/>
-<area shape="rect" href="flow_impl_8cpp.html" title=" " alt="" coords="5,88,123,115"/>
-<area shape="poly" title=" " alt="" coords="260,40,104,90,102,85,258,35"/>
-<area shape="rect" href="funcional__tests_8cpp.html" title=" " alt="" coords="146,80,302,123"/>
-<area shape="poly" title=" " alt="" coords="290,42,248,82,245,77,285,44"/>
-<area shape="rect" href="unit___flow_8cpp.html" title=" " alt="" coords="325,88,478,115"/>
-<area shape="poly" title=" " alt="" coords="338,40,390,88,385,87,336,45"/>
-<area shape="rect" href="unit___model_8cpp.html" title=" " alt="" coords="501,88,662,115"/>
-<area shape="poly" title=" " alt="" coords="369,34,542,87,536,88,368,39"/>
+<area shape="rect" title=" " alt="" coords="452,5,570,32"/>
+<area shape="rect" href="flow_impl_8cpp.html" title=" " alt="" coords="178,80,295,107"/>
+<area shape="poly" title=" " alt="" coords="446,38,285,82,284,77,451,35"/>
+<area shape="rect" href="model_8hpp.html" title=" " alt="" coords="319,80,423,107"/>
+<area shape="poly" title=" " alt="" coords="475,38,397,82,394,77,471,41"/>
+<area shape="rect" href="model_impl_8cpp.html" title=" " alt="" coords="403,245,531,272"/>
+<area shape="poly" title=" " alt="" coords="546,38,589,69,628,108,643,130,651,153,651,176,641,199,619,222,592,238,562,249,532,255,531,250,560,244,589,233,616,217,637,196,646,175,646,154,638,133,624,112,585,73,545,43"/>
+<area shape="rect" href="funcional__tests_8cpp.html" title=" " alt="" coords="288,155,443,197"/>
+<area shape="poly" title=" " alt="" coords="493,43,437,108,389,156,386,152,433,105,488,46"/>
+<area shape="rect" href="unit___model_8cpp.html" title=" " alt="" coords="467,163,627,189"/>
+<area shape="poly" title=" " alt="" coords="519,45,547,163,542,161,516,49"/>
+<area shape="rect" href="unit___flow_8cpp.html" title=" " alt="" coords="702,80,854,107"/>
+<area shape="poly" title=" " alt="" coords="572,34,733,79,728,80,572,39"/>
+<area shape="rect" href="factory_8hpp.html" title="Funcoes de fabrica para criacao de objetos do MyVENSIM." alt="" coords="5,163,113,189"/>
+<area shape="poly" title=" " alt="" coords="303,112,125,157,100,164,98,160,124,152,305,107"/>
+<area shape="rect" href="model_impl_8hpp.html" title=" " alt="" coords="136,163,264,189"/>
+<area shape="poly" title=" " alt="" coords="328,115,228,165,226,160,333,112"/>
+<area shape="poly" title=" " alt="" coords="371,120,369,156,365,153,367,124"/>
+<area shape="poly" title=" " alt="" coords="413,111,522,162,517,162,412,116"/>
+<area shape="rect" href="factory_8cpp.html" title="Implementacao das funcoes de fabrica." alt="" coords="76,245,183,272"/>
+<area shape="poly" title=" " alt="" coords="81,199,122,245,116,246,79,203"/>
+<area shape="poly" title=" " alt="" coords="182,200,142,247,139,243,177,202"/>
+<area shape="poly" title=" " alt="" coords="257,191,428,244,423,246,256,197"/>
 </map>
 </div>
 </div>
@@ -113,7 +131,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flow_impl.html">FlowImpl</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementacao concreta base da interface <a class="el" href="class_flow.html" title="Interface da classe Flow. Define o contrato de um fluxo: conectar dois Systems e calcular a taxa de t...">Flow</a>. Gerencia os ponteiros source e target e implementa todos os metodos da interface, exceto <a class="el" href="class_flow_impl.html#a88d14f759988f1dcf393b83a93aea1f1">execute()</a> — que permanece abstrato para que cada tipo de fluxo defina sua propria equacao matematica.  <a href="class_flow_impl.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementacao concreta base da interface <a class="el" href="class_flow.html" title="Interface da classe Flow. Define o contrato minimo de um fluxo: ler suas conexoes (origem e destino) ...">Flow</a>.  <a href="class_flow_impl.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->

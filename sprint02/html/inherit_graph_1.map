@@ -1,5 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$class_model.html" title="Interface da classe Model. Define o contrato do motor de simulacao: adicionar/remover Systems e Flows..." alt="" coords="5,5,62,32"/>
-<area shape="rect" id="Node000001" href="$class_model_impl.html" title="Implementacao concreta da interface Model. Armazena as colecoes de Systems e Flows em vetores e imple..." alt="" coords="110,5,191,32"/>
+<area shape="rect" id="Node000000" href="$class_model.html" title="Interface da classe Model." alt="" coords="5,5,62,32"/>
+<area shape="rect" id="Node000001" href="$class_model_impl.html" title="Implementacao concreta da interface Model." alt="" coords="110,5,191,32"/>
 <area shape="poly" id="edge6_Node000000_Node000001" title=" " alt="" coords="77,16,112,18,107,19,77,21"/>
 </map>

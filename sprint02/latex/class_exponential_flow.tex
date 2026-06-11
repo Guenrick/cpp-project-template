@@ -23,37 +23,33 @@ Collaboration diagram for Exponential\+Flow\+:
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_exponential_flow_a97b2083af546bc73576efe6025d4603d}{Exponential\+Flow}} (\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}s=nullptr, \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}t=nullptr)
+\mbox{\hyperlink{class_exponential_flow_adce6ba65c0c3d64ff5a0960b02ed16ee}{Exponential\+Flow}} (std\+::string id=\"{}\"{}, \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}s=nullptr, \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}t=nullptr)
 \item 
 double \mbox{\hyperlink{class_exponential_flow_aafb074830c5c18138913cb10da3b8782}{execute}} () override
 \item 
-\mbox{\hyperlink{class_exponential_flow_a97b2083af546bc73576efe6025d4603d}{Exponential\+Flow}} (\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}s=nullptr, \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}t=nullptr)
+\mbox{\hyperlink{class_exponential_flow_adce6ba65c0c3d64ff5a0960b02ed16ee}{Exponential\+Flow}} (std\+::string id=\"{}\"{}, \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}s=nullptr, \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}t=nullptr)
 \item 
 double \mbox{\hyperlink{class_exponential_flow_aafb074830c5c18138913cb10da3b8782}{execute}} () override
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_flow_impl}{Flow\+Impl}}}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_flow_impl_a4a88f4376cdaf1c0e62a900f507d4295}{Flow\+Impl}} (\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_flow_impl_a950987351656a518a1057b64c5f85af8}{source}}=nullptr, \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_flow_impl_af97039b649da65573e5582edbeb287b5}{target}}=nullptr)
-\item 
-\mbox{\hyperlink{class_flow_impl_a2981b1758ffef2310105758b4f473c27}{Flow\+Impl}} (const \mbox{\hyperlink{class_flow_impl}{Flow\+Impl}} \&obj)
+\mbox{\hyperlink{class_flow_impl_aca777e556ebdd53417b12de0ed87ca66}{Flow\+Impl}} (std\+::string id=\"{}\"{}, \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_flow_impl_a950987351656a518a1057b64c5f85af8}{source}}=nullptr, \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_flow_impl_af97039b649da65573e5582edbeb287b5}{target}}=nullptr)
 \item 
 virtual \mbox{\hyperlink{class_flow_impl_a2d91539593b336aee4a19048f8a82e8c}{\texorpdfstring{$\sim$}{\string~}\+Flow\+Impl}} ()
 \item 
-\mbox{\hyperlink{class_flow_impl}{Flow\+Impl}} \& \mbox{\hyperlink{class_flow_impl_ad923ca284a121114852d8f2948190e37}{operator=}} (const \mbox{\hyperlink{class_flow_impl}{Flow\+Impl}} \&obj)
-\item 
-void \mbox{\hyperlink{class_flow_impl_a47bbb64941fde986da1198b4af443c16}{set\+Source}} (\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}s) override
-\item 
-void \mbox{\hyperlink{class_flow_impl_abb1e0677c5e0d0a94b931ab57187bdcb}{set\+Target}} (\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}s) override
-\item 
 \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_flow_impl_a06c8ffdcfd36b04ddad091d2c043f5d0}{get\+Source}} () const override
-\item 
+\begin{DoxyCompactList}\small\item\em Retorna o \doxylink{class_system}{System} de origem deste \doxylink{class_flow}{Flow} (ou nullptr se nao houver). \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_flow_impl_adb35e3574470e91207c631fda3cdc9bd}{get\+Target}} () const override
-\item 
-void \mbox{\hyperlink{class_flow_impl_acf4fc570ead9b0421638d428f44305c1}{clear\+Source}} () override
-\item 
-void \mbox{\hyperlink{class_flow_impl_acf255f5bb33cdc0a09f486f2bab20d99}{clear\+Target}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em Retorna o \doxylink{class_system}{System} de destino deste \doxylink{class_flow}{Flow} (ou nullptr se nao houver). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_flow_impl_ac761ce3fc1b097b3086a2618f645a2a2}{set\+Source}} (\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}s)
+\begin{DoxyCompactList}\small\item\em Define o \doxylink{class_system}{System} de origem deste \doxylink{class_flow}{Flow}. Usado pelo \doxylink{class_model_a8ed641dd049aa26b485c2a011b893318}{Model\+::set\+Source}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_flow_impl_a9c9d09746b4fb2fae14041beafcba9dc}{set\+Target}} (\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}s)
+\begin{DoxyCompactList}\small\item\em Define o \doxylink{class_system}{System} de destino deste \doxylink{class_flow}{Flow}. Usado pelo \doxylink{class_model_ab4a9173d124546f28acf220e6994925b}{Model\+::set\+Target}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_flow_impl_a92a3d902afab0aa20ec2886d55264156}{clear\+Source}} ()
+\begin{DoxyCompactList}\small\item\em Remove a referencia ao \doxylink{class_system}{System} de origem. Usado pelo \doxylink{class_model_af5cefecf2366c43f850f630b6f71b9cc}{Model\+::clear\+Source}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_flow_impl_afec6eff9cdd0611aa49bfcad74a1f9bd}{clear\+Target}} ()
+\begin{DoxyCompactList}\small\item\em Remove a referencia ao \doxylink{class_system}{System} de destino. Usado pelo \doxylink{class_model_a2c7ca0384e43d9b4bd5295d2500c5257}{Model\+::clear\+Target}. \end{DoxyCompactList}\item 
 virtual double \mbox{\hyperlink{class_flow_impl_a88d14f759988f1dcf393b83a93aea1f1}{execute}} ()=0
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_flow}{Flow}}}
@@ -61,21 +57,18 @@ virtual double \mbox{\hyperlink{class_flow_impl_a88d14f759988f1dcf393b83a93aea1f
 \item 
 virtual \mbox{\hyperlink{class_flow_a325d284a50ca3274b126b21f5c39b9af}{\texorpdfstring{$\sim$}{\string~}\+Flow}} ()
 \item 
-virtual void \mbox{\hyperlink{class_flow_a4d756236982858350e7bf80a465926a7}{set\+Source}} (\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}s)=0
-\item 
-virtual void \mbox{\hyperlink{class_flow_ab1361d85c69c6c897d0409c8b8ae72fe}{set\+Target}} (\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}s)=0
-\item 
 virtual \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_flow_abf0f3dbb285fe82e5ba6449de06b97c8}{get\+Source}} () const =0
-\item 
+\begin{DoxyCompactList}\small\item\em Retorna o \doxylink{class_system}{System} de origem deste \doxylink{class_flow}{Flow} (ou nullptr se nao houver). \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_flow_afb9b8d93ea0fc81868b8e02dd382a787}{get\+Target}} () const =0
-\item 
-virtual void \mbox{\hyperlink{class_flow_a98e7aafb65699a9645a22f215b49c8b0}{clear\+Source}} ()=0
-\item 
-virtual void \mbox{\hyperlink{class_flow_a52f8ab7ff430f5d2e87aa0fdb12ad64b}{clear\+Target}} ()=0
-\item 
+\begin{DoxyCompactList}\small\item\em Retorna o \doxylink{class_system}{System} de destino deste \doxylink{class_flow}{Flow} (ou nullptr se nao houver). \end{DoxyCompactList}\item 
 virtual double \mbox{\hyperlink{class_flow_a619be0b590c78202127bc6ac7fb04029}{execute}} ()=0
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Calcula a quantidade transferida de origem para destino neste passo. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_flow_impl}{Flow\+Impl}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_flow_impl_a18de5084aabbb2f8a2ed6b9bc8b44599}{id\+\_\+}}
+\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_flow_impl}{Flow\+Impl}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -86,17 +79,17 @@ virtual double \mbox{\hyperlink{class_flow_a619be0b590c78202127bc6ac7fb04029}{ex
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{class_exponential_flow_a97b2083af546bc73576efe6025d4603d}\label{class_exponential_flow_a97b2083af546bc73576efe6025d4603d} 
+\Hypertarget{class_exponential_flow_adce6ba65c0c3d64ff5a0960b02ed16ee}\label{class_exponential_flow_adce6ba65c0c3d64ff5a0960b02ed16ee} 
 \index{ExponentialFlow@{ExponentialFlow}!ExponentialFlow@{ExponentialFlow}}
 \index{ExponentialFlow@{ExponentialFlow}!ExponentialFlow@{ExponentialFlow}}
 \doxysubsubsection{\texorpdfstring{ExponentialFlow()}{ExponentialFlow()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily Exponential\+Flow\+::\+Exponential\+Flow (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}}]{s = {\ttfamily nullptr},  }\item[{\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}}]{t = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily Exponential\+Flow\+::\+Exponential\+Flow (\begin{DoxyParamCaption}\item[{std\+::string}]{id = {\ttfamily \"{}\"{}},  }\item[{\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}}]{s = {\ttfamily nullptr},  }\item[{\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}}]{t = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-\Hypertarget{class_exponential_flow_a97b2083af546bc73576efe6025d4603d}\label{class_exponential_flow_a97b2083af546bc73576efe6025d4603d} 
+\Hypertarget{class_exponential_flow_adce6ba65c0c3d64ff5a0960b02ed16ee}\label{class_exponential_flow_adce6ba65c0c3d64ff5a0960b02ed16ee} 
 \index{ExponentialFlow@{ExponentialFlow}!ExponentialFlow@{ExponentialFlow}}
 \index{ExponentialFlow@{ExponentialFlow}!ExponentialFlow@{ExponentialFlow}}
 \doxysubsubsection{\texorpdfstring{ExponentialFlow()}{ExponentialFlow()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Exponential\+Flow\+::\+Exponential\+Flow (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}}]{s = {\ttfamily nullptr},  }\item[{\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}}]{t = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily Exponential\+Flow\+::\+Exponential\+Flow (\begin{DoxyParamCaption}\item[{std\+::string}]{id = {\ttfamily \"{}\"{}},  }\item[{\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}}]{s = {\ttfamily nullptr},  }\item[{\mbox{\hyperlink{class_system}{System}} \texorpdfstring{$\ast$}{*}}]{t = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -107,7 +100,7 @@ virtual double \mbox{\hyperlink{class_flow_a619be0b590c78202127bc6ac7fb04029}{ex
 \doxysubsubsection{\texorpdfstring{execute()}{execute()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily double Exponential\+Flow\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
 
-
+Calcula e retorna a quantidade transferida de source para target neste passo. Permanece abstrato — cada subclasse define sua propria equacao. 
 
 Implements \mbox{\hyperlink{class_flow_impl_a88d14f759988f1dcf393b83a93aea1f1}{Flow\+Impl}}.
 
@@ -117,7 +110,7 @@ Implements \mbox{\hyperlink{class_flow_impl_a88d14f759988f1dcf393b83a93aea1f1}{F
 \doxysubsubsection{\texorpdfstring{execute()}{execute()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily double Exponential\+Flow\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
 
-
+Calcula e retorna a quantidade transferida de source para target neste passo. Permanece abstrato — cada subclasse define sua propria equacao. 
 
 Implements \mbox{\hyperlink{class_flow_impl_a88d14f759988f1dcf393b83a93aea1f1}{Flow\+Impl}}.
 

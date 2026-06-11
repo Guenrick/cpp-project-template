@@ -1,5 +1,5 @@
 <map id="Model" name="Model">
-<area shape="rect" id="Node000001" title="Interface da classe Model. Define o contrato do motor de simulacao: adicionar/remover Systems e Flows..." alt="" coords="5,5,120,267"/>
-<area shape="rect" id="Node000002" href="$class_model_impl.html" title="Implementacao concreta da interface Model. Armazena as colecoes de Systems e Flows em vetores e imple..." alt="" coords="5,315,120,683"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="63,279,65,315,60,315,63,284"/>
+<area shape="rect" id="Node000001" title="Interface da classe Model." alt="" coords="5,5,120,416"/>
+<area shape="rect" id="Node000002" href="$class_model_impl.html" title="Implementacao concreta da interface Model." alt="" coords="5,464,120,939"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="63,428,65,464,60,464,63,433"/>
 </map>

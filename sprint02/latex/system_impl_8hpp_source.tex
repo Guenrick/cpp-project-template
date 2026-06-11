@@ -6,21 +6,29 @@
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SYSTEM\_IMPL\_HPP}}
 \DoxyCodeLine{00003\ }
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{system_8hpp}{system.hpp}}"{}}}
-\DoxyCodeLine{00005\ }
-\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_system_impl}{SystemImpl}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_system}{System}}\ \{}
-\DoxyCodeLine{00012\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{double}\ value;}
-\DoxyCodeLine{00014\ }
-\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_system_impl}{SystemImpl}}(\textcolor{keywordtype}{double}\ v\ =\ 0.0);}
-\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_system_impl}{SystemImpl}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_system_impl}{SystemImpl}}\&\ obj);}
-\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_system_impl_a0cd451779458a7bd7c224a48ed163a9e}{\string~SystemImpl}}();}
-\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_system_impl}{SystemImpl}}\&\ \mbox{\hyperlink{class_system_impl_a8e4d15426ab9220d919c997c2bee6167}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_system_impl}{SystemImpl}}\&\ obj);}
-\DoxyCodeLine{00020\ }
-\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_system_impl_abd3ff91586d4474c0a747dc5dd6e0268}{getValue}}()\ \textcolor{keyword}{const\ override};}
-\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_system_impl_a2e25a20fd72a603e63ef29b910ee7462}{setValue}}(\textcolor{keywordtype}{double}\ v)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00023\ \};}
-\DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SYSTEM\_IMPL\_HPP}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_system_impl}{SystemImpl}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_system}{System}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ std::string\ \mbox{\hyperlink{class_system_impl_af0215504df34bec6d67eca6508315770}{id\_}};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_system_impl_a6aa6e81471ae9e49b500a495c7d9bfe7}{value\_}};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_system_impl}{SystemImpl}}(std::string\ \textcolor{keywordtype}{id},\ \textcolor{keywordtype}{double}\ value\ =\ 0.0);}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_system_impl_a0cd451779458a7bd7c224a48ed163a9e}{\string~SystemImpl}}();}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_system_impl_abd3ff91586d4474c0a747dc5dd6e0268}{getValue}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_system_impl_a2e25a20fd72a603e63ef29b910ee7462}{setValue}}(\textcolor{keywordtype}{double}\ v)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00029\ \ \ \ \ std::string\ \mbox{\hyperlink{class_system_impl_ad3843b49bbde11738f395c5fbeae4633}{getName}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_system_impl_a64ccf2dd42f82bef7cbaf1a645589d49}{setName}}(\textcolor{keyword}{const}\ std::string\&\ name)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_system_impl}{SystemImpl}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_system_impl}{SystemImpl}}\&\ obj);}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_system_impl}{SystemImpl}}\&\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_system_impl}{SystemImpl}}\&\ obj);}
+\DoxyCodeLine{00035\ \};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SYSTEM\_IMPL\_HPP}}
 
 \end{DoxyCode}

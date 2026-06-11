@@ -71,13 +71,14 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_flow_impl-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">FlowImpl Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Implementacao concreta base da interface <a class="el" href="class_flow.html" title="Interface da classe Flow. Define o contrato de um fluxo: conectar dois Systems e calcular a taxa de t...">Flow</a>. Gerencia os ponteiros source e target e implementa todos os metodos da interface, exceto <a class="el" href="class_flow_impl.html#a88d14f759988f1dcf393b83a93aea1f1">execute()</a> — que permanece abstrato para que cada tipo de fluxo defina sua propria equacao matematica.  
+<p>Implementacao concreta base da interface <a class="el" href="class_flow.html" title="Interface da classe Flow. Define o contrato minimo de um fluxo: ler suas conexoes (origem e destino) ...">Flow</a>.  
  <a href="class_flow_impl.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="flow_impl_8hpp_source.html">flowImpl.hpp</a>&gt;</code></p>
@@ -86,17 +87,17 @@ Inheritance diagram for FlowImpl:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_flow_impl__inherit__graph.png" border="0" usemap="#a_flow_impl_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_flow_impl_inherit__map" id="a_flow_impl_inherit__map">
-<area shape="rect" title="Implementacao concreta base da interface Flow. Gerencia os ponteiros source e target e implementa tod..." alt="" coords="219,272,320,576"/>
-<area shape="rect" href="class_complex_flow.html" title=" " alt="" coords="5,645,117,736"/>
-<area shape="poly" title=" " alt="" coords="212,502,98,647,94,644,208,499"/>
-<area shape="rect" href="class_concrete_flow.html" title=" " alt="" coords="141,645,254,736"/>
-<area shape="poly" title=" " alt="" coords="226,589,212,647,207,644,222,593"/>
-<area shape="rect" href="class_exponential_flow.html" title=" " alt="" coords="277,624,405,757"/>
-<area shape="poly" title=" " alt="" coords="316,588,326,625,321,623,313,593"/>
-<area shape="rect" href="class_logistic_flow.html" title=" " alt="" coords="429,645,534,736"/>
-<area shape="poly" title=" " alt="" coords="330,497,449,645,443,646,328,502"/>
-<area shape="rect" href="class_flow.html" title="Interface da classe Flow. Define o contrato de um fluxo: conectar dois Systems e calcular a taxa de t..." alt="" coords="219,5,320,224"/>
-<area shape="poly" title=" " alt="" coords="270,236,272,273,267,272,269,242"/>
+<area shape="rect" title="Implementacao concreta base da interface Flow." alt="" coords="219,187,320,469"/>
+<area shape="rect" href="class_complex_flow.html" title=" " alt="" coords="5,539,117,629"/>
+<area shape="poly" title=" " alt="" coords="212,404,99,541,95,537,207,401"/>
+<area shape="rect" href="class_concrete_flow.html" title=" " alt="" coords="141,539,254,629"/>
+<area shape="poly" title=" " alt="" coords="227,481,212,540,207,538,224,485"/>
+<area shape="rect" href="class_exponential_flow.html" title=" " alt="" coords="277,517,405,651"/>
+<area shape="poly" title=" " alt="" coords="314,481,325,519,320,517,312,486"/>
+<area shape="rect" href="class_logistic_flow.html" title=" " alt="" coords="429,539,534,629"/>
+<area shape="poly" title=" " alt="" coords="330,399,447,539,442,539,328,403"/>
+<area shape="rect" href="class_flow.html" title="Interface da classe Flow. Define o contrato minimo de um fluxo: ler suas conexoes (origem e destino) ..." alt="" coords="224,5,315,139"/>
+<area shape="poly" title=" " alt="" coords="270,151,272,187,267,186,269,156"/>
 </map>
 </div>
 <div class="dynheader">
@@ -104,55 +105,57 @@ Collaboration diagram for FlowImpl:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_flow_impl__coll__graph.png" border="0" usemap="#a_flow_impl_coll__map" alt="Collaboration graph"/></div>
 <map name="a_flow_impl_coll__map" id="a_flow_impl_coll__map">
-<area shape="rect" title="Implementacao concreta base da interface Flow. Gerencia os ponteiros source e target e implementa tod..." alt="" coords="64,304,165,587"/>
-<area shape="rect" href="class_flow.html" title="Interface da classe Flow. Define o contrato de um fluxo: conectar dois Systems e calcular a taxa de t..." alt="" coords="5,5,106,224"/>
-<area shape="poly" title=" " alt="" coords="78,236,92,304,87,305,77,241"/>
-<area shape="rect" href="class_system.html" title="Interface da classe System. Define o contrato que toda implementacao de System deve cumprir...." alt="" coords="131,59,216,171"/>
-<area shape="poly" title=" " alt="" coords="164,168,145,288,140,287,162,173"/>
+<area shape="rect" title="Implementacao concreta base da interface Flow." alt="" coords="56,240,157,480"/>
+<area shape="rect" href="class_flow.html" title="Interface da classe Flow. Define o contrato minimo de um fluxo: ler suas conexoes (origem e destino) ..." alt="" coords="5,16,96,149"/>
+<area shape="poly" title=" " alt="" coords="68,161,85,240,80,240,67,167"/>
+<area shape="rect" href="class_system.html" title="Interface da classe System. Define o contrato que toda implementacao de System deve cumprir...." alt="" coords="120,5,205,160"/>
+<area shape="poly" title=" " alt="" coords="148,157,137,224,132,223,146,162"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4a88f4376cdaf1c0e62a900f507d4295"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flow_impl.html#a4a88f4376cdaf1c0e62a900f507d4295">FlowImpl</a> (<a class="el" href="class_system.html">System</a> *<a class="el" href="class_flow_impl.html#a950987351656a518a1057b64c5f85af8">source</a>=nullptr, <a class="el" href="class_system.html">System</a> *<a class="el" href="class_flow_impl.html#af97039b649da65573e5582edbeb287b5">target</a>=nullptr)</td></tr>
-<tr class="separator:a4a88f4376cdaf1c0e62a900f507d4295"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2981b1758ffef2310105758b4f473c27"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flow_impl.html#a2981b1758ffef2310105758b4f473c27">FlowImpl</a> (const <a class="el" href="class_flow_impl.html">FlowImpl</a> &amp;obj)</td></tr>
-<tr class="separator:a2981b1758ffef2310105758b4f473c27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca777e556ebdd53417b12de0ed87ca66"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flow_impl.html#aca777e556ebdd53417b12de0ed87ca66">FlowImpl</a> (std::string id=&quot;&quot;, <a class="el" href="class_system.html">System</a> *<a class="el" href="class_flow_impl.html#a950987351656a518a1057b64c5f85af8">source</a>=nullptr, <a class="el" href="class_system.html">System</a> *<a class="el" href="class_flow_impl.html#af97039b649da65573e5582edbeb287b5">target</a>=nullptr)</td></tr>
+<tr class="separator:aca777e556ebdd53417b12de0ed87ca66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d91539593b336aee4a19048f8a82e8c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flow_impl.html#a2d91539593b336aee4a19048f8a82e8c">~FlowImpl</a> ()</td></tr>
 <tr class="separator:a2d91539593b336aee4a19048f8a82e8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad923ca284a121114852d8f2948190e37"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_flow_impl.html">FlowImpl</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flow_impl.html#ad923ca284a121114852d8f2948190e37">operator=</a> (const <a class="el" href="class_flow_impl.html">FlowImpl</a> &amp;obj)</td></tr>
-<tr class="separator:ad923ca284a121114852d8f2948190e37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47bbb64941fde986da1198b4af443c16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flow_impl.html#a47bbb64941fde986da1198b4af443c16">setSource</a> (<a class="el" href="class_system.html">System</a> *s) override</td></tr>
-<tr class="separator:a47bbb64941fde986da1198b4af443c16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb1e0677c5e0d0a94b931ab57187bdcb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flow_impl.html#abb1e0677c5e0d0a94b931ab57187bdcb">setTarget</a> (<a class="el" href="class_system.html">System</a> *s) override</td></tr>
-<tr class="separator:abb1e0677c5e0d0a94b931ab57187bdcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06c8ffdcfd36b04ddad091d2c043f5d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_system.html">System</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flow_impl.html#a06c8ffdcfd36b04ddad091d2c043f5d0">getSource</a> () const override</td></tr>
+<tr class="memdesc:a06c8ffdcfd36b04ddad091d2c043f5d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o <a class="el" href="class_system.html" title="Interface da classe System. Define o contrato que toda implementacao de System deve cumprir....">System</a> de origem deste <a class="el" href="class_flow.html" title="Interface da classe Flow. Define o contrato minimo de um fluxo: ler suas conexoes (origem e destino) ...">Flow</a> (ou nullptr se nao houver).  <br /></td></tr>
 <tr class="separator:a06c8ffdcfd36b04ddad091d2c043f5d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb35e3574470e91207c631fda3cdc9bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_system.html">System</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flow_impl.html#adb35e3574470e91207c631fda3cdc9bd">getTarget</a> () const override</td></tr>
+<tr class="memdesc:adb35e3574470e91207c631fda3cdc9bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o <a class="el" href="class_system.html" title="Interface da classe System. Define o contrato que toda implementacao de System deve cumprir....">System</a> de destino deste <a class="el" href="class_flow.html" title="Interface da classe Flow. Define o contrato minimo de um fluxo: ler suas conexoes (origem e destino) ...">Flow</a> (ou nullptr se nao houver).  <br /></td></tr>
 <tr class="separator:adb35e3574470e91207c631fda3cdc9bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf4fc570ead9b0421638d428f44305c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flow_impl.html#acf4fc570ead9b0421638d428f44305c1">clearSource</a> () override</td></tr>
-<tr class="separator:acf4fc570ead9b0421638d428f44305c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf255f5bb33cdc0a09f486f2bab20d99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flow_impl.html#acf255f5bb33cdc0a09f486f2bab20d99">clearTarget</a> () override</td></tr>
-<tr class="separator:acf255f5bb33cdc0a09f486f2bab20d99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac761ce3fc1b097b3086a2618f645a2a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flow_impl.html#ac761ce3fc1b097b3086a2618f645a2a2">setSource</a> (<a class="el" href="class_system.html">System</a> *s)</td></tr>
+<tr class="memdesc:ac761ce3fc1b097b3086a2618f645a2a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define o <a class="el" href="class_system.html" title="Interface da classe System. Define o contrato que toda implementacao de System deve cumprir....">System</a> de origem deste <a class="el" href="class_flow.html" title="Interface da classe Flow. Define o contrato minimo de um fluxo: ler suas conexoes (origem e destino) ...">Flow</a>. Usado pelo <a class="el" href="class_model.html#a8ed641dd049aa26b485c2a011b893318" title="Define a origem (source) de um Flow.">Model::setSource</a>.  <br /></td></tr>
+<tr class="separator:ac761ce3fc1b097b3086a2618f645a2a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c9d09746b4fb2fae14041beafcba9dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flow_impl.html#a9c9d09746b4fb2fae14041beafcba9dc">setTarget</a> (<a class="el" href="class_system.html">System</a> *s)</td></tr>
+<tr class="memdesc:a9c9d09746b4fb2fae14041beafcba9dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define o <a class="el" href="class_system.html" title="Interface da classe System. Define o contrato que toda implementacao de System deve cumprir....">System</a> de destino deste <a class="el" href="class_flow.html" title="Interface da classe Flow. Define o contrato minimo de um fluxo: ler suas conexoes (origem e destino) ...">Flow</a>. Usado pelo <a class="el" href="class_model.html#ab4a9173d124546f28acf220e6994925b" title="Define o destino (target) de um Flow.">Model::setTarget</a>.  <br /></td></tr>
+<tr class="separator:a9c9d09746b4fb2fae14041beafcba9dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92a3d902afab0aa20ec2886d55264156"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flow_impl.html#a92a3d902afab0aa20ec2886d55264156">clearSource</a> ()</td></tr>
+<tr class="memdesc:a92a3d902afab0aa20ec2886d55264156"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a referencia ao <a class="el" href="class_system.html" title="Interface da classe System. Define o contrato que toda implementacao de System deve cumprir....">System</a> de origem. Usado pelo <a class="el" href="class_model.html#af5cefecf2366c43f850f630b6f71b9cc" title="Remove a origem (source) de um Flow.">Model::clearSource</a>.  <br /></td></tr>
+<tr class="separator:a92a3d902afab0aa20ec2886d55264156"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afec6eff9cdd0611aa49bfcad74a1f9bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flow_impl.html#afec6eff9cdd0611aa49bfcad74a1f9bd">clearTarget</a> ()</td></tr>
+<tr class="memdesc:afec6eff9cdd0611aa49bfcad74a1f9bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a referencia ao <a class="el" href="class_system.html" title="Interface da classe System. Define o contrato que toda implementacao de System deve cumprir....">System</a> de destino. Usado pelo <a class="el" href="class_model.html#a2c7ca0384e43d9b4bd5295d2500c5257" title="Remove o destino (target) de um Flow.">Model::clearTarget</a>.  <br /></td></tr>
+<tr class="separator:afec6eff9cdd0611aa49bfcad74a1f9bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88d14f759988f1dcf393b83a93aea1f1"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flow_impl.html#a88d14f759988f1dcf393b83a93aea1f1">execute</a> ()=0</td></tr>
 <tr class="separator:a88d14f759988f1dcf393b83a93aea1f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_flow"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_flow')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_flow.html">Flow</a></td></tr>
 <tr class="memitem:a325d284a50ca3274b126b21f5c39b9af inherit pub_methods_class_flow"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flow.html#a325d284a50ca3274b126b21f5c39b9af">~Flow</a> ()</td></tr>
 <tr class="separator:a325d284a50ca3274b126b21f5c39b9af inherit pub_methods_class_flow"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d756236982858350e7bf80a465926a7 inherit pub_methods_class_flow"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flow.html#a4d756236982858350e7bf80a465926a7">setSource</a> (<a class="el" href="class_system.html">System</a> *s)=0</td></tr>
-<tr class="separator:a4d756236982858350e7bf80a465926a7 inherit pub_methods_class_flow"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1361d85c69c6c897d0409c8b8ae72fe inherit pub_methods_class_flow"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flow.html#ab1361d85c69c6c897d0409c8b8ae72fe">setTarget</a> (<a class="el" href="class_system.html">System</a> *s)=0</td></tr>
-<tr class="separator:ab1361d85c69c6c897d0409c8b8ae72fe inherit pub_methods_class_flow"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf0f3dbb285fe82e5ba6449de06b97c8 inherit pub_methods_class_flow"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_system.html">System</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flow.html#abf0f3dbb285fe82e5ba6449de06b97c8">getSource</a> () const =0</td></tr>
+<tr class="memdesc:abf0f3dbb285fe82e5ba6449de06b97c8 inherit pub_methods_class_flow"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o <a class="el" href="class_system.html" title="Interface da classe System. Define o contrato que toda implementacao de System deve cumprir....">System</a> de origem deste <a class="el" href="class_flow.html" title="Interface da classe Flow. Define o contrato minimo de um fluxo: ler suas conexoes (origem e destino) ...">Flow</a> (ou nullptr se nao houver).  <br /></td></tr>
 <tr class="separator:abf0f3dbb285fe82e5ba6449de06b97c8 inherit pub_methods_class_flow"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb9b8d93ea0fc81868b8e02dd382a787 inherit pub_methods_class_flow"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_system.html">System</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flow.html#afb9b8d93ea0fc81868b8e02dd382a787">getTarget</a> () const =0</td></tr>
+<tr class="memdesc:afb9b8d93ea0fc81868b8e02dd382a787 inherit pub_methods_class_flow"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o <a class="el" href="class_system.html" title="Interface da classe System. Define o contrato que toda implementacao de System deve cumprir....">System</a> de destino deste <a class="el" href="class_flow.html" title="Interface da classe Flow. Define o contrato minimo de um fluxo: ler suas conexoes (origem e destino) ...">Flow</a> (ou nullptr se nao houver).  <br /></td></tr>
 <tr class="separator:afb9b8d93ea0fc81868b8e02dd382a787 inherit pub_methods_class_flow"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98e7aafb65699a9645a22f215b49c8b0 inherit pub_methods_class_flow"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flow.html#a98e7aafb65699a9645a22f215b49c8b0">clearSource</a> ()=0</td></tr>
-<tr class="separator:a98e7aafb65699a9645a22f215b49c8b0 inherit pub_methods_class_flow"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52f8ab7ff430f5d2e87aa0fdb12ad64b inherit pub_methods_class_flow"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flow.html#a52f8ab7ff430f5d2e87aa0fdb12ad64b">clearTarget</a> ()=0</td></tr>
-<tr class="separator:a52f8ab7ff430f5d2e87aa0fdb12ad64b inherit pub_methods_class_flow"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a619be0b590c78202127bc6ac7fb04029 inherit pub_methods_class_flow"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flow.html#a619be0b590c78202127bc6ac7fb04029">execute</a> ()=0</td></tr>
+<tr class="memdesc:a619be0b590c78202127bc6ac7fb04029 inherit pub_methods_class_flow"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula a quantidade transferida de origem para destino neste passo.  <br /></td></tr>
 <tr class="separator:a619be0b590c78202127bc6ac7fb04029 inherit pub_methods_class_flow"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a18de5084aabbb2f8a2ed6b9bc8b44599"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_flow_impl.html#a18de5084aabbb2f8a2ed6b9bc8b44599">id_</a></td></tr>
+<tr class="separator:a18de5084aabbb2f8a2ed6b9bc8b44599"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -162,10 +165,12 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:af97039b649da65573e5582edbeb287b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Implementacao concreta base da interface <a class="el" href="class_flow.html" title="Interface da classe Flow. Define o contrato de um fluxo: conectar dois Systems e calcular a taxa de t...">Flow</a>. Gerencia os ponteiros source e target e implementa todos os metodos da interface, exceto <a class="el" href="class_flow_impl.html#a88d14f759988f1dcf393b83a93aea1f1">execute()</a> — que permanece abstrato para que cada tipo de fluxo defina sua propria equacao matematica. </p>
+<div class="textblock"><p>Implementacao concreta base da interface <a class="el" href="class_flow.html" title="Interface da classe Flow. Define o contrato minimo de um fluxo: ler suas conexoes (origem e destino) ...">Flow</a>. </p>
+<p>Possui um identificador (id_) e gerencia os ponteiros source e target. Implementa <a class="el" href="class_flow_impl.html#a06c8ffdcfd36b04ddad091d2c043f5d0" title="Retorna o System de origem deste Flow (ou nullptr se nao houver).">getSource()</a>/getTarget() (parte da interface <a class="el" href="class_flow.html" title="Interface da classe Flow. Define o contrato minimo de um fluxo: ler suas conexoes (origem e destino) ...">Flow</a>) e tambem expoe setSource/setTarget/clearSource/clearTarget como metodos concretos — usados internamente pelo <a class="el" href="class_model.html" title="Interface da classe Model.">Model</a> para (des)conectar Systems a um <a class="el" href="class_flow.html" title="Interface da classe Flow. Define o contrato minimo de um fluxo: ler suas conexoes (origem e destino) ...">Flow</a>, ja que essas operacoes nao fazem parte da interface <a class="el" href="class_flow.html" title="Interface da classe Flow. Define o contrato minimo de um fluxo: ler suas conexoes (origem e destino) ...">Flow</a>.</p>
+<p><a class="el" href="class_flow_impl.html#a88d14f759988f1dcf393b83a93aea1f1">execute()</a> permanece abstrato para que cada tipo de fluxo defina sua propria equacao matematica. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a4a88f4376cdaf1c0e62a900f507d4295" name="a4a88f4376cdaf1c0e62a900f507d4295"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a88f4376cdaf1c0e62a900f507d4295">&#9670;&#160;</a></span>FlowImpl() <span class="overload">[1/2]</span></h2>
+<a id="aca777e556ebdd53417b12de0ed87ca66" name="aca777e556ebdd53417b12de0ed87ca66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca777e556ebdd53417b12de0ed87ca66">&#9670;&#160;</a></span>FlowImpl()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -173,6 +178,12 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">FlowImpl::FlowImpl </td>
           <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>id</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype"><a class="el" href="class_system.html">System</a> *&#160;</td>
           <td class="paramname"><em>source</em> = <code>nullptr</code>, </td>
         </tr>
@@ -186,24 +197,6 @@ Protected Attributes</h2></td></tr>
           <td></td>
           <td>)</td>
           <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a2981b1758ffef2310105758b4f473c27" name="a2981b1758ffef2310105758b4f473c27"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2981b1758ffef2310105758b4f473c27">&#9670;&#160;</a></span>FlowImpl() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">FlowImpl::FlowImpl </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_flow_impl.html">FlowImpl</a> &amp;&#160;</td>
-          <td class="paramname"><em>obj</em></td><td>)</td>
-          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -236,14 +229,11 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="acf4fc570ead9b0421638d428f44305c1" name="acf4fc570ead9b0421638d428f44305c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf4fc570ead9b0421638d428f44305c1">&#9670;&#160;</a></span>clearSource()</h2>
+<a id="a92a3d902afab0aa20ec2886d55264156" name="a92a3d902afab0aa20ec2886d55264156"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92a3d902afab0aa20ec2886d55264156">&#9670;&#160;</a></span>clearSource()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void FlowImpl::clearSource </td>
@@ -252,25 +242,17 @@ Protected Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_flow.html#a98e7aafb65699a9645a22f215b49c8b0">Flow</a>.</p>
+<p>Remove a referencia ao <a class="el" href="class_system.html" title="Interface da classe System. Define o contrato que toda implementacao de System deve cumprir....">System</a> de origem. Usado pelo <a class="el" href="class_model.html#af5cefecf2366c43f850f630b6f71b9cc" title="Remove a origem (source) de um Flow.">Model::clearSource</a>. </p>
 
 </div>
 </div>
-<a id="acf255f5bb33cdc0a09f486f2bab20d99" name="acf255f5bb33cdc0a09f486f2bab20d99"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf255f5bb33cdc0a09f486f2bab20d99">&#9670;&#160;</a></span>clearTarget()</h2>
+<a id="afec6eff9cdd0611aa49bfcad74a1f9bd" name="afec6eff9cdd0611aa49bfcad74a1f9bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afec6eff9cdd0611aa49bfcad74a1f9bd">&#9670;&#160;</a></span>clearTarget()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void FlowImpl::clearTarget </td>
@@ -279,14 +261,9 @@ Protected Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_flow.html#a52f8ab7ff430f5d2e87aa0fdb12ad64b">Flow</a>.</p>
+<p>Remove a referencia ao <a class="el" href="class_system.html" title="Interface da classe System. Define o contrato que toda implementacao de System deve cumprir....">System</a> de destino. Usado pelo <a class="el" href="class_model.html#a2c7ca0384e43d9b4bd5295d2500c5257" title="Remove o destino (target) de um Flow.">Model::clearTarget</a>. </p>
 
 </div>
 </div>
@@ -312,6 +289,7 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Calcula e retorna a quantidade transferida de source para target neste passo. Permanece abstrato — cada subclasse define sua propria equacao. </p>
 
 <p>Implements <a class="el" href="class_flow.html#a619be0b590c78202127bc6ac7fb04029">Flow</a>.</p>
 
@@ -342,6 +320,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Retorna o <a class="el" href="class_system.html" title="Interface da classe System. Define o contrato que toda implementacao de System deve cumprir....">System</a> de origem deste <a class="el" href="class_flow.html" title="Interface da classe Flow. Define o contrato minimo de um fluxo: ler suas conexoes (origem e destino) ...">Flow</a> (ou nullptr se nao houver). </p>
+
 <p>Implements <a class="el" href="class_flow.html#abf0f3dbb285fe82e5ba6449de06b97c8">Flow</a>.</p>
 
 </div>
@@ -369,36 +349,17 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Retorna o <a class="el" href="class_system.html" title="Interface da classe System. Define o contrato que toda implementacao de System deve cumprir....">System</a> de destino deste <a class="el" href="class_flow.html" title="Interface da classe Flow. Define o contrato minimo de um fluxo: ler suas conexoes (origem e destino) ...">Flow</a> (ou nullptr se nao houver). </p>
+
 <p>Implements <a class="el" href="class_flow.html#afb9b8d93ea0fc81868b8e02dd382a787">Flow</a>.</p>
 
 </div>
 </div>
-<a id="ad923ca284a121114852d8f2948190e37" name="ad923ca284a121114852d8f2948190e37"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad923ca284a121114852d8f2948190e37">&#9670;&#160;</a></span>operator=()</h2>
+<a id="ac761ce3fc1b097b3086a2618f645a2a2" name="ac761ce3fc1b097b3086a2618f645a2a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac761ce3fc1b097b3086a2618f645a2a2">&#9670;&#160;</a></span>setSource()</h2>
 
 <div class="memitem">
 <div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_flow_impl.html">FlowImpl</a> &amp; FlowImpl::operator= </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_flow_impl.html">FlowImpl</a> &amp;&#160;</td>
-          <td class="paramname"><em>obj</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a47bbb64941fde986da1198b4af443c16" name="a47bbb64941fde986da1198b4af443c16"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47bbb64941fde986da1198b4af443c16">&#9670;&#160;</a></span>setSource()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void FlowImpl::setSource </td>
@@ -408,25 +369,17 @@ Protected Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_flow.html#a4d756236982858350e7bf80a465926a7">Flow</a>.</p>
+<p>Define o <a class="el" href="class_system.html" title="Interface da classe System. Define o contrato que toda implementacao de System deve cumprir....">System</a> de origem deste <a class="el" href="class_flow.html" title="Interface da classe Flow. Define o contrato minimo de um fluxo: ler suas conexoes (origem e destino) ...">Flow</a>. Usado pelo <a class="el" href="class_model.html#a8ed641dd049aa26b485c2a011b893318" title="Define a origem (source) de um Flow.">Model::setSource</a>. </p>
 
 </div>
 </div>
-<a id="abb1e0677c5e0d0a94b931ab57187bdcb" name="abb1e0677c5e0d0a94b931ab57187bdcb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb1e0677c5e0d0a94b931ab57187bdcb">&#9670;&#160;</a></span>setTarget()</h2>
+<a id="a9c9d09746b4fb2fae14041beafcba9dc" name="a9c9d09746b4fb2fae14041beafcba9dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c9d09746b4fb2fae14041beafcba9dc">&#9670;&#160;</a></span>setTarget()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void FlowImpl::setTarget </td>
@@ -436,18 +389,27 @@ Protected Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_flow.html#ab1361d85c69c6c897d0409c8b8ae72fe">Flow</a>.</p>
+<p>Define o <a class="el" href="class_system.html" title="Interface da classe System. Define o contrato que toda implementacao de System deve cumprir....">System</a> de destino deste <a class="el" href="class_flow.html" title="Interface da classe Flow. Define o contrato minimo de um fluxo: ler suas conexoes (origem e destino) ...">Flow</a>. Usado pelo <a class="el" href="class_model.html#ab4a9173d124546f28acf220e6994925b" title="Define o destino (target) de um Flow.">Model::setTarget</a>. </p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a18de5084aabbb2f8a2ed6b9bc8b44599" name="a18de5084aabbb2f8a2ed6b9bc8b44599"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18de5084aabbb2f8a2ed6b9bc8b44599">&#9670;&#160;</a></span>id_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string FlowImpl::id_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a950987351656a518a1057b64c5f85af8" name="a950987351656a518a1057b64c5f85af8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a950987351656a518a1057b64c5f85af8">&#9670;&#160;</a></span>source</h2>
 

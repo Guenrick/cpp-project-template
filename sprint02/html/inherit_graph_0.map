@@ -1,6 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$class_flow.html" title="Interface da classe Flow. Define o contrato de um fluxo: conectar dois Systems e calcular a taxa de t..." alt="" coords="5,81,55,108"/>
-<area shape="rect" id="Node000001" href="$class_flow_impl.html" title="Implementacao concreta base da interface Flow. Gerencia os ponteiros source e target e implementa tod..." alt="" coords="103,81,177,108"/>
+<area shape="rect" id="Node000000" href="$class_flow.html" title="Interface da classe Flow. Define o contrato minimo de um fluxo: ler suas conexoes (origem e destino) ..." alt="" coords="5,81,55,108"/>
+<area shape="rect" id="Node000001" href="$class_flow_impl.html" title="Implementacao concreta base da interface Flow." alt="" coords="103,81,177,108"/>
 <area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="69,92,104,93,100,96,71,97"/>
 <area shape="rect" id="Node000002" href="$class_complex_flow.html" title=" " alt="" coords="233,5,334,32"/>
 <area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="174,70,224,42,252,31,247,34,226,46,177,75"/>

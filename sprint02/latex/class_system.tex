@@ -35,9 +35,13 @@ Collaboration diagram for System\+:
 virtual \mbox{\hyperlink{class_system_a2fc0f34023977cab9b628aa9f734d88c}{\texorpdfstring{$\sim$}{\string~}\+System}} ()
 \item 
 virtual double \mbox{\hyperlink{class_system_a41b673faa6c199eb8e4f204639fab4f2}{get\+Value}} () const =0
-\item 
+\begin{DoxyCompactList}\small\item\em Retorna o valor (estoque) atual do \doxylink{class_system}{System}. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_system_a28536e1a680eb4b223cd26562a55bb1e}{set\+Value}} (double v)=0
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Define o valor (estoque) atual do \doxylink{class_system}{System}. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{class_system_a3bc2509274e6c346e07b0bf1151378c5}{get\+Name}} () const =0
+\begin{DoxyCompactList}\small\item\em Retorna o identificador/nome do \doxylink{class_system}{System}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_system_a2c84980e017370987a25548b13ea9578}{set\+Name}} (const std\+::string \&name)=0
+\begin{DoxyCompactList}\small\item\em Define o identificador/nome do \doxylink{class_system}{System}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -53,6 +57,20 @@ Interface da classe \doxylink{class_system}{System}. Define o contrato que toda 
 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{class_system_a3bc2509274e6c346e07b0bf1151378c5}\label{class_system_a3bc2509274e6c346e07b0bf1151378c5} 
+\index{System@{System}!getName@{getName}}
+\index{getName@{getName}!System@{System}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily virtual std\+::string System\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Retorna o identificador/nome do \doxylink{class_system}{System}. 
+
+
+
+Implemented in \mbox{\hyperlink{class_system_impl_ad3843b49bbde11738f395c5fbeae4633}{System\+Impl}}.
+
 \Hypertarget{class_system_a41b673faa6c199eb8e4f204639fab4f2}\label{class_system_a41b673faa6c199eb8e4f204639fab4f2} 
 \index{System@{System}!getValue@{getValue}}
 \index{getValue@{getValue}!System@{System}}
@@ -61,13 +79,35 @@ Interface da classe \doxylink{class_system}{System}. Define o contrato que toda 
 
 
 
+Retorna o valor (estoque) atual do \doxylink{class_system}{System}. 
+
+
+
 Implemented in \mbox{\hyperlink{class_system_impl_abd3ff91586d4474c0a747dc5dd6e0268}{System\+Impl}}.
+
+\Hypertarget{class_system_a2c84980e017370987a25548b13ea9578}\label{class_system_a2c84980e017370987a25548b13ea9578} 
+\index{System@{System}!setName@{setName}}
+\index{setName@{setName}!System@{System}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily virtual void System\+::set\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Define o identificador/nome do \doxylink{class_system}{System}. 
+
+
+
+Implemented in \mbox{\hyperlink{class_system_impl_a64ccf2dd42f82bef7cbaf1a645589d49}{System\+Impl}}.
 
 \Hypertarget{class_system_a28536e1a680eb4b223cd26562a55bb1e}\label{class_system_a28536e1a680eb4b223cd26562a55bb1e} 
 \index{System@{System}!setValue@{setValue}}
 \index{setValue@{setValue}!System@{System}}
 \doxysubsubsection{\texorpdfstring{setValue()}{setValue()}}
 {\footnotesize\ttfamily virtual void System\+::set\+Value (\begin{DoxyParamCaption}\item[{double}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Define o valor (estoque) atual do \doxylink{class_system}{System}. 
 
 
 

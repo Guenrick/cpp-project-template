@@ -6,28 +6,31 @@
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ FLOW\_IMPL\_HPP}}
 \DoxyCodeLine{00003\ }
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{flow_8hpp}{flow.hpp}}"{}}}
-\DoxyCodeLine{00005\ }
-\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_flow_impl}{FlowImpl}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_flow}{Flow}}\ \{}
-\DoxyCodeLine{00013\ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{class_system}{System}}*\ \mbox{\hyperlink{class_flow_impl_a950987351656a518a1057b64c5f85af8}{source}};}
-\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_system}{System}}*\ \mbox{\hyperlink{class_flow_impl_af97039b649da65573e5582edbeb287b5}{target}};}
-\DoxyCodeLine{00016\ }
-\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_flow_impl}{FlowImpl}}(\mbox{\hyperlink{class_system}{System}}*\ \mbox{\hyperlink{class_flow_impl_a950987351656a518a1057b64c5f85af8}{source}}\ =\ \textcolor{keyword}{nullptr},\ \mbox{\hyperlink{class_system}{System}}*\ \mbox{\hyperlink{class_flow_impl_af97039b649da65573e5582edbeb287b5}{target}}\ =\ \textcolor{keyword}{nullptr});}
-\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_flow_impl}{FlowImpl}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_flow_impl}{FlowImpl}}\&\ obj);}
-\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_flow_impl_a2d91539593b336aee4a19048f8a82e8c}{\string~FlowImpl}}();}
-\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_flow_impl}{FlowImpl}}\&\ \mbox{\hyperlink{class_flow_impl_ad923ca284a121114852d8f2948190e37}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_flow_impl}{FlowImpl}}\&\ obj);}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_flow_impl}{FlowImpl}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_flow}{Flow}}\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ std::string\ \mbox{\hyperlink{class_flow_impl_a18de5084aabbb2f8a2ed6b9bc8b44599}{id\_}};}
 \DoxyCodeLine{00022\ }
-\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_flow_impl_a47bbb64941fde986da1198b4af443c16}{setSource}}(\mbox{\hyperlink{class_system}{System}}*\ s)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_flow_impl_abb1e0677c5e0d0a94b931ab57187bdcb}{setTarget}}(\mbox{\hyperlink{class_system}{System}}*\ s)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_system}{System}}*\ \mbox{\hyperlink{class_flow_impl_a06c8ffdcfd36b04ddad091d2c043f5d0}{getSource}}()\ \textcolor{keyword}{const\ override};}
-\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_system}{System}}*\ \mbox{\hyperlink{class_flow_impl_adb35e3574470e91207c631fda3cdc9bd}{getTarget}}()\ \textcolor{keyword}{const\ override};}
-\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_flow_impl_acf4fc570ead9b0421638d428f44305c1}{clearSource}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_flow_impl_acf255f5bb33cdc0a09f486f2bab20d99}{clearTarget}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00029\ }
-\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_flow_impl_a88d14f759988f1dcf393b83a93aea1f1}{execute}}()\ =\ 0;\ \textcolor{comment}{//\ ainda\ abstrato\ —\ subclasse\ define\ a\ equacao}}
-\DoxyCodeLine{00031\ \};}
-\DoxyCodeLine{00032\ }
-\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ FLOW\_IMPL\_HPP}}
+\DoxyCodeLine{00023\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_system}{System}}*\ \mbox{\hyperlink{class_flow_impl_a950987351656a518a1057b64c5f85af8}{source}};}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_system}{System}}*\ \mbox{\hyperlink{class_flow_impl_af97039b649da65573e5582edbeb287b5}{target}};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_flow_impl}{FlowImpl}}(std::string\ \textcolor{keywordtype}{id}\ =\ \textcolor{stringliteral}{"{}"{}},\ \mbox{\hyperlink{class_system}{System}}*\ \mbox{\hyperlink{class_flow_impl_a950987351656a518a1057b64c5f85af8}{source}}\ =\ \textcolor{keyword}{nullptr},\ \mbox{\hyperlink{class_system}{System}}*\ \mbox{\hyperlink{class_flow_impl_af97039b649da65573e5582edbeb287b5}{target}}\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_flow_impl_a2d91539593b336aee4a19048f8a82e8c}{\string~FlowImpl}}();}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_system}{System}}*\ \mbox{\hyperlink{class_flow_impl_a06c8ffdcfd36b04ddad091d2c043f5d0}{getSource}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_system}{System}}*\ \mbox{\hyperlink{class_flow_impl_adb35e3574470e91207c631fda3cdc9bd}{getTarget}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_flow_impl_ac761ce3fc1b097b3086a2618f645a2a2}{setSource}}(\mbox{\hyperlink{class_system}{System}}*\ s);}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_flow_impl_a9c9d09746b4fb2fae14041beafcba9dc}{setTarget}}(\mbox{\hyperlink{class_system}{System}}*\ s);}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_flow_impl_a92a3d902afab0aa20ec2886d55264156}{clearSource}}();}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_flow_impl_afec6eff9cdd0611aa49bfcad74a1f9bd}{clearTarget}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_flow_impl_a88d14f759988f1dcf393b83a93aea1f1}{execute}}()\ =\ 0;}
+\DoxyCodeLine{00046\ \};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ FLOW\_IMPL\_HPP}}
 
 \end{DoxyCode}

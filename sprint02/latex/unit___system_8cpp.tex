@@ -1,7 +1,7 @@
 \doxysection{test/unit/unit\+\_\+\+System.cpp File Reference}
 \hypertarget{unit___system_8cpp}{}\label{unit___system_8cpp}\index{test/unit/unit\_System.cpp@{test/unit/unit\_System.cpp}}
 {\ttfamily \#include \"{}unit\+\_\+\+System.\+h\"{}}\newline
-{\ttfamily \#include \"{}../../src/factory.\+hpp\"{}}\newline
+{\ttfamily \#include \"{}../../src/system\+Impl.\+hpp\"{}}\newline
 {\ttfamily \#include $<$assert.\+h$>$}\newline
 Include dependency graph for unit\+\_\+\+System.\+cpp\+:
 \nopagebreak
@@ -15,17 +15,17 @@ Include dependency graph for unit\+\_\+\+System.\+cpp\+:
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{unit___system_8cpp_a46e097a8a45f48d72634c5dff1f7ca5f}{unit\+\_\+\+System\+\_\+constructor}} (void)
-\begin{DoxyCompactList}\small\item\em Testa os construtores da classe \doxylink{class_system}{System}. Verifica o construtor padrão (valor 0.\+0) e o parametrizado com valores positivos, negativos e zero. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Testa o construtor de \doxylink{class_system_impl}{System\+Impl}. Verifica o valor padrão (0.\+0) e valores parametrizados positivos, negativos e zero, alem do id atribuido. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{unit___system_8cpp_a6102352f9630ddcf12eb94bc4b558bc1}{unit\+\_\+\+System\+\_\+destructor}} (void)
-\begin{DoxyCompactList}\small\item\em Testa o destrutor da classe \doxylink{class_system}{System}. Um objeto criado em escopo local deve ser destruído sem erros ao sair do escopo. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{unit___system_8cpp_a4b504bd5c78b1a1cae785948cf0e58a3}{unit\+\_\+\+System\+\_\+copy\+Constructor}} (void)
-\begin{DoxyCompactList}\small\item\em Testa o construtor de cópia da classe \doxylink{class_system}{System}. A cópia deve ter o mesmo valor que o original, e modificá-\/la não deve afetar o original. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{unit___system_8cpp_ae1b2276713abfafdd55b3a70f2380c78}{unit\+\_\+\+System\+\_\+assignment\+Operator}} (void)
-\begin{DoxyCompactList}\small\item\em Testa o operador de atribuição da classe \doxylink{class_system}{System}. Verifica atribuição normal, independência entre objetos e auto-\/atribuição. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Testa o destrutor de \doxylink{class_system_impl}{System\+Impl}. Um objeto criado em escopo local deve ser destruído sem erros ao sair do escopo. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{unit___system_8cpp_adeeb73fcb3ab0a36610f3740f85b6eae}{unit\+\_\+\+System\+\_\+get\+Value}} (void)
 \begin{DoxyCompactList}\small\item\em Testa o método get\+Value(). Deve retornar exatamente o valor armazenado no sistema. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{unit___system_8cpp_a0e0a4c0513e1dbf6487920465ce62b22}{unit\+\_\+\+System\+\_\+set\+Value}} (void)
 \begin{DoxyCompactList}\small\item\em Testa o método set\+Value(). Após a chamada, get\+Value() deve retornar o novo valor imediatamente. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{unit___system_8cpp_ac5707e927092753fdf9ffb275f209466}{unit\+\_\+\+System\+\_\+get\+Name}} (void)
+\begin{DoxyCompactList}\small\item\em Testa o método get\+Name(). Deve retornar o identificador (id) atribuido na construção. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{unit___system_8cpp_ae92753cb0977ecd3217dc3540dc33e87}{unit\+\_\+\+System\+\_\+set\+Name}} (void)
+\begin{DoxyCompactList}\small\item\em Testa o método set\+Name(). Após a chamada, get\+Name() deve retornar o novo identificador. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{unit___system_8cpp_ab3d9f7c3d450ff30ca9cf6b51666f701}{run\+\_\+unit\+\_\+tests\+\_\+\+System}} (void)
 \begin{DoxyCompactList}\small\item\em Executa todos os testes unitários da classe \doxylink{class_system}{System}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -41,16 +41,6 @@ void \mbox{\hyperlink{unit___system_8cpp_ab3d9f7c3d450ff30ca9cf6b51666f701}{run\
 
 Executa todos os testes unitários da classe \doxylink{class_system}{System}. 
 
-\Hypertarget{unit___system_8cpp_ae1b2276713abfafdd55b3a70f2380c78}\label{unit___system_8cpp_ae1b2276713abfafdd55b3a70f2380c78} 
-\index{unit\_System.cpp@{unit\_System.cpp}!unit\_System\_assignmentOperator@{unit\_System\_assignmentOperator}}
-\index{unit\_System\_assignmentOperator@{unit\_System\_assignmentOperator}!unit\_System.cpp@{unit\_System.cpp}}
-\doxysubsubsection{\texorpdfstring{unit\_System\_assignmentOperator()}{unit\_System\_assignmentOperator()}}
-{\footnotesize\ttfamily void unit\+\_\+\+System\+\_\+assignment\+Operator (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
-
-
-
-Testa o operador de atribuição da classe \doxylink{class_system}{System}. Verifica atribuição normal, independência entre objetos e auto-\/atribuição. 
-
 \Hypertarget{unit___system_8cpp_a46e097a8a45f48d72634c5dff1f7ca5f}\label{unit___system_8cpp_a46e097a8a45f48d72634c5dff1f7ca5f} 
 \index{unit\_System.cpp@{unit\_System.cpp}!unit\_System\_constructor@{unit\_System\_constructor}}
 \index{unit\_System\_constructor@{unit\_System\_constructor}!unit\_System.cpp@{unit\_System.cpp}}
@@ -59,17 +49,7 @@ Testa o operador de atribuição da classe \doxylink{class_system}{System}. Veri
 
 
 
-Testa os construtores da classe \doxylink{class_system}{System}. Verifica o construtor padrão (valor 0.\+0) e o parametrizado com valores positivos, negativos e zero. 
-
-\Hypertarget{unit___system_8cpp_a4b504bd5c78b1a1cae785948cf0e58a3}\label{unit___system_8cpp_a4b504bd5c78b1a1cae785948cf0e58a3} 
-\index{unit\_System.cpp@{unit\_System.cpp}!unit\_System\_copyConstructor@{unit\_System\_copyConstructor}}
-\index{unit\_System\_copyConstructor@{unit\_System\_copyConstructor}!unit\_System.cpp@{unit\_System.cpp}}
-\doxysubsubsection{\texorpdfstring{unit\_System\_copyConstructor()}{unit\_System\_copyConstructor()}}
-{\footnotesize\ttfamily void unit\+\_\+\+System\+\_\+copy\+Constructor (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
-
-
-
-Testa o construtor de cópia da classe \doxylink{class_system}{System}. A cópia deve ter o mesmo valor que o original, e modificá-\/la não deve afetar o original. 
+Testa o construtor de \doxylink{class_system_impl}{System\+Impl}. Verifica o valor padrão (0.\+0) e valores parametrizados positivos, negativos e zero, alem do id atribuido. 
 
 \Hypertarget{unit___system_8cpp_a6102352f9630ddcf12eb94bc4b558bc1}\label{unit___system_8cpp_a6102352f9630ddcf12eb94bc4b558bc1} 
 \index{unit\_System.cpp@{unit\_System.cpp}!unit\_System\_destructor@{unit\_System\_destructor}}
@@ -79,7 +59,17 @@ Testa o construtor de cópia da classe \doxylink{class_system}{System}. A cópia
 
 
 
-Testa o destrutor da classe \doxylink{class_system}{System}. Um objeto criado em escopo local deve ser destruído sem erros ao sair do escopo. 
+Testa o destrutor de \doxylink{class_system_impl}{System\+Impl}. Um objeto criado em escopo local deve ser destruído sem erros ao sair do escopo. 
+
+\Hypertarget{unit___system_8cpp_ac5707e927092753fdf9ffb275f209466}\label{unit___system_8cpp_ac5707e927092753fdf9ffb275f209466} 
+\index{unit\_System.cpp@{unit\_System.cpp}!unit\_System\_getName@{unit\_System\_getName}}
+\index{unit\_System\_getName@{unit\_System\_getName}!unit\_System.cpp@{unit\_System.cpp}}
+\doxysubsubsection{\texorpdfstring{unit\_System\_getName()}{unit\_System\_getName()}}
+{\footnotesize\ttfamily void unit\+\_\+\+System\+\_\+get\+Name (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Testa o método get\+Name(). Deve retornar o identificador (id) atribuido na construção. 
 
 \Hypertarget{unit___system_8cpp_adeeb73fcb3ab0a36610f3740f85b6eae}\label{unit___system_8cpp_adeeb73fcb3ab0a36610f3740f85b6eae} 
 \index{unit\_System.cpp@{unit\_System.cpp}!unit\_System\_getValue@{unit\_System\_getValue}}
@@ -90,6 +80,16 @@ Testa o destrutor da classe \doxylink{class_system}{System}. Um objeto criado em
 
 
 Testa o método get\+Value(). Deve retornar exatamente o valor armazenado no sistema. 
+
+\Hypertarget{unit___system_8cpp_ae92753cb0977ecd3217dc3540dc33e87}\label{unit___system_8cpp_ae92753cb0977ecd3217dc3540dc33e87} 
+\index{unit\_System.cpp@{unit\_System.cpp}!unit\_System\_setName@{unit\_System\_setName}}
+\index{unit\_System\_setName@{unit\_System\_setName}!unit\_System.cpp@{unit\_System.cpp}}
+\doxysubsubsection{\texorpdfstring{unit\_System\_setName()}{unit\_System\_setName()}}
+{\footnotesize\ttfamily void unit\+\_\+\+System\+\_\+set\+Name (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Testa o método set\+Name(). Após a chamada, get\+Name() deve retornar o novo identificador. 
 
 \Hypertarget{unit___system_8cpp_a0e0a4c0513e1dbf6487920465ce62b22}\label{unit___system_8cpp_a0e0a4c0513e1dbf6487920465ce62b22} 
 \index{unit\_System.cpp@{unit\_System.cpp}!unit\_System\_setValue@{unit\_System\_setValue}}

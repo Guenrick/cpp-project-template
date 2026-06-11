@@ -16,29 +16,33 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{unit___model_8h_af0c874c71422ff355ec8579c9a859738}{unit\+\_\+\+Model\+\_\+constructor}} (void)
-\begin{DoxyCompactList}\small\item\em Testa o construtor padrão de \doxylink{class_model}{Model}. Um \doxylink{class_model}{Model} recém-\/criado deve ter listas de sistemas e fluxos vazias. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Testa \doxylink{class_model_a6eb089bcc8e4cbc580879a92b18b7297}{Model\+::create\+Model()}. Um \doxylink{class_model}{Model} recém-\/criado deve ter listas de sistemas e fluxos vazias. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{unit___model_8h_ab348ace4d56947bf92a931650a17b240}{unit\+\_\+\+Model\+\_\+destructor}} (void)
-\begin{DoxyCompactList}\small\item\em Testa o destrutor de \doxylink{class_model}{Model}. \doxylink{class_model}{Model} não é dono dos objetos — sistemas devem continuar intactos após o destrutor. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{unit___model_8h_a5504169b35177d0717c8074ef376d19a}{unit\+\_\+\+Model\+\_\+copy\+Constructor}} (void)
-\begin{DoxyCompactList}\small\item\em Testa o construtor de cópia de \doxylink{class_model}{Model}. A cópia deve conter os mesmos ponteiros que o original. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{unit___model_8h_a28d45d33aaf478ce3a0eef7c230df523}{unit\+\_\+\+Model\+\_\+assignment\+Operator}} (void)
-\begin{DoxyCompactList}\small\item\em Testa o operador de atribuição de \doxylink{class_model}{Model}. Verifica atribuição normal e auto-\/atribuição. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{unit___model_8h_a3057ba58ead378390c26338bf4b8b081}{unit\+\_\+\+Model\+\_\+add\+\_\+\+System}} (void)
-\begin{DoxyCompactList}\small\item\em Testa add(\+System\texorpdfstring{$\ast$}{*}). Após adicionar, o iterador deve encontrar o sistema na lista. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{unit___model_8h_a3795cad3cd850b489acab19886efdbe0}{unit\+\_\+\+Model\+\_\+add\+\_\+\+Flow}} (void)
-\begin{DoxyCompactList}\small\item\em Testa add(\+Flow\texorpdfstring{$\ast$}{*}). Após adicionar, o iterador deve encontrar o fluxo na lista. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{unit___model_8h_ab0eb69ae89d5adcd44033970a9978df3}{unit\+\_\+\+Model\+\_\+remove\+\_\+\+System}} (void)
-\begin{DoxyCompactList}\small\item\em Testa remove(\+System\texorpdfstring{$\ast$}{*}). Após remover, o sistema não deve mais estar na lista. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{unit___model_8h_a917a24fb9b5ff527bfc8cafadcd7880c}{unit\+\_\+\+Model\+\_\+remove\+\_\+\+Flow}} (void)
-\begin{DoxyCompactList}\small\item\em Testa remove(\+Flow\texorpdfstring{$\ast$}{*}). Após remover, o fluxo não deve mais estar na lista. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Testa o destrutor de \doxylink{class_model}{Model}. \doxylink{class_model}{Model} é dono dos Systems e Flows criados por ele\+: destruí-\/lo deve liberar essas memórias sem causar erros. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{unit___model_8h_a5a422b1ecc2f29e2163f0d84359c6294}{unit\+\_\+\+Model\+\_\+create\+System}} (void)
+\begin{DoxyCompactList}\small\item\em Testa \doxylink{factory_8cpp_add37a387de08deb7594b5bcad1d1c479}{create\+System()}. O \doxylink{class_system}{System} criado deve ter o id e o valor informados, e deve ser encontrado na coleção interna do \doxylink{class_model}{Model}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{unit___model_8h_aacf80509e98e08f3796d04141dfb63c7}{unit\+\_\+\+Model\+\_\+create\+Flux}} (void)
+\begin{DoxyCompactList}\small\item\em Testa create\+Flux$<$\+T\+\_\+\+FLUX\+\_\+\+IMPL$>$(). O \doxylink{class_flow}{Flow} criado deve estar conectado às origens/destinos informados e deve ser encontrado na coleção interna do \doxylink{class_model}{Model}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{unit___model_8h_a96b1272b9790335d846f3b2f74da98e2}{unit\+\_\+\+Model\+\_\+delete\+System}} (void)
+\begin{DoxyCompactList}\small\item\em Testa delete\+System(). Após remover, o \doxylink{class_system}{System} não deve mais estar na lista de sistemas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{unit___model_8h_a64e42546bac6492abfe9dded1f007bf3}{unit\+\_\+\+Model\+\_\+delete\+Flux}} (void)
+\begin{DoxyCompactList}\small\item\em Testa delete\+Flux(). Após remover, o \doxylink{class_flow}{Flow} não deve mais estar na lista de fluxos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{unit___model_8h_a94f8ba77a75939c241f1d8caf5443ef9}{unit\+\_\+\+Model\+\_\+set\+Source}} (void)
+\begin{DoxyCompactList}\small\item\em Testa set\+Source(\+Flow\&, System\&). Após a chamada, get\+Source() do \doxylink{class_flow}{Flow} deve retornar o novo \doxylink{class_system}{System}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{unit___model_8h_aef179e87336d8c7aee2abb229e9e34ee}{unit\+\_\+\+Model\+\_\+set\+Target}} (void)
+\begin{DoxyCompactList}\small\item\em Testa set\+Target(\+Flow\&, System\&). Após a chamada, get\+Target() do \doxylink{class_flow}{Flow} deve retornar o novo \doxylink{class_system}{System}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{unit___model_8h_ae25452019eed82bd0f3f672b411b2ea6}{unit\+\_\+\+Model\+\_\+clear\+Source}} (void)
+\begin{DoxyCompactList}\small\item\em Testa clear\+Source(\+Flow\&). Após a chamada, get\+Source() do \doxylink{class_flow}{Flow} deve retornar nullptr. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{unit___model_8h_a6016cff9c5ca750a32c7a2977570ec29}{unit\+\_\+\+Model\+\_\+clear\+Target}} (void)
+\begin{DoxyCompactList}\small\item\em Testa clear\+Target(\+Flow\&). Após a chamada, get\+Target() do \doxylink{class_flow}{Flow} deve retornar nullptr. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{unit___model_8h_a13d11c2effe7a8423cde2df7ed12987c}{unit\+\_\+\+Model\+\_\+begin\+Systems}} (void)
-\begin{DoxyCompactList}\small\item\em Testa begin\+Systems(). Em modelo vazio, begin == end. Após adicionar um sistema, deve apontar para ele. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Testa begin\+Systems(). Em modelo vazio, begin == end. Após criar um sistema, deve apontar para ele. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{unit___model_8h_a417f1f20a06b50860202665072980ed1}{unit\+\_\+\+Model\+\_\+end\+Systems}} (void)
-\begin{DoxyCompactList}\small\item\em Testa end\+Systems(). A iteração completa deve percorrer exatamente todos os sistemas adicionados. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Testa end\+Systems(). A iteração completa deve percorrer exatamente todos os sistemas criados. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{unit___model_8h_a7fe3e46e22ed744b32ab7282bde4596c}{unit\+\_\+\+Model\+\_\+begin\+Flows}} (void)
-\begin{DoxyCompactList}\small\item\em Testa begin\+Flows(). Em modelo vazio, begin == end. Após adicionar um fluxo, deve apontar para ele. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Testa begin\+Flows(). Em modelo vazio, begin == end. Após criar um fluxo, deve apontar para ele. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{unit___model_8h_ad6a97adba7764c4eb5a04c9c39dd0aca}{unit\+\_\+\+Model\+\_\+end\+Flows}} (void)
-\begin{DoxyCompactList}\small\item\em Testa end\+Flows(). A iteração completa deve percorrer exatamente todos os fluxos adicionados. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Testa end\+Flows(). A iteração completa deve percorrer exatamente todos os fluxos criados. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{unit___model_8h_aac3d89a223697eccea16a00a2ac266f0}{unit\+\_\+\+Model\+\_\+execute}} (void)
 \begin{DoxyCompactList}\small\item\em Testa execute() com o modelo exponencial clássico. Configuração\+: pop1=100, pop2=0, \doxylink{class_exponential_flow}{Exponential\+Flow}, 100 iterações. Resultado esperado\+: pop1 ≈ 36.\+6032, pop2 ≈ 63.\+3968. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{unit___model_8h_ac9809e814596bf9bf3c37918190a866c}{run\+\_\+unit\+\_\+tests\+\_\+\+Model}} (void)
@@ -61,36 +65,6 @@ Declaração dos testes unitários da classe \doxylink{class_model}{Model}.
 
 Executa todos os testes unitários da classe \doxylink{class_model}{Model}. 
 
-\Hypertarget{unit___model_8h_a3795cad3cd850b489acab19886efdbe0}\label{unit___model_8h_a3795cad3cd850b489acab19886efdbe0} 
-\index{unit\_Model.h@{unit\_Model.h}!unit\_Model\_add\_Flow@{unit\_Model\_add\_Flow}}
-\index{unit\_Model\_add\_Flow@{unit\_Model\_add\_Flow}!unit\_Model.h@{unit\_Model.h}}
-\doxysubsubsection{\texorpdfstring{unit\_Model\_add\_Flow()}{unit\_Model\_add\_Flow()}}
-{\footnotesize\ttfamily void unit\+\_\+\+Model\+\_\+add\+\_\+\+Flow (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
-
-
-
-Testa add(\+Flow\texorpdfstring{$\ast$}{*}). Após adicionar, o iterador deve encontrar o fluxo na lista. 
-
-\Hypertarget{unit___model_8h_a3057ba58ead378390c26338bf4b8b081}\label{unit___model_8h_a3057ba58ead378390c26338bf4b8b081} 
-\index{unit\_Model.h@{unit\_Model.h}!unit\_Model\_add\_System@{unit\_Model\_add\_System}}
-\index{unit\_Model\_add\_System@{unit\_Model\_add\_System}!unit\_Model.h@{unit\_Model.h}}
-\doxysubsubsection{\texorpdfstring{unit\_Model\_add\_System()}{unit\_Model\_add\_System()}}
-{\footnotesize\ttfamily void unit\+\_\+\+Model\+\_\+add\+\_\+\+System (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
-
-
-
-Testa add(\+System\texorpdfstring{$\ast$}{*}). Após adicionar, o iterador deve encontrar o sistema na lista. 
-
-\Hypertarget{unit___model_8h_a28d45d33aaf478ce3a0eef7c230df523}\label{unit___model_8h_a28d45d33aaf478ce3a0eef7c230df523} 
-\index{unit\_Model.h@{unit\_Model.h}!unit\_Model\_assignmentOperator@{unit\_Model\_assignmentOperator}}
-\index{unit\_Model\_assignmentOperator@{unit\_Model\_assignmentOperator}!unit\_Model.h@{unit\_Model.h}}
-\doxysubsubsection{\texorpdfstring{unit\_Model\_assignmentOperator()}{unit\_Model\_assignmentOperator()}}
-{\footnotesize\ttfamily void unit\+\_\+\+Model\+\_\+assignment\+Operator (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
-
-
-
-Testa o operador de atribuição de \doxylink{class_model}{Model}. Verifica atribuição normal e auto-\/atribuição. 
-
 \Hypertarget{unit___model_8h_a7fe3e46e22ed744b32ab7282bde4596c}\label{unit___model_8h_a7fe3e46e22ed744b32ab7282bde4596c} 
 \index{unit\_Model.h@{unit\_Model.h}!unit\_Model\_beginFlows@{unit\_Model\_beginFlows}}
 \index{unit\_Model\_beginFlows@{unit\_Model\_beginFlows}!unit\_Model.h@{unit\_Model.h}}
@@ -99,7 +73,7 @@ Testa o operador de atribuição de \doxylink{class_model}{Model}. Verifica atri
 
 
 
-Testa begin\+Flows(). Em modelo vazio, begin == end. Após adicionar um fluxo, deve apontar para ele. 
+Testa begin\+Flows(). Em modelo vazio, begin == end. Após criar um fluxo, deve apontar para ele. 
 
 \Hypertarget{unit___model_8h_a13d11c2effe7a8423cde2df7ed12987c}\label{unit___model_8h_a13d11c2effe7a8423cde2df7ed12987c} 
 \index{unit\_Model.h@{unit\_Model.h}!unit\_Model\_beginSystems@{unit\_Model\_beginSystems}}
@@ -109,7 +83,27 @@ Testa begin\+Flows(). Em modelo vazio, begin == end. Após adicionar um fluxo, d
 
 
 
-Testa begin\+Systems(). Em modelo vazio, begin == end. Após adicionar um sistema, deve apontar para ele. 
+Testa begin\+Systems(). Em modelo vazio, begin == end. Após criar um sistema, deve apontar para ele. 
+
+\Hypertarget{unit___model_8h_ae25452019eed82bd0f3f672b411b2ea6}\label{unit___model_8h_ae25452019eed82bd0f3f672b411b2ea6} 
+\index{unit\_Model.h@{unit\_Model.h}!unit\_Model\_clearSource@{unit\_Model\_clearSource}}
+\index{unit\_Model\_clearSource@{unit\_Model\_clearSource}!unit\_Model.h@{unit\_Model.h}}
+\doxysubsubsection{\texorpdfstring{unit\_Model\_clearSource()}{unit\_Model\_clearSource()}}
+{\footnotesize\ttfamily void unit\+\_\+\+Model\+\_\+clear\+Source (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Testa clear\+Source(\+Flow\&). Após a chamada, get\+Source() do \doxylink{class_flow}{Flow} deve retornar nullptr. 
+
+\Hypertarget{unit___model_8h_a6016cff9c5ca750a32c7a2977570ec29}\label{unit___model_8h_a6016cff9c5ca750a32c7a2977570ec29} 
+\index{unit\_Model.h@{unit\_Model.h}!unit\_Model\_clearTarget@{unit\_Model\_clearTarget}}
+\index{unit\_Model\_clearTarget@{unit\_Model\_clearTarget}!unit\_Model.h@{unit\_Model.h}}
+\doxysubsubsection{\texorpdfstring{unit\_Model\_clearTarget()}{unit\_Model\_clearTarget()}}
+{\footnotesize\ttfamily void unit\+\_\+\+Model\+\_\+clear\+Target (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Testa clear\+Target(\+Flow\&). Após a chamada, get\+Target() do \doxylink{class_flow}{Flow} deve retornar nullptr. 
 
 \Hypertarget{unit___model_8h_af0c874c71422ff355ec8579c9a859738}\label{unit___model_8h_af0c874c71422ff355ec8579c9a859738} 
 \index{unit\_Model.h@{unit\_Model.h}!unit\_Model\_constructor@{unit\_Model\_constructor}}
@@ -119,17 +113,47 @@ Testa begin\+Systems(). Em modelo vazio, begin == end. Após adicionar um sistem
 
 
 
-Testa o construtor padrão de \doxylink{class_model}{Model}. Um \doxylink{class_model}{Model} recém-\/criado deve ter listas de sistemas e fluxos vazias. 
+Testa \doxylink{class_model_a6eb089bcc8e4cbc580879a92b18b7297}{Model\+::create\+Model()}. Um \doxylink{class_model}{Model} recém-\/criado deve ter listas de sistemas e fluxos vazias. 
 
-\Hypertarget{unit___model_8h_a5504169b35177d0717c8074ef376d19a}\label{unit___model_8h_a5504169b35177d0717c8074ef376d19a} 
-\index{unit\_Model.h@{unit\_Model.h}!unit\_Model\_copyConstructor@{unit\_Model\_copyConstructor}}
-\index{unit\_Model\_copyConstructor@{unit\_Model\_copyConstructor}!unit\_Model.h@{unit\_Model.h}}
-\doxysubsubsection{\texorpdfstring{unit\_Model\_copyConstructor()}{unit\_Model\_copyConstructor()}}
-{\footnotesize\ttfamily void unit\+\_\+\+Model\+\_\+copy\+Constructor (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+\Hypertarget{unit___model_8h_aacf80509e98e08f3796d04141dfb63c7}\label{unit___model_8h_aacf80509e98e08f3796d04141dfb63c7} 
+\index{unit\_Model.h@{unit\_Model.h}!unit\_Model\_createFlux@{unit\_Model\_createFlux}}
+\index{unit\_Model\_createFlux@{unit\_Model\_createFlux}!unit\_Model.h@{unit\_Model.h}}
+\doxysubsubsection{\texorpdfstring{unit\_Model\_createFlux()}{unit\_Model\_createFlux()}}
+{\footnotesize\ttfamily void unit\+\_\+\+Model\+\_\+create\+Flux (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
 
 
-Testa o construtor de cópia de \doxylink{class_model}{Model}. A cópia deve conter os mesmos ponteiros que o original. 
+Testa create\+Flux$<$\+T\+\_\+\+FLUX\+\_\+\+IMPL$>$(). O \doxylink{class_flow}{Flow} criado deve estar conectado às origens/destinos informados e deve ser encontrado na coleção interna do \doxylink{class_model}{Model}. 
+
+\Hypertarget{unit___model_8h_a5a422b1ecc2f29e2163f0d84359c6294}\label{unit___model_8h_a5a422b1ecc2f29e2163f0d84359c6294} 
+\index{unit\_Model.h@{unit\_Model.h}!unit\_Model\_createSystem@{unit\_Model\_createSystem}}
+\index{unit\_Model\_createSystem@{unit\_Model\_createSystem}!unit\_Model.h@{unit\_Model.h}}
+\doxysubsubsection{\texorpdfstring{unit\_Model\_createSystem()}{unit\_Model\_createSystem()}}
+{\footnotesize\ttfamily void unit\+\_\+\+Model\+\_\+create\+System (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Testa \doxylink{factory_8cpp_add37a387de08deb7594b5bcad1d1c479}{create\+System()}. O \doxylink{class_system}{System} criado deve ter o id e o valor informados, e deve ser encontrado na coleção interna do \doxylink{class_model}{Model}. 
+
+\Hypertarget{unit___model_8h_a64e42546bac6492abfe9dded1f007bf3}\label{unit___model_8h_a64e42546bac6492abfe9dded1f007bf3} 
+\index{unit\_Model.h@{unit\_Model.h}!unit\_Model\_deleteFlux@{unit\_Model\_deleteFlux}}
+\index{unit\_Model\_deleteFlux@{unit\_Model\_deleteFlux}!unit\_Model.h@{unit\_Model.h}}
+\doxysubsubsection{\texorpdfstring{unit\_Model\_deleteFlux()}{unit\_Model\_deleteFlux()}}
+{\footnotesize\ttfamily void unit\+\_\+\+Model\+\_\+delete\+Flux (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Testa delete\+Flux(). Após remover, o \doxylink{class_flow}{Flow} não deve mais estar na lista de fluxos. 
+
+\Hypertarget{unit___model_8h_a96b1272b9790335d846f3b2f74da98e2}\label{unit___model_8h_a96b1272b9790335d846f3b2f74da98e2} 
+\index{unit\_Model.h@{unit\_Model.h}!unit\_Model\_deleteSystem@{unit\_Model\_deleteSystem}}
+\index{unit\_Model\_deleteSystem@{unit\_Model\_deleteSystem}!unit\_Model.h@{unit\_Model.h}}
+\doxysubsubsection{\texorpdfstring{unit\_Model\_deleteSystem()}{unit\_Model\_deleteSystem()}}
+{\footnotesize\ttfamily void unit\+\_\+\+Model\+\_\+delete\+System (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Testa delete\+System(). Após remover, o \doxylink{class_system}{System} não deve mais estar na lista de sistemas. 
 
 \Hypertarget{unit___model_8h_ab348ace4d56947bf92a931650a17b240}\label{unit___model_8h_ab348ace4d56947bf92a931650a17b240} 
 \index{unit\_Model.h@{unit\_Model.h}!unit\_Model\_destructor@{unit\_Model\_destructor}}
@@ -139,7 +163,7 @@ Testa o construtor de cópia de \doxylink{class_model}{Model}. A cópia deve con
 
 
 
-Testa o destrutor de \doxylink{class_model}{Model}. \doxylink{class_model}{Model} não é dono dos objetos — sistemas devem continuar intactos após o destrutor. 
+Testa o destrutor de \doxylink{class_model}{Model}. \doxylink{class_model}{Model} é dono dos Systems e Flows criados por ele\+: destruí-\/lo deve liberar essas memórias sem causar erros. 
 
 \Hypertarget{unit___model_8h_ad6a97adba7764c4eb5a04c9c39dd0aca}\label{unit___model_8h_ad6a97adba7764c4eb5a04c9c39dd0aca} 
 \index{unit\_Model.h@{unit\_Model.h}!unit\_Model\_endFlows@{unit\_Model\_endFlows}}
@@ -149,7 +173,7 @@ Testa o destrutor de \doxylink{class_model}{Model}. \doxylink{class_model}{Model
 
 
 
-Testa end\+Flows(). A iteração completa deve percorrer exatamente todos os fluxos adicionados. 
+Testa end\+Flows(). A iteração completa deve percorrer exatamente todos os fluxos criados. 
 
 \Hypertarget{unit___model_8h_a417f1f20a06b50860202665072980ed1}\label{unit___model_8h_a417f1f20a06b50860202665072980ed1} 
 \index{unit\_Model.h@{unit\_Model.h}!unit\_Model\_endSystems@{unit\_Model\_endSystems}}
@@ -159,7 +183,7 @@ Testa end\+Flows(). A iteração completa deve percorrer exatamente todos os flu
 
 
 
-Testa end\+Systems(). A iteração completa deve percorrer exatamente todos os sistemas adicionados. 
+Testa end\+Systems(). A iteração completa deve percorrer exatamente todos os sistemas criados. 
 
 \Hypertarget{unit___model_8h_aac3d89a223697eccea16a00a2ac266f0}\label{unit___model_8h_aac3d89a223697eccea16a00a2ac266f0} 
 \index{unit\_Model.h@{unit\_Model.h}!unit\_Model\_execute@{unit\_Model\_execute}}
@@ -171,23 +195,23 @@ Testa end\+Systems(). A iteração completa deve percorrer exatamente todos os s
 
 Testa execute() com o modelo exponencial clássico. Configuração\+: pop1=100, pop2=0, \doxylink{class_exponential_flow}{Exponential\+Flow}, 100 iterações. Resultado esperado\+: pop1 ≈ 36.\+6032, pop2 ≈ 63.\+3968. 
 
-\Hypertarget{unit___model_8h_a917a24fb9b5ff527bfc8cafadcd7880c}\label{unit___model_8h_a917a24fb9b5ff527bfc8cafadcd7880c} 
-\index{unit\_Model.h@{unit\_Model.h}!unit\_Model\_remove\_Flow@{unit\_Model\_remove\_Flow}}
-\index{unit\_Model\_remove\_Flow@{unit\_Model\_remove\_Flow}!unit\_Model.h@{unit\_Model.h}}
-\doxysubsubsection{\texorpdfstring{unit\_Model\_remove\_Flow()}{unit\_Model\_remove\_Flow()}}
-{\footnotesize\ttfamily void unit\+\_\+\+Model\+\_\+remove\+\_\+\+Flow (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+\Hypertarget{unit___model_8h_a94f8ba77a75939c241f1d8caf5443ef9}\label{unit___model_8h_a94f8ba77a75939c241f1d8caf5443ef9} 
+\index{unit\_Model.h@{unit\_Model.h}!unit\_Model\_setSource@{unit\_Model\_setSource}}
+\index{unit\_Model\_setSource@{unit\_Model\_setSource}!unit\_Model.h@{unit\_Model.h}}
+\doxysubsubsection{\texorpdfstring{unit\_Model\_setSource()}{unit\_Model\_setSource()}}
+{\footnotesize\ttfamily void unit\+\_\+\+Model\+\_\+set\+Source (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
 
 
-Testa remove(\+Flow\texorpdfstring{$\ast$}{*}). Após remover, o fluxo não deve mais estar na lista. 
+Testa set\+Source(\+Flow\&, System\&). Após a chamada, get\+Source() do \doxylink{class_flow}{Flow} deve retornar o novo \doxylink{class_system}{System}. 
 
-\Hypertarget{unit___model_8h_ab0eb69ae89d5adcd44033970a9978df3}\label{unit___model_8h_ab0eb69ae89d5adcd44033970a9978df3} 
-\index{unit\_Model.h@{unit\_Model.h}!unit\_Model\_remove\_System@{unit\_Model\_remove\_System}}
-\index{unit\_Model\_remove\_System@{unit\_Model\_remove\_System}!unit\_Model.h@{unit\_Model.h}}
-\doxysubsubsection{\texorpdfstring{unit\_Model\_remove\_System()}{unit\_Model\_remove\_System()}}
-{\footnotesize\ttfamily void unit\+\_\+\+Model\+\_\+remove\+\_\+\+System (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+\Hypertarget{unit___model_8h_aef179e87336d8c7aee2abb229e9e34ee}\label{unit___model_8h_aef179e87336d8c7aee2abb229e9e34ee} 
+\index{unit\_Model.h@{unit\_Model.h}!unit\_Model\_setTarget@{unit\_Model\_setTarget}}
+\index{unit\_Model\_setTarget@{unit\_Model\_setTarget}!unit\_Model.h@{unit\_Model.h}}
+\doxysubsubsection{\texorpdfstring{unit\_Model\_setTarget()}{unit\_Model\_setTarget()}}
+{\footnotesize\ttfamily void unit\+\_\+\+Model\+\_\+set\+Target (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
 
 
-Testa remove(\+System\texorpdfstring{$\ast$}{*}). Após remover, o sistema não deve mais estar na lista. 
+Testa set\+Target(\+Flow\&, System\&). Após a chamada, get\+Target() do \doxylink{class_flow}{Flow} deve retornar o novo \doxylink{class_system}{System}. 
 

@@ -1,5 +1,5 @@
 <map id="SystemImpl" name="SystemImpl">
-<area shape="rect" id="Node000001" title="Implementacao concreta da interface System. Armazena o valor em um atributo double privado e implemen..." alt="" coords="5,165,115,341"/>
-<area shape="rect" id="Node000002" href="$class_system.html" title="Interface da classe System. Define o contrato que toda implementacao de System deve cumprir...." alt="" coords="18,5,103,117"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="61,129,63,166,58,165,60,135"/>
+<area shape="rect" id="Node000001" title="Implementacao concreta da interface System. Possui um identificador (id_) e armazena o valor em um at..." alt="" coords="5,208,115,405"/>
+<area shape="rect" id="Node000002" href="$class_system.html" title="Interface da classe System. Define o contrato que toda implementacao de System deve cumprir...." alt="" coords="18,5,103,160"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="61,172,63,208,58,208,60,177"/>
 </map>
