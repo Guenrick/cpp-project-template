@@ -59,6 +59,8 @@ public:
      *
      * @return Referencia para o Flow criado.
      */
+    // Aqui template é uma forma de escrever código que funciona para vários tipos diferentes, sem precisar repetir a implementação de cada um
+    // Ai o compilador vai preencher o tipo no momento qem que o template é usado
     template <typename T_FLUX_IMPL>
     Flow& createFlux(std::string id, System* source = nullptr, System* target = nullptr) {
         T_FLUX_IMPL* f = new T_FLUX_IMPL(id, source, target);
