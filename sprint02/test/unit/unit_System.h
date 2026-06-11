@@ -1,34 +1,23 @@
 /**
  * @file unit_System.h
- * @brief Declaração dos testes unitários da classe System.
+ * @brief Declaração dos testes unitários da classe System (SystemImpl).
  */
 
 #ifndef UNIT_SYSTEM_H
 #define UNIT_SYSTEM_H
 
 /**
- * @brief Testa os construtores da classe System.
- * Verifica o construtor padrão (valor 0.0) e o parametrizado com valores positivos, negativos e zero.
+ * @brief Testa o construtor de SystemImpl.
+ * Verifica o valor padrão (0.0) e valores parametrizados positivos,
+ * negativos e zero, alem do id atribuido.
  */
 void unit_System_constructor(void);
 
 /**
- * @brief Testa o destrutor da classe System.
+ * @brief Testa o destrutor de SystemImpl.
  * Um objeto criado em escopo local deve ser destruído sem erros ao sair do escopo.
  */
 void unit_System_destructor(void);
-
-/**
- * @brief Testa o construtor de cópia da classe System.
- * A cópia deve ter o mesmo valor que o original, e modificá-la não deve afetar o original.
- */
-void unit_System_copyConstructor(void);
-
-/**
- * @brief Testa o operador de atribuição da classe System.
- * Verifica atribuição normal, independência entre objetos e auto-atribuição.
- */
-void unit_System_assignmentOperator(void);
 
 /**
  * @brief Testa o método getValue().
@@ -41,6 +30,18 @@ void unit_System_getValue(void);
  * Após a chamada, getValue() deve retornar o novo valor imediatamente.
  */
 void unit_System_setValue(void);
+
+/**
+ * @brief Testa o método getName().
+ * Deve retornar o identificador (id) atribuido na construção.
+ */
+void unit_System_getName(void);
+
+/**
+ * @brief Testa o método setName().
+ * Após a chamada, getName() deve retornar o novo identificador.
+ */
+void unit_System_setName(void);
 
 /**
  * @brief Executa todos os testes unitários da classe System.

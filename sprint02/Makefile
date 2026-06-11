@@ -17,9 +17,9 @@ LIB = bin/libmyvensim.so
 #alvo: dependencias
 #	comandos
 # -shared vai gerar uma biblioteca compartilhada .so ao invés de um executável, e -fPIC é necessário para criar código independente de posição, que é necessário para bibliotecas compartilhadas.	
-lib: 
+lib:
 	mkdir -p bin
-	$(CXX) $(CXXFLAGS) -shared -fPIC $(SRC) src/factory.cpp -o $(LIB)
+	$(CXX) $(CXXFLAGS) -shared -fPIC $(SRC) -o $(LIB)
 	@echo "Library compiled successfully."
 
 all: clean lib unit funcional run_unit run_funcional

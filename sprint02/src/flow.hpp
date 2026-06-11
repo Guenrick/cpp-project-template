@@ -5,18 +5,23 @@
 
 /**
  * @brief Interface da classe Flow.
- * Define o contrato de um fluxo: conectar dois Systems e calcular
- * a taxa de transferencia. Todos os metodos sao virtuais puros.
+ * Define o contrato minimo de um fluxo: ler suas conexoes (origem e
+ * destino) e calcular a taxa de transferencia. Todos os metodos sao
+ * virtuais puros.
+ *
+ * As operacoes de conexao (setSource/setTarget/clearSource/clearTarget)
+ * nao fazem parte desta interface — elas sao responsabilidade do Model,
+ * que e quem gerencia o ciclo de vida e as ligacoes entre Systems e Flows.
  */
 class Flow {
 public:
     virtual ~Flow() {}
-    virtual void setSource(System* s) = 0;
-    virtual void setTarget(System* s) = 0;
+
+    /// Retorna o System de origem deste Flow (ou nullptr se nao houver).
     virtual System* getSource() const = 0;
+    /// Retorna o System de destino deste Flow (ou nullptr se nao houver).
     virtual System* getTarget() const = 0;
-    virtual void clearSource() = 0;
-    virtual void clearTarget() = 0;
+    /// Calcula a quantidade transferida de origem para destino neste passo.
     virtual double execute() = 0;
 };
 

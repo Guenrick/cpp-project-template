@@ -7,74 +7,89 @@
 #define UNIT_MODEL_H
 
 /**
- * @brief Testa o construtor padrão de Model.
+ * @brief Testa Model::createModel().
  * Um Model recém-criado deve ter listas de sistemas e fluxos vazias.
  */
 void unit_Model_constructor(void);
 
 /**
  * @brief Testa o destrutor de Model.
- * Model não é dono dos objetos — sistemas devem continuar intactos após o destrutor.
+ * Model é dono dos Systems e Flows criados por ele: destruí-lo deve
+ * liberar essas memórias sem causar erros.
  */
 void unit_Model_destructor(void);
 
 /**
- * @brief Testa o construtor de cópia de Model.
- * A cópia deve conter os mesmos ponteiros que o original.
+ * @brief Testa createSystem().
+ * O System criado deve ter o id e o valor informados, e deve ser
+ * encontrado na coleção interna do Model.
  */
-void unit_Model_copyConstructor(void);
+void unit_Model_createSystem(void);
 
 /**
- * @brief Testa o operador de atribuição de Model.
- * Verifica atribuição normal e auto-atribuição.
+ * @brief Testa createFlux<T_FLUX_IMPL>().
+ * O Flow criado deve estar conectado às origens/destinos informados
+ * e deve ser encontrado na coleção interna do Model.
  */
-void unit_Model_assignmentOperator(void);
+void unit_Model_createFlux(void);
 
 /**
- * @brief Testa add(System*).
- * Após adicionar, o iterador deve encontrar o sistema na lista.
+ * @brief Testa deleteSystem().
+ * Após remover, o System não deve mais estar na lista de sistemas.
  */
-void unit_Model_add_System(void);
+void unit_Model_deleteSystem(void);
 
 /**
- * @brief Testa add(Flow*).
- * Após adicionar, o iterador deve encontrar o fluxo na lista.
+ * @brief Testa deleteFlux().
+ * Após remover, o Flow não deve mais estar na lista de fluxos.
  */
-void unit_Model_add_Flow(void);
+void unit_Model_deleteFlux(void);
 
 /**
- * @brief Testa remove(System*).
- * Após remover, o sistema não deve mais estar na lista.
+ * @brief Testa setSource(Flow&, System&).
+ * Após a chamada, getSource() do Flow deve retornar o novo System.
  */
-void unit_Model_remove_System(void);
+void unit_Model_setSource(void);
 
 /**
- * @brief Testa remove(Flow*).
- * Após remover, o fluxo não deve mais estar na lista.
+ * @brief Testa setTarget(Flow&, System&).
+ * Após a chamada, getTarget() do Flow deve retornar o novo System.
  */
-void unit_Model_remove_Flow(void);
+void unit_Model_setTarget(void);
+
+/**
+ * @brief Testa clearSource(Flow&).
+ * Após a chamada, getSource() do Flow deve retornar nullptr.
+ */
+void unit_Model_clearSource(void);
+
+/**
+ * @brief Testa clearTarget(Flow&).
+ * Após a chamada, getTarget() do Flow deve retornar nullptr.
+ */
+void unit_Model_clearTarget(void);
 
 /**
  * @brief Testa beginSystems().
- * Em modelo vazio, begin == end. Após adicionar um sistema, deve apontar para ele.
+ * Em modelo vazio, begin == end. Após criar um sistema, deve apontar para ele.
  */
 void unit_Model_beginSystems(void);
 
 /**
  * @brief Testa endSystems().
- * A iteração completa deve percorrer exatamente todos os sistemas adicionados.
+ * A iteração completa deve percorrer exatamente todos os sistemas criados.
  */
 void unit_Model_endSystems(void);
 
 /**
  * @brief Testa beginFlows().
- * Em modelo vazio, begin == end. Após adicionar um fluxo, deve apontar para ele.
+ * Em modelo vazio, begin == end. Após criar um fluxo, deve apontar para ele.
  */
 void unit_Model_beginFlows(void);
 
 /**
  * @brief Testa endFlows().
- * A iteração completa deve percorrer exatamente todos os fluxos adicionados.
+ * A iteração completa deve percorrer exatamente todos os fluxos criados.
  */
 void unit_Model_endFlows(void);
 

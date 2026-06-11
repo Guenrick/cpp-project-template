@@ -1,21 +1,21 @@
 #include "systemImpl.hpp"
 
-SystemImpl::SystemImpl(double v) : value(v) {}
-
-SystemImpl::SystemImpl(const SystemImpl& obj) : value(obj.value) {}
+SystemImpl::SystemImpl(std::string id, double value) : id_(id), value_(value) {}
 
 SystemImpl::~SystemImpl() {}
 
-SystemImpl& SystemImpl::operator=(const SystemImpl& obj) {
-    if (this == &obj) return *this;
-    value = obj.value;
-    return *this;
-}
-
 double SystemImpl::getValue() const {
-    return value;
+    return value_;
 }
 
 void SystemImpl::setValue(double v) {
-    value = v;
+    value_ = v;
+}
+
+std::string SystemImpl::getName() const {
+    return id_;
+}
+
+void SystemImpl::setName(const std::string& name) {
+    id_ = name;
 }
